@@ -1,12 +1,14 @@
 # Anforderungs- und Entwurfsspezifikation ("Pflichtenheft")
 
-Titel, Autoren, (Inhaltsverzeichnis)
+## Xtreme Xercising - Mobile Anwendung zur Erstellung, Ausführung und Auswertung von Trainingsplänen
+#### Autoren: Pascal Squarra, Jacqueline Menke, 
+
+(Inhaltsverzeichnis)
 
 # 1 Einführung
 
 ## 1.1 Beschreibung
-    - Projektname
-    - Darstellung der Produktvision in Prosa (5-10 Sätze)
+Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, wie auch dem Benutzer die Möglichkeit bieten, eigene Trainingspläne zu erstellen. Dabei kann man aus einer Vielzahl an Übungen auswählen oder eigene hinzufügen. Die Übungen können zur besseren Übersicht nach Name, Muskelgruppe oder Kategorie sortiert werden. Fügt man Übungen zu einem Trainingsplan hinzu, legt man zuvor noch die Anzahl an Wiederholungen und Sätzen oder die Dauer der Ausführung fest. Im Trainingsmodus können die Übungen dann in beliebiger Reihenfolge ausgeübt werden und das geschaffte Gewicht bzw. die zurückgelegte Strecke eingetragen werden. Im Statistikmodus kann der Trainingserfolg mithilfe eines Graphen angezeigt werden, wobei die jeweilige Übung und der Zeitraum eingestellt werden können. Auch die Verteilung der trainierten Muskelgruppen und weitere Statistiken sollen hier einsehbar sein. Darüber hinaus kann der Benutzer einen Alarm einstellen, der ihn in Form einer Push-Benachrichtigung ans Training erinnert.
 
 ## 1.2 Ziele
     - Anwendungsbereiche, Motivation, Umfang, Marktanforderungen, Alleinstellungsmerkmale
@@ -31,9 +33,7 @@ Titel, Autoren, (Inhaltsverzeichnis)
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
 ## 2.3 Graphische Benutzerschnittstelle
-    - GUI-Mockups passend zu User Stories
-    - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
-
+   ![alt text](Mockups/XtremeXercising_Editieren.png)
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
     - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
