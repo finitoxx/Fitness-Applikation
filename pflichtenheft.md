@@ -1,6 +1,9 @@
 # Anforderungs- und Entwurfsspezifikation ("Pflichtenheft")
 
-Titel, Autoren, (Inhaltsverzeichnis)
+## Xtreme Xercising - Mobile Anwendung zur Erstellung, Ausführung und Auswertung von Trainingsplänen
+#### Autoren: Pascal Squarra, Jacqueline Menke, 
+
+(Inhaltsverzeichnis)
 
 # 1 Einführung
 
@@ -31,7 +34,8 @@ Titel, Autoren, (Inhaltsverzeichnis)
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
 ## 2.3 Graphische Benutzerschnittstelle
-    ![alt text](https://github.com/finitoxx/Fitness-Applikation/blob/master/Mockups/XtremeXercising_Editieren.png)
+    - GUI-Mockups passend zu User Stories
+    - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
 
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
