@@ -34,6 +34,8 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
 
 ## 2.3 Graphische Benutzerschnittstelle
    ![alt text](Mockups/XtremeXercising_Editieren.png)
+   Im Ladebildschirm sieht man sowohl den Schriftzug als auch einen Loading-Spinner, der den Warteprozess verbildlicht, während im Hintergrund die Datenbank arbeitet und Daten daraus extrahiert werden. Darunter sieht man den Slogan der Applikation: Be the best version of yourself. Dieser soll dazu motiveren, jeden Tag sein bestes zu geben und sich zu verbessern, um seine Ziele zu erreichen, ohne sich mit anderen vergleichen zu müssen. Zugleich erkennt man die hauptsächliche Farbgestaltung, die primär aus einem dunklen Graubraun und zusätzlich aus einem feurigen Rot-Orange als Akzentfarbe besteht. Diese wird stringent durch das gesamte Design fortgeführt und eingehalten.
+   
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
     - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
