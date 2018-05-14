@@ -31,8 +31,7 @@ Titel, Autoren, (Inhaltsverzeichnis)
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
 ## 2.3 Graphische Benutzerschnittstelle
-    - GUI-Mockups passend zu User Stories
-    - Modellierung der Navigation zwischen den Screens der GUI-Mockups als Zustandsdiagramm
+    ![alt text](https://github.com/finitoxx/Fitness-Applikation/blob/master/Mockups/XtremeXercising_Editieren.png)
 
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
