@@ -26,12 +26,7 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
     - Statistik zur Verteilung der Muskelgruppen (Bauch, Bizeps, Brust, Oberschenkel, Po, Rücken, Schultern, Trizeps, Waden) in Form einer Pie Chart
     - Allgemeine Statistiken zum Training (z.B. Gesamtanzahl der absolvierten Trainings, der ausgeführten Übungen, der besten Ergebnisse, etc.)
     - Möglichkeit, Körperdaten des Users zu erfassen und zu aktualisieren (Gewicht, Body Mass Index, Körpermaße)
-    
- Trainingsplan erstellen FA-M 1.1 Übungen aus Kategorien (Freie Übung, Maschine und Ausdauer) und Muskelgruppen (Brust, Beine, Bizeps, etc.) hinzufügen FA-M 1.1.a Sätze und Wiederholungen festlegen oder FA-M 1.1.b Trainingszeit festlegen FA-M 1.2 Übungen entfernen FA-M 1.3 Übungen ändern FA-M 1.4 Trainingstag festlegen FA-M 2 Trainingsplan löschen FA-M 3 Trainingsplan ändern FA-M 4 Trainingsplan durchführen FA-M 4.1 Übung zum Trainieren auswählen FA-M 4.2 Ausführungsart wird angezeigt (Sätze und Wiederholungen/Zeit) FA-M 4.3 Erfolg eintragen (Gewicht/Strecke) FA-M 5 Statistiken zu Trainingsplänen anzeigen FA-M 5.1 Statistik zu den durch das Training abgedeckten Muskelgruppen FA-M 5.2 Statistik zu Trainingserfolgen FA-M 5.2.1 Zeitintervall für die Statistik einstellbar (eine Woche, ein Monat, drei Monate, sechs Monate, ein Jahr)
 
-
-
-    
 #### Zielbenutzergruppe
 Zur Zielgruppe zählen alle Sport-, Fitness-, und Gesundheits-Interessenten jeglicher Altersgruppen (mit besonderem Augenmerk auf die unter 20-Jährigen bis 40-Jährigen). Die App richtet sich sowohl an Menschen, die ihr Training zu Hause, als auch im Fitness Studio absolvieren möchten. Egal ob Gewichtsverlust, Muskelaufbau oder Cardio-Training: die Applikation ist für jegliche sportliche Zielrichtung ausgelegt. Anfänger können mit der Anwendung ihren Einstieg ins regelmäßige und erfolgreiche Trainin gunterstützen und erste Fitnesserfahrungen sammeln. Fortgeschrittene haben die Möglichkeit, ihre Trainingserfolge besser prüfen und einschätzen zu können. Da die Anwendung leicht zu bedienen ist und wenig technisches Verständnis erfordert, ist sie für eine breite Nutzergruppe geeignet. Das Design ist modern und schlicht gehalten und eignet sich sowohl für weibliche als auch männliche Nutzer.
 
