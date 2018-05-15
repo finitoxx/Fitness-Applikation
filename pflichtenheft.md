@@ -69,6 +69,10 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
    ![alt text](Mockups/XtremeXercising_Trainieren.png)
    In diesem Bildschirm ist man im Trainingsmodus. Aus diesem Grund ist es hier nicht möglich, den Navigation-Drawer zu benutzen. Auch hier ﬁndet man wieder eine Liste mit allen Übungen des Trainingsplans. Das Design ist dabei aber etwas anders: statt einer Liste mit Listeneinträgen sind die Übungen hier mehr wie einzelne Einheiten angeordnet. Die Icons links neben dem Namen werden in der Akzentfarbe eingefärbt, sobald eine Übung vollständig ausgeführt wurde. Unterhalb der Liste ist ein Progress-Bar, der sich entsprechend der abgearbeiteten Übungen füllt und den Fortschritt visualisiert.
    
+### Übung ausführen
+   ![alt text](Mockups/XtremeXercising_UebungAusfuehren.png)
+   Dieser Bildschirm ist aktiv, wenn der Benutzer gerade eine bestimmte Übungseinheit ausführt. Pro Satz wird ein Bildschirm dieser Art generiert, in welchem die angestrebte Wiederholungsanzahl und ein Feld für das absolvierte Gewicht angezeigt wird. Wieder hat man die Möglichkeit, die Anzahl per Tastatur oder mit den Buttons einzustellen. Zum nächsten Satz gelangt man mit dem Pfeil am unteren rechten Bildschirm. Hat man den letzten Satz absolviert, verwandelt dieser sich in ein Häkchen und man kehrt in den vorherigen Bildschirm zurück.
+   
    
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
