@@ -56,53 +56,65 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
 
 ## 2.3 Graphische Benutzerschnittstelle
-#### Ladebildschirm
-   ![alt text](Mockups/XtremeXercising_Ladebildschirm.png)
+#### Ladebildschirm<br /><br />
+   ![alt text](Mockups/XtremeXercising_Ladebildschirm.png) <br />
+   <br />
    Im Ladebildschirm sieht man sowohl den Schriftzug als auch einen Loading-Spinner, der den Warteprozess verbildlicht, während im Hintergrund die Datenbank arbeitet und Daten daraus extrahiert werden. Darunter sieht man den Slogan der Applikation: Be the best version of yourself. Dieser soll dazu motiveren, jeden Tag sein bestes zu geben und sich zu verbessern, um seine Ziele zu erreichen, ohne sich mit anderen vergleichen zu müssen. Zugleich erkennt man die hauptsächliche Farbgestaltung, die primär aus einem dunklen Graubraun und zusätzlich aus einem feurigen Rot-Orange als Akzentfarbe besteht. Diese wird stringent durch das gesamte Design fortgeführt und eingehalten.
    
-#### Trainingspläne
-   ![alt text](Mockups/XtremeXercising_Trainingsplaene.png)
+#### Trainingspläne<br /><br />
+   ![alt text](Mockups/XtremeXercising_Trainingsplaene.png) <br />
+   <br />
    Das folgende Mockup zeigt den Hauptbildschirm der Anwendung. Oben links sieht man den Toggle-Button für den Navigation Drawer, mit dem sich dieser öﬀnen lässt. Die Statistik ﬁndet sich im Navigation Drawer, den man problemlos aus vielen verschiedenen Bildschirmen heraus erreichen kann. Darunter sieht der Nutzer alle selbst erstellten Trainingspläne in einer Liste. Unter dem Namen des Plans ﬁndet sich zudem die jeweilige Kategorie und rechts erscheinen, falls vom Nutzer so eingestellt, zwei Images: eine Glocke, falls für den Trainingsplan eine Benachrichtigung eingestellt wurde, und ein Stern, falls der Plan zu den Favoriten hinzugefügt wurde. Damit lassen sich beim Scrollen die bevorzugten Trainingspläne rasch wiedererkennen. Der FloatingActionButton mit dem Plus ermöglicht es, wie das Image bereits vermuten lässt, neue Trainingspläne zu erstellen.
    
-#### Trainingsplan erstellen
-   ![alt text](Mockups/XtremeXercising_TrainingsplanErstellen.png)
+#### Trainingsplan erstellen<br /><br />
+   ![alt text](Mockups/XtremeXercising_TrainingsplanErstellen.png) <br />
+   <br />
    Hier sieht man ein kleines Dialogfenster, in dem schnell und unkompliziert ein neuer Trainingsplan angelegt werden kann. Theoretisch ist es ausreichend einen Namen anzugeben, eine Kategorie auszuwählen und mit 'Ok' zu bestätigen. Außerdem kann über das bereits bekannte Glockensymbol ein weiterer Dialog geöﬀnet werden, mit dem eine Benachrichtigung erstellt werden kann. Dieser enthält einen TimePicker für die Uhrzeit und eine Drop-DownListe für den Wochentag, an welchem man trainieren möchte.
    
-#### Menü
-   ![alt text](Mockups/XtremeXercising_Einstellungen.png)
+#### Menü<br /><br />
+   ![alt text](Mockups/XtremeXercising_Einstellungen.png) <br />
+   <br />
    In diesem Bildschirm sieht man den Navigation-Drawer, der aus vielen verschiedenen Bildschirmen (siehe Zustandsdiagramm für die GUI-Navigation) heraus erreichbar ist. In diesem Menü kann man alle wichtigen Seiten der Applikation erreichen und persönliche Einstellungen vornehmen.
    
-#### Trainingsplan
-   ![alt text](Mockups/XtremeXercising_TrainingsplanAuswahl.png)
+#### Trainingsplan<br /><br />
+   ![alt text](Mockups/XtremeXercising_TrainingsplanAuswahl.png) <br />
+   <br />
    Dieser Bildschirm ist als eine Art Navigation-Screen zu verstehen: von hier aus hat man die Möglichkeit, ein Training zu starten, den Trainingsplan zu bearbeiten (mit Hilfe des Stift-Buttons) oder den Trainingsplan zu löschen (mittels des Mülleimer-Buttons). Hierbei wurde darauf geachtet, Texte möglichst wenig und wenn präzise einzusetzen, um den kleinen Bildschirm nicht zu überfrachten. Zudem ist es möglich, eine Benachrichtigung (Glocken-Symbol) einzurichten und den Trainingsplan als Favorit zu markieren (Stern-Symbol). Ist eines dieser Attribute gesetzt, ist das Image in der Akzentfarbe eingefärbt.
    
-#### Trainingsplan editieren
-   ![alt text](Mockups/XtremeXercising_Editieren.png)
+#### Trainingsplan editieren<br /><br />
+   ![alt text](Mockups/XtremeXercising_Editieren.png) <br />
+   <br />
    In diesem Bildschirm sieht man eine weitere Liste, die alle zum Trainingsplan gehörenden Übungseinheiten enthält. Wie im Hauptbildschirm auch existiert an der selben Stelle wie zuvor ein FloatingActionButton, mit dem neue Übungen hinzugefügt werden können. Entsprechend der Designrichtlinien ist dieser Button immer in der Akzentfarbe gehalten, damit diese wichtige Funktion visuell in den Vordergrund tritt und auf den ersten Blick erkennbar ist. Die Listeneinträge bestehen aus dem Namen der Übung, der Kategorie sowie den beanspruchten Muskelgruppen. Durch das Berühren einer Übung kann diese Bearbeitet werden.
    
-#### Übungen
-   ![alt text](Mockups/XtremeXercising_UebungHinzufuegen.png)
+#### Übungen<br /><br />
+   ![alt text](Mockups/XtremeXercising_UebungHinzufuegen.png) <br />
+   <br />
    Über den FloatingActionButton im Bildschirm "Trainingsplan editieren" landet der User in einer Übersicht über alle verfügbaren Übungen. Diese Liste besteht aus Überschriften und Einträgen. Drückt man hier auf eine Übung, kann man diese zum Trainingsplan hinzufügen. Abhängig davon welche Sortierung in der Drop-Down-Liste ausgewählt ist, passt sich die Liste dynamisch an. Bei einer alphabetischen Sortierung werden die Übungen nach dem Namen sortiert angezeigt und die Überschriften zeigen den jeweiligen Buchstaben an. Ist Kategorie ausgewählt, sieht die Sortierung wie auf dem Mockup aus. Bei einer Sortierung nach Muskelgruppen dienen diese als Überschriften und Übungen, die mehrere Muskelgruppen haben, tauchen in jeder davon auf. Auf diese Weise kann der Nutzer ganz einfach und speziﬁsch nach bestimmten Übungen suchen. Wenn er bereits weiß, wie die Übung heißt, benutzt er die alphabetische Sortierung. Möchte er beispielsweise ein Ausdauertraining erstellen, wählt er die entsprechende Kategorie und sucht dann Cardioübungen. Wenn der User sein Training nach Muskelgruppen aufteilt und zum Beispiel einen Unterkörper-Trainingsplan erstellt, sortiert er die Liste nach Muskelgruppen, um Übungen für Beine, Po und Waden zu ﬁnden.
    
-#### Übung hinzufügen
-   ![alt text](Mockups/XtremeXercising_UebungEinstellungen.png)
+#### Übung hinzufügen<br /><br />
+   ![alt text](Mockups/XtremeXercising_UebungEinstellungen.png) <br />
+   <br />
    Dieses Dialogfenster dient zur Erstellung von Übungseinheiten, also Übungen mit Sätzen und Wiederholungen, die zum ausgewählten Trainingsplan hinzugefügt werden. Zunächst gibt man ein, wie viele Sätze man durchführen möchte. Dies kann man entweder über das Textfeld und die Tastatur oder mit Hilfe der Plus- und Minus-Buttons machen. Erstere Variante ist zwar präziser, allerdings nicht immer praktischer, da man die Buttons schneller und einfacher bedienen kann. Darunter gibt man die Wiederholungen einer Übung pro Satz ein. Hierfür gibt es zwei Modi, zwischen denen man mit dem Pfeil-Button wechseln kann. Im Standard-Modus gibt es ein Feld für die Wiederholungen. Die Anzahl, die man dann eingibt, gilt für alle Sätze. Möchte man dies individualisieren, wechselt man mit dem Pfeil-Button in den erweiterten Modus. Hierbei wird (wie im Mockup gezeigt) pro eingegebenen Satz ein Textfeld für eine Wiederholung erstellt. Mit "OK" fügt man die Übungseinheit zum Trainingsplan hinzu und kehrt zurück zum vorherigen Bildschirm.
    
-#### Trainieren
-   ![alt text](Mockups/XtremeXercising_Trainieren.png)
+#### Trainieren<br /><br />
+   ![alt text](Mockups/XtremeXercising_Trainieren.png) <br />
+   <br />
    In diesem Bildschirm ist man im Trainingsmodus. Aus diesem Grund ist es hier nicht möglich, den Navigation-Drawer zu benutzen. Auch hier ﬁndet man wieder eine Liste mit allen Übungen des Trainingsplans. Das Design ist dabei aber etwas anders: statt einer Liste mit Listeneinträgen sind die Übungen hier mehr wie einzelne Einheiten angeordnet. Die Icons links neben dem Namen werden in der Akzentfarbe eingefärbt, sobald eine Übung vollständig ausgeführt wurde. Unterhalb der Liste ist ein Progress-Bar, der sich entsprechend der abgearbeiteten Übungen füllt und den Fortschritt visualisiert.
    
-### Übung ausführen
-   ![alt text](Mockups/XtremeXercising_UebungAusfuehren.png)
+### Übung ausführen<br /><br />
+   ![alt text](Mockups/XtremeXercising_UebungAusfuehren.png) <br />
+   <br />
    Dieser Bildschirm ist aktiv, wenn der Benutzer gerade eine bestimmte Übungseinheit ausführt. Pro Satz wird ein Bildschirm dieser Art generiert, in welchem die angestrebte Wiederholungsanzahl und ein Feld für das absolvierte Gewicht angezeigt wird. Wieder hat man die Möglichkeit, die Anzahl per Tastatur oder mit den Buttons einzustellen. Zum nächsten Satz gelangt man mit dem Pfeil am unteren rechten Bildschirm. Hat man den letzten Satz absolviert, verwandelt dieser sich in ein Häkchen und man kehrt in den vorherigen Bildschirm zurück.
    
-### Statistik
-   ![alt text](Mockups/XtremeXercising_Statistik.png)
+### Statistik<br /><br />
+   ![alt text](Mockups/XtremeXercising_Statistik.png) <br />
+   <br />
    Die Statistik besteht aus einem einzelnen Bildschirm, der die unterschiedlichen statistischen Darstellungen enthält. Der erste Graph zeigt den Verlauf des jeweils maximal gestemmten Gewichts, welches man bei einem Training geschaﬀt hat. Darunter kann man die Übung sowie einen Zeitraum aus der Drop-Down-Liste auswählen, die man sich mit dem Graph anzeigen lassen möchte. Darunter ist eine Pie-Chart, welche die Verteilung der einzelnen Muskelgruppen in Prozent anzeigt. Damit kann der Nutzer sehen, wie spezialisiert oder ausgewogen er seinen Körper trainiert. Darüber hinaus gibt es einen weiteren Graphen. Dieser benutzt als Wert die Summe aus den Wiederholungen multipliziert mit dem Gewicht. Dieser Graph berücksichtigt somit nicht nur das Gewicht sondern auch die Sätze und Wiederholungen und zeigt den Fortschritt in Hinblick auf alle drei Variablen an. 
    Somit bekommt der Nutzer einen umfassenden Überblick über sein Training und seine Leistungssteigerung. Dabei kann er die Übungen einzeln und individuell prüfen und sowohl einen kurzfristigen wie auch langfristigen Einblick gewinnen, indem er den Zeitraum entsprechend anpasst.
    
-### GUI-Navigation
-   ![alt text](Diagramme/GUINavigation.png)
+### GUI-Navigation<br /><br />
+   ![alt text](Diagramme/GUINavigation.png) <br />
+   <br />
    Zustandsgraph, der die GUI-Navigation darstellt.
    
    
