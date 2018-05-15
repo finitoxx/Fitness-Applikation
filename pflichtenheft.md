@@ -1,4 +1,3 @@
-
 # Anforderungs- und Entwurfsspezifikation ("Pflichtenheft")
 
 ## Xtreme Xercising - Mobile Anwendung zur Erstellung, Ausführung und Auswertung von Trainingsplänen
@@ -21,16 +20,12 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
 #### Motivation
     
 #### Umfang
-    - Erstellen, ändern und löschen von Trainingsplänen (Kategorien: Muskelaufbau, Cardio, Definition)
-    - Hinzufügen von Übungen zum Trainingsplan (Sätze und Wiederholungen bzw. Zeit), sowie das Entfernen und Verändern von diesen
-    - Erstellen eigener Übungen (Name, Kategorie, Muskelgruppe, Art der Ausführung) sowie das Entfernen und Verändern von diesen 
-    - Erstellen von Push-up-Nachrichten zu Trainingsplänen, um den Nutzer an das Trainings zu erinnern
-    - Ausführen eines Trainings, wobei die Übungen in beliebiger Reihenfolge ausgeführt werden können und die erzielten Gewichte bzw. zurückgelegte Strecke eingetragen werden kann
-    - Statistik mit Graphen zum maximal geschafften Gewicht bzw. maximal zurückgelegte Strecke bei einer Übung in Hinblick auf einen einstellbaren Zeitraum
-    - Statistik zu einem kummulierten Wert aus Wiederholungen, Sätzen und Gewicht bzw. aus Zeit und Strecke mit einem Graphen in Hinblick auf einen einstellbaren Zeitraum
-    - Statistik zur Verteilung der Muskelgruppen (Bauch, Bizeps, Brust, Oberschenkel, Po, Rücken, Schultern, Trizeps, Waden) in Form einer Pie Chart
-    - Allgemeine Statistiken zum Training (z.B. Gesamtanzahl der absolvierten Trainings, der ausgeführten Übungen, der besten Ergebnisse, etc.)
-    - Möglichkeit, Körperdaten des Users zu erfassen und zu aktualisieren (Gewicht, Body Mass Index, Körpermaße)
+Mit der Anwendung soll der Nutzer eigene Trainingspläne erstellen und vorhandene ändern oder löschen können. Bei der Erstellung wird ein Name angegeben, eine Kategorie (Muskelaufbau, Cardio, Definition) ausgewählt und bei Bedarf eine Erinnerung festgelegt. Dabei können Wochentag und Uhrzeit festgelegt werden, sodass sich der Benutzer zum festgelegten Zeitpunkt an sein Training erinnert lassen kann. 
+Zu einem Trainingsplan können dann Übungen hinzugefügt und wieder entfernt oder Änderungen an diesen vorgenommen werden. Dabei legt man die Sätze und Wiederholungen beziehungsweise die Trainingszeit fest. Außerdem gibt es die Möglichkeit, neben den bereits vorhandenen Übungen eigene zu erstellen, diese zu löschen oder zu verändern. Zum Erstellen vergibt man wie bei den Trainingsplänen einen Namen, wählt aus einer Kategorie (Ausdauer, Freie Übung, Maschine) aus und gibt die beanspruchten Muskelgruppen (Bauch, Bizeps, Brust, Oberschenkel, Po, Rücken, Schultern, Trizeps, Waden) an.
+
+Im Trainingsmodus können die Übungen eines Trainingssplans in beliebiger Reihenfolge abgearbeitet werden, wobei ein Progress-Bar den Nutzer über den Fortschritt des Trainings informiert. Nach der Ausführung der Training können immer jeweils pro Satz das geschaffte Gewicht oder die zurückgelegte Strecke notiert werden. Das Beenden eines Trainings wird dem Nutzer in Form eines Erfolgsbildschirms mitgeteilt.
+
+In der Statistik kann der Nutzer aus vielen unterschiedlichen grafischen Darstellungen und Tabellen einen Überblick über seine sportlichen Leistungen gewinnen. Der erste Graph stellt die Maximalleistung einer Übung in einem festlegbaren Zeitraum dar. Ein weiterer Graph basiert auf einem kummulierten Wert aus Sätzen, Wiederholungen und Gewicht bzw. aus Zeit und Strecke. Auch hier wählt der Nutzer den zu berücksichtigten Zeitpunkt aus. Darüberhinaus gibt eine Pie Chart mit der Verteilung der trainierten Muskelgruppen und weitere allgemeine Statistiken (z.B. die Gesamtanzahl der absolvierten Trainings, der ausgeführten Übungen, der besten Ergebnisse, u.ä.). Außerdem soll es die Möglichkeit geben, die Körperdaten des Users zu erfassen und aktualisieren zu können, um eine Übersicht über die Veränderungen von Gewicht, Body Mass Index und der Körpermaßen bereit zu stellen.
 
 #### Marktanforderungen
 
