@@ -78,6 +78,10 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
    Die Statistik besteht aus einem einzelnen Bildschirm, der die unterschiedlichen statistischen Darstellungen enthält. Der erste Graph zeigt den Verlauf des jeweils maximal gestemmten Gewichts, welches man bei einem Training geschaﬀt hat. Darunter kann man die Übung sowie einen Zeitraum aus der Drop-Down-Liste auswählen, die man sich mit dem Graph anzeigen lassen möchte. Darunter ist eine Pie-Chart, welche die Verteilung der einzelnen Muskelgruppen in Prozent anzeigt. Damit kann der Nutzer sehen, wie spezialisiert oder ausgewogen er seinen Körper trainiert. Darüber hinaus gibt es einen weiteren Graphen. Dieser benutzt als Wert die Summe aus den Wiederholungen multipliziert mit dem Gewicht. Dieser Graph berücksichtigt somit nicht nur das Gewicht sondern auch die Sätze und Wiederholungen und zeigt den Fortschritt in Hinblick auf alle drei Variablen an. 
    Somit bekommt der Nutzer einen umfassenden Überblick über sein Training und seine Leistungssteigerung. Dabei kann er die Übungen einzeln und individuell prüfen und sowohl einen kurzfristigen wie auch langfristigen Einblick gewinnen, indem er den Zeitraum entsprechend anpasst.
    
+### GUI-Navigation
+   ![alt text](Diagramme/GUINavigation.png)
+   Zustandsgraph, der die GUI-Navigation darstellt.
+   
    
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
