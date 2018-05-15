@@ -45,7 +45,9 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
    ![alt text](Mockups/XtremeXercising_TrainingsplanErstellen.png)
    Hier sieht man ein kleines Dialogfenster, in dem schnell und unkompliziert ein neuer Trainingsplan angelegt werden kann. Theoretisch ist es ausreichend einen Namen anzugeben, eine Kategorie auszuwählen und mit 'Ok' zu bestätigen. Außerdem kann über das bereits bekannte Glockensymbol ein weiterer Dialog geöﬀnet werden, mit dem eine Benachrichtigung erstellt werden kann. Dieser enthält einen TimePicker für die Uhrzeit und eine Drop-DownListe für den Wochentag, an welchem man trainieren möchte.
    
-   
+#### Menü
+   ![alt text](Mockups/XtremeXercising_Einstellungen.png)
+   In diesem Bildschirm sieht man den Navigation-Drawer, der aus vielen verschiedenen Bildschirmen (siehe Zustandsdiagramm für die GUI-Navigation) heraus erreichbar ist. In diesem Menü kann man alle wichtigen Seiten der Applikation erreichen und persönliche Einstellungen vornehmen.
    
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
