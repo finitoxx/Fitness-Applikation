@@ -49,6 +49,10 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
    ![alt text](Mockups/XtremeXercising_Einstellungen.png)
    In diesem Bildschirm sieht man den Navigation-Drawer, der aus vielen verschiedenen Bildschirmen (siehe Zustandsdiagramm für die GUI-Navigation) heraus erreichbar ist. In diesem Menü kann man alle wichtigen Seiten der Applikation erreichen und persönliche Einstellungen vornehmen.
    
+#### Trainingsplan
+   ![alt text](Mockups/XtremeXercising_Einstellungen.png)
+   Dieser Bildschirm ist als eine Art Navigation-Screen zu verstehen: von hier aus hat man die Möglichkeit, ein Training zu starten, den Trainingsplan zu bearbeiten (mit Hilfe des Stift-Buttons) oder den Trainingsplan zu löschen (mittels des Mülleimer-Buttons). Hierbei wurde darauf geachtet, Texte möglichst wenig und wenn präzise einzusetzen, um den kleinen Bildschirm nicht zu überfrachten. Zudem ist es möglich, eine Benachrichtigung (Glocken-Symbol) einzurichten und den Trainingsplan als Favorit zu markieren (Stern-Symbol). Ist eines dieser Attribute gesetzt, ist das Image in der Akzentfarbe eingefärbt.
+   
 ## 2.4 Anforderungen im Detail
     - User Stories mit Akzeptanzkritierien 
     - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
