@@ -1,3 +1,4 @@
+
 # Anforderungs- und Entwurfsspezifikation ("Pflichtenheft")
 
 ## Xtreme Xercising - Mobile Anwendung zur Erstellung, Ausführung und Auswertung von Trainingsplänen
@@ -15,6 +16,10 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
     - Informationen zu Zielbenutzergruppen und deren Merkmale (Bildung, Erfahrung, Sachkenntnis)
     - Abgrenzung (Was ist das Softwaresystem _nicht_)
     
+#### Anwendungsbereiche
+
+#### Motivation
+    
 #### Umfang
     - Erstellen, ändern und löschen von Trainingsplänen (Kategorien: Muskelaufbau, Cardio, Definition)
     - Hinzufügen von Übungen zum Trainingsplan (Sätze und Wiederholungen bzw. Zeit), sowie das Entfernen und Verändern von diesen
@@ -26,6 +31,10 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
     - Statistik zur Verteilung der Muskelgruppen (Bauch, Bizeps, Brust, Oberschenkel, Po, Rücken, Schultern, Trizeps, Waden) in Form einer Pie Chart
     - Allgemeine Statistiken zum Training (z.B. Gesamtanzahl der absolvierten Trainings, der ausgeführten Übungen, der besten Ergebnisse, etc.)
     - Möglichkeit, Körperdaten des Users zu erfassen und zu aktualisieren (Gewicht, Body Mass Index, Körpermaße)
+
+#### Marktanforderungen
+
+#### Alleinstellungsmerkmale
 
 #### Zielbenutzergruppe
 Zur Zielgruppe zählen alle Sport-, Fitness-, und Gesundheits-Interessenten jeglicher Altersgruppen (mit besonderem Augenmerk auf die unter 20-Jährigen bis 40-Jährigen). Die App richtet sich sowohl an Menschen, die ihr Training zu Hause, als auch im Fitness Studio absolvieren möchten. Egal ob Gewichtsverlust, Muskelaufbau oder Cardio-Training: die Applikation ist für jegliche sportliche Zielrichtung ausgelegt. Anfänger können mit der Anwendung ihren Einstieg ins regelmäßige und erfolgreiche Trainin gunterstützen und erste Fitnesserfahrungen sammeln. Fortgeschrittene haben die Möglichkeit, ihre Trainingserfolge besser prüfen und einschätzen zu können. Da die Anwendung leicht zu bedienen ist und wenig technisches Verständnis erfordert, ist sie für eine breite Nutzergruppe geeignet. Das Design ist modern und schlicht gehalten und eignet sich sowohl für weibliche als auch männliche Nutzer.
