@@ -19,6 +19,10 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
 
 Zur Zielgruppe zählen alle Sport-, Fitness-, und Gesundheits-Interessenten jeglicher Altersgruppen (mit besonderem Augenmerk auf die unter 20-Jährigen bis 40-Jährigen). Die App richtet sich sowohl an Menschen, die ihr Training zu Hause, als auch im Fitness Studio absolvieren möchten. Egal ob Gewichtsverlust, Muskelaufbau oder Cardio-Training: die Applikation ist für jegliche sportliche Zielrichtung ausgelegt. Anfänger können mit der Anwendung ihren Einstieg ins regelmäßige und erfolgreiche Trainin gunterstützen und erste Fitnesserfahrungen sammeln. Fortgeschrittene haben die Möglichkeit, ihre Trainingserfolge besser prüfen und einschätzen zu können. Da die Anwendung leicht zu bedienen ist und wenig technisches Verständnis erfordert, ist sie für eine breite Nutzergruppe geeignet. Das Design ist modern und schlicht gehalten und eignet sich sowohl für weibliche als auch männliche Nutzer.
 
+#### Abgrenzung
+
+Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Ausführung von sportlichen Übungen. Das bedeutet, dass es keine entsprechenden Anleitungen oder Bilder zur korrekten Ausführung geben wird. Auch eine Community- oder eine Share-Funktion, mit Hilfe derer sich Nutzer austauschen oder gegenseitig untersützen können, ist zu diesem Zeitpunkt nicht eingeplant. Des weiteren werden auch jegliche medizinischen, gesundheitlichen und ernährungsspezifischen Aspekte nicht in der Fitness-App berücksichtigt.
+
 # 2 Anforderungen
 
 ## 2.1 Funktionale Anforderungen
