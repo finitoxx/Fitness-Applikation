@@ -16,6 +16,8 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
     - Abgrenzung (Was ist das Softwaresystem _nicht_)
     
 #### Anwendungsbereiche
+Zu den größten wachsenden Trends der letzten Jahre kann man sowohl die Digitalisierung wie auch das Thema Gesundheit und alle damit verbundenen Unterthemen wie Fitness, gesundem Lifestyle und Ernährung zählen.[1] Diese Trends sind oﬀensichtliche Begleiterscheinungen der allgemeinen weltweiten Entwicklung: Der technologische Fortschritt erschließt immer neue Märkte, das alltägliche Leben wird zunehmend digitalisiert und das Smartphone ist der ständige Begleiter. Über das bloße Telefonieren und Schreiben von Mitteilungen ist das Handy längst hinausgewachsen. Heutzutage nutzt man es zur Informationsgewinnung, zum Einkaufen, zum Planen und Strukturieren des Tagesablaufes, zu Unterhaltungszwecken und vielem mehr. Gleichzeitig wächst der Gesundheitsbegriff immer weiter. Hierbei geht es nicht mehr nur um die bloße körperliche Gesundheit, sondern vielmehr um die “aktive Selbstoptimierung“[1] mit dem “neue[n, Anm. d. Verf.] Ziel einer Gesamtgesundheit“[1]. Gesunde Ernährung und regelmäßiger Sport gewinnen immer stärker an Bedeutung. Dahingehend wird auch die Kombination dieser beiden Trends in Form von Fitness- und Health-Apps immer bedeutsamer.[1]
+Bereits 15.000 mobile Anwendungen dieser Art werden in Deutschland angeboten, weltweit sind es bereits 40.000. Zwischen 2011 und 2012 ist die Anzahl der Downloads beinahe auf das Doppelte angewachsen: von 124 Millionen auf 247 Millionen. Die Idee hinter diesen Applikationen ist einfach: das Handy als handlichen und immer greifbaren Begleiter soll die Menschen bei ihren Zielen, zum Beispiel Abnehmen, Muskelaufbau oder Fitnesssteigerung, auf motivierende, einfache und spielerische Weise unterstützen.[1] Auf diese Anwendung ist auch Xtreme Xercising ausgelegt.
 
 #### Motivation
 Da der Markt im Bereich mobiler Anwendungen zum Thema Fitness, Gesundheit und Lifestyle immer stärker wächst, fällt es auch dementsprechend schwer, die für einen persönlich am besten geeignete Anwendung zu ﬁnden. Aus diesem Grund haben wir uns das Ziel der Entwicklung einer FitnessApp gesetzt. Ein ansprechendes und einprägsames Design in Kombination mit intuitiver und einfacher Bedienung verbindet die - unserer Meinung nach - wichtigsten Grundfunktionen für die Trainingsplangestaltung, -verwaltung, -ausführung und Fortschrittüberwachung. Xtreme Xercising soll somit der digitale Freund und Begleiter beim Sport werden. Durch das einfache Prüfen des Trainingserfolgs in Form von anschaulichen Graphen sowie das Erinnern durch Benachrichtigungen ans Trainieren soll die Motivation gefördert werden. Die Bedienung ist simpel und selbsterklärend, sodass das Eintragen der Trainingsdaten das Training erleichtern und verbessern soll. 
@@ -195,6 +197,7 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 
 ## 5.2 Referenzen
     - Handbücher, Gesetze
+    - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/
 
 ## 5.3 Index
 
