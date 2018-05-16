@@ -9,16 +9,16 @@
 ## 2 Pflichtenheft
 
    - Pflichtenheft (Fertigstellen bis zum 31.5)
-   https://github.com/finitoxx/Fitness-Applikation/blob/master/pflichtenheft.md
+   - https://github.com/finitoxx/Fitness-Applikation/blob/master/pflichtenheft.md
    
 ## 3 Softwareprojekt
 
    - Repository ihres Softwareprojekts (Fertigstellen bis zum Ende des Semesters)
-   https://github.com/finitoxx/Fitness-Applikation
+   - https://github.com/finitoxx/Fitness-Applikation
 ## 4 Projektpräsentation
 
    - Projektpräsentation (Fertigstellen bis zum Ende des Semesters)
-   --Link wird noch eingefügt--
+   - --Link wird noch eingefügt--
 ## 5 Projektbeteiligte
 
    - Jacqueline Menke
