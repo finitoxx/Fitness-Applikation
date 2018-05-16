@@ -1,24 +1,28 @@
 # Ergebnisdokument
 
 ## 1 Remark-Präsentationen
-
-   - Remark-Präsentationen auf Github-Pages über die "Theorie" der vorgegebenen Themen
+  https://finitoxx.github.io/Softwarequalitaet-Tooling/
+  https://jmenke.github.io/npm-webpack/
+  https://jmenke.github.io/React-JS/
+  https://jmenke.github.io/Rich-Client-Applikation---ES6/
    
 ## 2 Pflichtenheft
 
    - Pflichtenheft (Fertigstellen bis zum 31.5)
+   https://github.com/finitoxx/Fitness-Applikation/blob/master/pflichtenheft.md
    
 ## 3 Softwareprojekt
 
    - Repository ihres Softwareprojekts (Fertigstellen bis zum Ende des Semesters)
-   
+   https://github.com/finitoxx/Fitness-Applikation
 ## 4 Projektpräsentation
 
    - Projektpräsentation (Fertigstellen bis zum Ende des Semesters)
-   
+   --Link wird noch eingefügt--
 ## 5 Projektbeteiligte
 
-   - Namen der Projektbeteiligten
+   - Jacqueline Menke
+   - Pascal Squarra
    
 ## 6 Sonstige Leistungen
 
