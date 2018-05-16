@@ -1,10 +1,10 @@
 # Ergebnisdokument
 
 ## 1 Remark-Präsentationen
-  https://finitoxx.github.io/Softwarequalitaet-Tooling/
-  https://jmenke.github.io/npm-webpack/
-  https://jmenke.github.io/React-JS/
-  https://jmenke.github.io/Rich-Client-Applikation---ES6/
+  - Tooling Präsentation: https://finitoxx.github.io/Softwarequalitaet-Tooling/
+  - npm-webpack Präsentation: https://jmenke.github.io/npm-webpack/
+  - React.js Präsentation: https://jmenke.github.io/React-JS/
+  - ES6 Präsentation: https://jmenke.github.io/Rich-Client-Applikation---ES6/
    
 ## 2 Pflichtenheft
 
