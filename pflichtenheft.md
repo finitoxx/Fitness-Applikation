@@ -161,11 +161,6 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
    
    
 ## 2.4 Anforderungen im Detail
-    - User Stories mit Akzeptanzkritierien 
-    - Optional: Name (oder ID) und Priorität ("Must", "Should", "Could", "Won't")
-    - Strukturierung der User Stories in funktionale Gruppen
-
-### Schablone für User Stories
 
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
@@ -182,11 +177,14 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 | Übung editieren | User | eine Übung ändern können | ich meine Übungen aktualisieren kann | Übung können editiert werden | Should |
 | Übung löschen | User | eine Übung löschen können | ich ungewollte Übung entfernen kann | Übung kann entfernt werden | Must |
 | **Übungseinheit** |
-| Übungseinheit hinzufügen | User | Trainingspläne mit Trainingseinheiten bestücken |  mein Trainings genau definiere | Trainingseinheit kann erstellt werden | Must | 
+| Übungseinheit erstellen | User | Übungseinheiten mit Wiederholungen und Sätze erstellen |  ich mein Training genau definiere | Übungseinheit kann erstellt werden | Must | 
 | Übungseinheit löschen | User | Trainingseinheiten wieder entfernen können | ich meinen Trainingsplan verändern möchte | Löschbutton für Trainingseinheit wird hinzugefügt | Must |
 | Übungseinheit editieren | User | Trainingseinheiten ändern können | die Einheiten nach meinem Trainingserfolg anpassen kann | Editier-Button wird hinzugefügt | Could |
-| **Funktionen** |
+| **Trainieren** |
 | Trainieren | User | meine Trainingspläne ausführen | ich meine sportlichen Ziele erfülle | Trainingsplan kann ausgeführt werden | Must |
+| Reihenfolge ändern | User | die Reihenfolge meiner Übungseinheiten ändern | ich auf spontane Besetzung meiner Geräte reagieren kann | Einheiten lassen sich in beliebiger Reihenfolge trainieren | Should |
+| Leistung eintragen | User | meine Leistung eintragen können | diese erfasst und gespeichert wird | Leistung eingetragen werden können und gespeichert werden | Must | 
+| **Funktionen** |
 | Statistik prüfen | User | meine Trainingseinheiten auswerten | ich alle Daten grafisch dargestellt sehe | Trainingseinheiten werden erfasst und angezeigt | Must |
 | Speicherung | User | ,dass meine Daten gespeichert werden | ich beim nächsten Starten der App weiter machen kann | Trainingspläne und Einheiten werden gespeichert | Should |
 | Motivation | User | möchte ich motiviert werden | ich angespornt werde, mehr Sport zu machen | Motivationssprüche werden angezeigt | Should |
