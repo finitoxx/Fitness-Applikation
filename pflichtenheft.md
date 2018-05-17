@@ -174,21 +174,21 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 | Trainingsplan erstellen | User | einen Trainingsplan erstellen können | ich mit ihm trainieren kann | Trainingspläne können angelegt werden | Must |
 | Trainingsplan löschen | User | Trainingspläne löschen können | ich ungewollte Trainingspläne entfernen kann  | Löschbutton wird hinzugefügt | Must |
 | Trainingsplan generieren | User | möchte ich Trainingspläne erstellt kriegen | ich mir keine Gedanken darüber machen muss | Trainingspläne werden generiert | Won't |  
-| Favoriten | User | meine Lieblingstrainingspläne markieren | ich sie schneller wiederfinde | Trainingsplan kann markiert werden | Must |
+| Favorit | User | meine Lieblingstrainingspläne markieren | ich sie schneller wiederfinde | Trainingsplan kann markiert werden | Must |
 | Timer stellen | User | mir Erinnerungen stellen | ich mein Training nicht vergesse | Push-up Benachrichtigungen können eingestellt werden | Could |
+| Übung hinzufügen | User | Übungen als Übungseinheit zu meinen Trainingsplänen hinzufügen | ich meine Trainingspläne gestalten kann | Trainingseinheiten können erstellt werden | Must |  
 | **Übung** |
 | Übung erstellen | User | eine Übung anlegen können | ich die die Übung zu Trainingsplänen hinzufügen kann | Übung können angelegt werden | Must |
-| Übung editieren | User | eine Übung ändern können | ich meine Übungen aktualisieren kann | Übung können editiert werden | Must |
+| Übung editieren | User | eine Übung ändern können | ich meine Übungen aktualisieren kann | Übung können editiert werden | Should |
 | Übung löschen | User | eine Übung löschen können | ich ungewollte Übung entfernen kann | Übung kann entfernt werden | Must |
-| **Trainingseinheit** |
-| Trainingseinheit hinzufügen | User | Trainingspläne mit Trainingseinheiten bestücken |  mein Trainings genau definiere | Trainingseinheit kann erstellt werden | Must | 
-| Trainingseinheit löschen | User | Trainingseinheiten wieder entfernen können | ich meinen Trainingsplan verändern möchte | Löschbutton für Trainingseinheit wird hinzugefügt | Must |
-| Trainingseinheit editieren | User | Trainingseinheiten ändern können | die Einheiten nach meinem Trainingserfolg anpassen kann | Editier-Button wird hinzugefügt | Could |
+| **Übungseinheit** |
+| Übungseinheit hinzufügen | User | Trainingspläne mit Trainingseinheiten bestücken |  mein Trainings genau definiere | Trainingseinheit kann erstellt werden | Must | 
+| Übungseinheit löschen | User | Trainingseinheiten wieder entfernen können | ich meinen Trainingsplan verändern möchte | Löschbutton für Trainingseinheit wird hinzugefügt | Must |
+| Übungseinheit editieren | User | Trainingseinheiten ändern können | die Einheiten nach meinem Trainingserfolg anpassen kann | Editier-Button wird hinzugefügt | Could |
 | **Funktionen** |
 | Trainieren | User | meine Trainingspläne ausführen | ich meine sportlichen Ziele erfülle | Trainingsplan kann ausgeführt werden | Must |
 | Statistik prüfen | User | meine Trainingseinheiten auswerten | ich alle Daten grafisch dargestellt sehe | Trainingseinheiten werden erfasst und angezeigt | Must |
-| Usability | Developer | die App mit bester Usability gestalten | User schnell gefallen an der App finden | Usability bei der Implementierung beachtet | Should | 
-| Speicherung | User | ,dass meine Daten gespeichert werden | ich beim nächsten Starten der App weiter machen kann | Trainingspläne und Einheiten werden gespeichert | Must |
+| Speicherung | User | ,dass meine Daten gespeichert werden | ich beim nächsten Starten der App weiter machen kann | Trainingspläne und Einheiten werden gespeichert | Should |
 | Motivation | User | möchte ich motiviert werden | ich angespornt werde, mehr Sport zu machen | Motivationssprüche werden angezeigt | Should |
 
 
