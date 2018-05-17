@@ -182,6 +182,18 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
 | Lernen  |Benutzer| bei Fehleingabe die Lösung angezeigt bekommen|ich lernen kann| Lösung wird angezeigt | Muss |
+| Trainingsplan erstellen | User | einen Trainingsplan erstellen können | ich mit ihm trainieren kann | Trainingspläne können angelegt werden | Muss |
+| Übung erstellen | User | eine Übung anlegen können | ich die die Übung zu Trainingsplänen hinzufügen kann | Übung können angelegt werden | Muss |
+| Trainingsplan editieren | User | meine Trainingspläne verändern können | ich meine Trainingspläne aktualisieren kann | Trainingsplan kann editiert werden | Muss |
+| Trainieren | User | meine Trainingspläne ausführen | ich meine sportlichen Ziele erfülle | Trainingsplan kann ausgeführt werden | Muss |
+| Statistik prüfen | User | meine Trainingseinheiten auswerten | ich alle Daten grafisch dargestellt sehe | Trainingseinheiten werden erfasst und angezeigt | Muss |
+| Timer stellen | User | mir Erinnerungen stellen | ich mein Training nicht vergesse | Push-up Benachrichtigungen können eingestellt werden | Kann |
+| Usability | Developer | die App mit bester Usability gestalten | User schnell gefallen an der App finden | Usability bei der Implementierung beachtet | Muss | 
+| Speicherung | User | ,dass meine Daten gespeichert werden | ich beim nächsten Starten der App weiter machen kann | Trainingspläne und Einheiten werden gespeichert | Muss |
+| Favoriten | User | meine Lieblingstrainingspläne markieren | ich sie schneller wiederfinde | Trainingsplan kann markiert werden | Muss |
+| Motivation | User | möchte ich motiviert werden | ich angespornt werde, mehr Sport zu machen | Motivationssprüche werden angezeigt | Soll |
+| Löschen | User | Trainingspläne oder Übungen löschen können | ich ungewollte Daten entferne | Löschbutton wird hinzugefügt | Muss |
+  
 
 
 # 3 Technische Beschreibung
