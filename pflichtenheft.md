@@ -173,16 +173,16 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 | Timer stellen | User | mir Erinnerungen stellen | ich mein Training nicht vergesse | Push-up Benachrichtigungen können eingestellt werden | Could |
 | Übung hinzufügen | User | Übungen zu meinen Trainingsplänen hinzufügen | ich meine Trainingspläne gestalten kann | Trainingseinheiten können erstellt werden | Must |  
 | **Übung** |
-| Übung erstellen | User | eine Übung anlegen können | ich die die Übung zu Trainingsplänen hinzufügen kann | Übung können angelegt werden | Must |
+| Übung erstellen | User | eine Übung anlegen können | ich die die Übung zu Trainingsplänen hinzufügen kann | Übung können angelegt werden | Should |
 | Übung editieren | User | eine Übung ändern können | ich meine Übungen aktualisieren kann | Übung können editiert werden | Should |
-| Übung löschen | User | eine Übung löschen können | ich ungewollte Übung entfernen kann | Übung kann entfernt werden | Must |
+| Übung löschen | User | eine Übung löschen können | ich ungewollte Übung entfernen kann | Übung kann entfernt werden | Should |
 | **Übungseinheit** |
 | Übungseinheit erstellen | User | Übungseinheiten mit Wiederholungen und Sätze erstellen | ich festlegen kann, wie oft oder wie lang ich eine Übung ausführen will | Übungseinheit kann erstellt werden | Must | 
 | Übungseinheit löschen | User | Trainingseinheiten wieder entfernen können | ich meinen Trainingsplan verändern kann | Löschbutton für Trainingseinheit wird hinzugefügt | Must |
 | Übungseinheit editieren | User | Trainingseinheiten ändern können | die Einheiten an meinen Trainingsfortschritt anpassen kann | Editier-Button wird hinzugefügt | Could |
 | **Trainieren** |
 | Trainieren | User | meine Trainingspläne ausführen | ich meine Leistungen dokumentieren und festhalten kann | Trainingsplan kann ausgeführt werden | Must |
-| Reihenfolge ändern | User | die Reihenfolge meiner Übungseinheiten ändern | ich frei und spontan entscheiden kann, wann ich welche Übung ausführen möchte | Einheiten lassen sich in beliebiger Reihenfolge ausführen | Should |
+| Reihenfolge ändern | User | die Reihenfolge meiner Übungseinheiten ändern | ich frei und spontan entscheiden kann, wann ich welche Übung ausführen möchte | Einheiten lassen sich in beliebiger Reihenfolge ausführen | Must |
 | Leistung eintragen | User | meine Leistung eintragen können | diese statistisch ausgewertet werden können | Leistung eingetragen werden können und gespeichert werden | Must | 
 | **Funktionen** |
 | Statistik prüfen | User | meine Trainingseinheiten auswerten | ich meine Fitnesserfolge einfach und anschaulich nachvollziehen kann | Trainingseinheiten werden erfasst und angezeigt | Must |
