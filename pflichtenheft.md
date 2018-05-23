@@ -108,11 +108,36 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 ### 2.2.1 Rahmenbedingungen
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
 
+| **Kategorie**| **Anforderung**|
+|:-----|:----------:|
+| Normen | ... |
+| Standards | ... |
+| Protokolle | ... |
+| Hardware | Endgeräte: Google Nexus 5X API-Level ?????????, Samsung Galaxy S7 API-Level ????????? |
+| Externe Vorgaben | ... |
+
 ### 2.2.2 Betriebsbedingungen
     - Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
+    
+| **Kategorie**| **Anforderung**|
+|:-----|:----------:|
+| Entwicklungsumgebung | Visual Studio Code |
+| Programmiersprache | Javascript (React Native) |
+| Compile-SDK-Version | ... |
+| Dokumentation | Markdown |
+| Versionsverwaltungssoftare | Git mithilfe von GitHub und GitHub Desktop |
+| UML-Werkzeug | UMLet Version 14.2 |
+| Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
 
 ### 2.2.3 Qualitätsmerkmale
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
+    
+| **Kategorie**| **Merkmal**|
+|:-----|:----------:|
+| Performance | ... |
+| Sicherheit | Datenspeicherung bei jeder Datenmanipulation mithilfe der dokumentenbasierten Datenbank Couch.db bzw. Pouch.db |
+| Zuverlässigkeit | ... |
+| Benutzerfreundlichkeit | ... |
 
 ## 2.3 Graphische Benutzerschnittstelle
 #### Ladebildschirm<br /><br />
