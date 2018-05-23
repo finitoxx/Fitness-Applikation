@@ -87,16 +87,20 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
    ![alt text](Diagramme/Traininsplan.png) <br />
    <br />
 
-#### Use-Case-Diagramm "Trainingsplan bearbeiten"
+#### Use-Case-Diagramm "Trainingsplan bearbeiten" <br />
    ![alt text](Diagramme/Trainingsplan_bearbeiten.png) <br />
    <br />
    
-#### Use-Case-Diagramm "Eigene Übungen erstellen"
+#### Use-Case-Diagramm "Eigene Übungen erstellen" <br />
    ![alt text](Diagramme/Eigene_Übungen_erstellen.png) <br />
    <br />
    
-#### Use-Case-Diagramm "Trainieren"
+#### Use-Case-Diagramm "Trainieren" <br />
    ![alt text](Diagramme/Trainieren.png) <br />
+   <br />
+   
+#### Use-Case-Diagramm "Statistik auswerten" <br />
+   ![alt text](Diagramme/Statistik_auswerten.png) <br />
    <br />
 
 ## 2.2 Nicht-funktionale Anforderungen 
