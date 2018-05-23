@@ -94,6 +94,10 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 #### Use-Case-Diagramm "Eigene Übungen erstellen"
    ![alt text](Diagramme/Eigene_Übungen_erstellen.png) <br />
    <br />
+   
+#### Use-Case-Diagramm "Trainieren"
+   ![alt text](Diagramme/Trainieren.png) <br />
+   <br />
 
 ## 2.2 Nicht-funktionale Anforderungen 
 
