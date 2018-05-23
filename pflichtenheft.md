@@ -83,12 +83,16 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
 # 2 Anforderungen
 
 ## 2.1 Funktionale Anforderungen <br />
-#### Use-Case-Diagramm Trainingsplan
+#### Use-Case-Diagramm "Trainingsplan"
    ![alt text](Diagramme/Traininsplan.png) <br />
    <br />
 
-#### Use-Case-Diagramm Trainingsplan bearbeiten
+#### Use-Case-Diagramm "Trainingsplan bearbeiten"
    ![alt text](Diagramme/Trainingsplan_bearbeiten.png) <br />
+   <br />
+   
+#### Use-Case-Diagramm "Eigene Übungen erstellen"
+   ![alt text](Diagramme/Eigene_Übungen_erstellen.png) <br />
    <br />
 
 ## 2.2 Nicht-funktionale Anforderungen 
