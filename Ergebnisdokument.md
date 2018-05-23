@@ -1,6 +1,7 @@
 # Ergebnisdokument
 
 ## 1 Remark-Präsentationen
+
   - Tooling Präsentation: https://finitoxx.github.io/Softwarequalitaet-Tooling/
   - npm-webpack Präsentation: https://jmenke.github.io/npm-webpack/
   - React.js Präsentation: https://jmenke.github.io/React-JS/
@@ -13,12 +14,13 @@
    
 ## 3 Softwareprojekt
 
-   - Repository ihres Softwareprojekts (Fertigstellen bis zum Ende des Semesters)
    - https://github.com/finitoxx/Fitness-Applikation
+   
 ## 4 Projektpräsentation
 
    - Projektpräsentation (Fertigstellen bis zum Ende des Semesters)
    - --Link wird noch eingefügt--
+   
 ## 5 Projektbeteiligte
 
    - Jacqueline Menke
