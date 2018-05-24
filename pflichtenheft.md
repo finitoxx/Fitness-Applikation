@@ -87,11 +87,13 @@ Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Aus
    ![alt text](Diagramme/Traininsplan.png) <br />
    <br />
    
-Use-Case-Diagramm zu den Funktionen des Trainingsplans. Dieser kann durch den Nutzer erstellt, bearbeitet oder gelöscht werden. Bei der Erstellung eines neuen Trainingsplans muss generell nur ein Name eingegeben werden, optional kann eine Benachrichtigung erstellt werden, die den Nutzer an die Ausübung des Plans erinnert. Soll der Trainingsplan verändert werden, können Name und Benachrichtigung nach Belieben angepasst werden.
+Use-Case-Diagramm zu den Funktionen des Trainingsplans. Dieser kann durch den Nutzer erstellt, editiert oder gelöscht werden. Bei der Erstellung eines neuen Trainingsplans muss generell nur ein Name eingegeben werden, optional kann eine Benachrichtigung erstellt werden, die den Nutzer an die Ausübung des Plans erinnert. Soll der Trainingsplan verändert werden, können Name und Benachrichtigung nach Belieben angepasst werden.
 
 #### Use-Case-Diagramm "Trainingsplan bearbeiten" <br />
    ![alt text](Diagramme/Trainingsplan_bearbeiten.png) <br />
    <br />
+   
+Hat man einen Trainingsplan erstellt, so können diesem neue Übungen als Übungseinheit hinzugefügt, verändert oder wieder entfernt werden. Um nach einer bestimmten Übung zu suchen, lassen sich diese nach verschiedenen Kriteriern sortieren. Hat man sich für eine Übung entschieden, muss der Nutzer die Anzahl an Sätzen und Wiederholungen angeben oder die Dauer die Ausführung. Selbiges kann beim Editieren einer Übung verändert werden.
    
 #### Use-Case-Diagramm "Eigene Übungen erstellen" <br />
    ![alt text](Diagramme/Eigene_Übungen_erstellen.png) <br />
