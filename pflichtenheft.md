@@ -101,10 +101,12 @@ Bei der Erstellung einer eigenen Übung vergibt der Nutzer zunächst einen einde
 #### Use-Case-Diagramm "Trainieren" <br />
    ![alt text](Diagramme/Trainieren.png) <br />
    <br />
+Möchte der Nutzer ein Trainings ausführen, wählt er zunächst den gewünschten Trainingsplan aus. Danach ist es ihm überlassen, die Reihenfolge der Ausführung der Übungen nach Belieben zu bestimmen. Hat er sich dann für eine Übung entschieden, trägt er nach der Ausführung die vollbrachte Leistung - entweder das geschaffte Gewicht oder die zurückgelegte Strecke - ein.
    
 #### Use-Case-Diagramm "Statistik auswerten" <br />
    ![alt text](Diagramme/Statistik_auswerten.png) <br />
    <br />
+Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, die er sich als Graph anzeigen lassen möchte. Danach hat er die Möglichkeit, den Zeitraum einzugrenzen, um sich den Verlauf seiner erbrachten Leistung entweder in einem kurz-, mittel- oder langfristigen Zeitintervall anzeigen zu lassen.
 
 ## 2.2 Nicht-funktionale Anforderungen 
 
