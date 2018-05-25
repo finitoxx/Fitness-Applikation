@@ -10,7 +10,7 @@ export default class App extends React.Component {
         <Text>Lädt der wirklich automatisch?.</Text>
         <Text>Was ist denn das Developermenü?????.</Text>
         <Text>Das Leben ist schön</Text>
-		<Text>So ist das Leben</Text>
+		    <Text>So ist das Leben</Text>
     <Button
       title="Mibi"
 			color="#0f1"
