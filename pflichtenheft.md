@@ -145,6 +145,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Benutzerfreundlichkeit | ... |
 
 ## 2.3 Graphische Benutzerschnittstelle
+
 #### Ladebildschirm<br /><br />
    ![alt text](Mockups/XtremeXercising_Ladebildschirm.png) <br />
    <br />
@@ -190,18 +191,18 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
    <br />
    In diesem Bildschirm ist man im Trainingsmodus. Aus diesem Grund ist es hier nicht möglich, den Navigation-Drawer zu benutzen. Auch hier ﬁndet man wieder eine Liste mit allen Übungen des Trainingsplans. Das Design ist dabei aber etwas anders: statt einer Liste mit Listeneinträgen sind die Übungen hier mehr wie einzelne Einheiten angeordnet. Die Icons links neben dem Namen werden in der Akzentfarbe eingefärbt, sobald eine Übung vollständig ausgeführt wurde. Unterhalb der Liste ist ein Progress-Bar, der sich entsprechend der abgearbeiteten Übungen füllt und den Fortschritt visualisiert.
    
-### Übung ausführen<br /><br />
+#### Übung ausführen<br /><br />
    ![alt text](Mockups/XtremeXercising_UebungAusfuehren.png) <br />
    <br />
    Dieser Bildschirm ist aktiv, wenn der Benutzer gerade eine bestimmte Übungseinheit ausführt. Pro Satz wird ein Bildschirm dieser Art generiert, in welchem die angestrebte Wiederholungsanzahl und ein Feld für das absolvierte Gewicht angezeigt wird. Wieder hat man die Möglichkeit, die Anzahl per Tastatur oder mit den Buttons einzustellen. Zum nächsten Satz gelangt man mit dem Pfeil am unteren rechten Bildschirm. Hat man den letzten Satz absolviert, verwandelt dieser sich in ein Häkchen und man kehrt in den vorherigen Bildschirm zurück.
    
-### Statistik<br /><br />
+#### Statistik<br /><br />
    ![alt text](Mockups/XtremeXercising_Statistik.png) <br />
    <br />
    Die Statistik besteht aus einem einzelnen Bildschirm, der die unterschiedlichen statistischen Darstellungen enthält. Der erste Graph zeigt den Verlauf des jeweils maximal gestemmten Gewichts, welches man bei einem Training geschaﬀt hat. Darunter kann man die Übung sowie einen Zeitraum aus der Drop-Down-Liste auswählen, die man sich mit dem Graph anzeigen lassen möchte. Darunter ist eine Pie-Chart, welche die Verteilung der einzelnen Muskelgruppen in Prozent anzeigt. Damit kann der Nutzer sehen, wie spezialisiert oder ausgewogen er seinen Körper trainiert. Darüber hinaus gibt es einen weiteren Graphen. Dieser benutzt als Wert die Summe aus den Wiederholungen multipliziert mit dem Gewicht. Dieser Graph berücksichtigt somit nicht nur das Gewicht sondern auch die Sätze und Wiederholungen und zeigt den Fortschritt in Hinblick auf alle drei Variablen an. 
    Somit bekommt der Nutzer einen umfassenden Überblick über sein Training und seine Leistungssteigerung. Dabei kann er die Übungen einzeln und individuell prüfen und sowohl einen kurzfristigen wie auch langfristigen Einblick gewinnen, indem er den Zeitraum entsprechend anpasst.
    
-### GUI-Navigation<br /><br />
+#### GUI-Navigation<br /><br />
    ![alt text](Diagramme/GUINavigation.png) <br />
    <br />
    Zustandsgraph, der die GUI-Navigation darstellt.
@@ -290,7 +291,8 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 # 4 Projektorganisation
 
 ## 4.1 Annahmen
-### Verwendete Technologien
+
+#### Verwendete Technologien
 | **Kategorie**| **Anforderung**|
 |:-----|:----------:|
 | Entwicklungsumgebung | Visual Studio Code |
@@ -300,14 +302,14 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | UML-Werkzeug | UMLet Version 14.2 |
 | Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
 
-### Betriebsbedingungen
+#### Betriebsbedingungen
 - Einschränkungen
 - Faktoren
 
-### Spezifische Annahmen
+#### Spezifische Annahmen
 - Anforderungen und Abhängigkeit
 
-### Interne Qualitätsanforderungen
+#### Interne Qualitätsanforderungen
 - Softwarequalitätsmerkmale
 
 
