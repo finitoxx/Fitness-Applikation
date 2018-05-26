@@ -280,9 +280,9 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ![alt text](Diagramme/AD_Statistik_auswerten.png) <br />
 <br />
 
-    - Aktivitätsdiagramme für relevante Use Cases
-    - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
-
+#### Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+![alt text](Diagramme/AD_Ablauf_alle_Use_Cases.png) <br />
+<br />
 
 ## 3.5 Entwurf
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
