@@ -242,7 +242,8 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 # 3 Technische Beschreibung
 
 ## 3.1 Systemübersicht
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
+    ![alt text](Diagramme/Systemarchitekturdiagramm.png) <br />
+   <br />
     - Schnittstellenbeschreibung
     - Kommunikationsprotokolle, Datenformate
 
@@ -250,7 +251,8 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
 ## 3.3 Datenmodell 
-    - Konzeptionelles Analyseklassendiagramm
+     ![alt text](Diagramme/Analyseklassendiagramm.png) <br />
+   <br />
 
 ## 3.4 Abläufe
     - Aktivitätsdiagramme für relevante Use Cases
