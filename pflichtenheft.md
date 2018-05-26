@@ -255,8 +255,14 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
    <br />
 
 ## 3.4 Abläufe
+
+#### Aktivitätsdiagramm "Trainingsplan erstellen" <br /><br />
+![alt text](Diagramme/AD_Trainingsplan_erstellen.png) <br />
+<br />
+
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+
 
 ## 3.5 Entwurf
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
