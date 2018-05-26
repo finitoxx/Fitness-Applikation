@@ -264,6 +264,10 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ![alt text](Diagramme/AD_Trainingsplan_loeschen.png) <br />
 <br />
 
+#### Aktivitätsdiagramm "Übung zum Trainingsplan hinzufügen"
+![alt text](Diagramme/AD_Uebung_hinzufügen.png) <br />
+<br />
+
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 
