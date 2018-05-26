@@ -256,8 +256,12 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 ## 3.4 Abläufe
 
-#### Aktivitätsdiagramm "Trainingsplan erstellen" <br /><br />
+#### Aktivitätsdiagramm "Trainingsplan erstellen"
 ![alt text](Diagramme/AD_Trainingsplan_erstellen.png) <br />
+<br />
+
+#### Aktivitätsdiagramm "Trainingsplan löschen"
+![alt text](Diagramme/AD_Trainingsplan_löschen.png) <br />
 <br />
 
     - Aktivitätsdiagramme für relevante Use Cases
