@@ -272,6 +272,10 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ![alt text](Diagramme/AD_Eigene_Uebungen_erstellen.png) <br />
 <br />
 
+#### Aktivitätsdiagramm "Trainieren"
+![alt text](Diagramme/AD_Trainieren.png) <br />
+<br />
+
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 
