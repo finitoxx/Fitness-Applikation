@@ -288,7 +288,13 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 ## 4.1 Annahmen <a name="annahmen"></a>
 
+#### Spezifische Annahmen
+- Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
+
 #### Verwendete Technologien
+
+- Verwendete Technologien (Programmiersprache, Frameworks, etc.)
+
 | **Kategorie**| **Anforderung**|
 |:-----|:----------:|
 | Entwicklungsumgebung | Visual Studio Code |
@@ -299,20 +305,13 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
 
 #### Betriebsbedingungen
-- Einschränkungen
-- Faktoren
 
-#### Spezifische Annahmen
-- Anforderungen und Abhängigkeit
+- Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
 
 #### Interne Qualitätsanforderungen
-- Softwarequalitätsmerkmale
 
+- Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
 
-- Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
-    - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
-    - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
-    - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
 
 ## 4.2 Verantwortlichkeiten <a name="verantwortlichkeiten"></a>
     - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
