@@ -276,6 +276,10 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ![alt text](Diagramme/AD_Trainieren.png) <br />
 <br />
 
+#### Aktivitätsdiagramm "Statistik auswerten"
+![alt text](Diagramme/AD_Statistik_auswerten.png) <br />
+<br />
+
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
 
