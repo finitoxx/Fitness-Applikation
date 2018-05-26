@@ -7,42 +7,38 @@
 **Inhaltsverzeichnis**
 ======================
 
-1. Einführung
-    1.1 Beschreibung
-    1.2 Ziele
-2. Anforderungen
-    2.1 Funktionale Anforderungen
-    2.2 Nicht-funktionale Anforderungen
-        2.2.1 Rahmenbedingungen
-        2.2.2 Betriebsbedingungen
-        2.2.3 Qualitätsmerkmale
-    2.3 Grafische Benutzerschnittstelle
-    2.4 Anforderungen im Detail
-3. Technische Beschreibung
-    3.1 Systemübersicht
-    3.2 Softwarearchitektur
-    3.3 Datenmodell
-    3.4 Abläufe
-    3.5 Entwurf
- 4. Projektorganisation
-    4.1 Annahmen
-    4.2 Verantwortlichkeiten
-    4.3 Grober Projektplan
- 5. Anhänge
-    5.1 Glossar
-    5.2 Referenzen
-    5.3 Index
+* 1\. [Einführung](#einführung)
+    * 1.1\. [Beschreibung](#beschreibung)
+    * 1.2\. [Ziele](#ziele)
+* 2\. [Anforderungen](#anforderungen)
+    * 2.1\. [Funktionale Anforderungen](#funktionaleAnforderungen)
+    * 2.2\. [Nicht-funktionale Anforderungen](#nichtFunktionaleAnforderungen)
+        * 2.2.1\. [Rahmenbedingungen](#rahmenbedingungen)
+        * 2.2.2\. [Betriebsbedingungen](#betriebsbedingungen)
+        * 2.2.3\. [Qualitätsmerkmale](#qualitaetsmerkmale)
+* 3\. [Technische Beschreibung](#technischeBeschreibung)
+    * 3.1\. [Systemübersicht](#systemuebersicht)
+    * 3.2\. [Softwarearchitektur](#softwarearchitektur)
+    * 3.3\. [Datenmodell](#datenmodell)
+    * 3.4\. [Abläufe](#ablaeufe)
+    * 3.5\. [Entwurf](#entwurf)
+* 4\. [Projektorganisation](#projektorganisation)
+    * 4.1\. [Annahmen](#annahmen)
+    * 4.2\. [Verantwortlichkeiten](#verantwortlichkeiten)
+    * 4.3\. [Grober Projektplan](#groberProjektplan)
+* 5\. [Anhänge](#anhaenge)
+    * 5.1\. [Glossar](#glossar)
+    * 5.2\. [Referenzen](#referenzen)
+    * 5.3\. [Index](#index)
+    
 
 
+# 1 Einführung <a name="einführung"></a>
 
-
-
-# 1 Einführung
-
-## 1.1 Beschreibung
+## 1.1 Beschreibung <a name="beschreibung"></a>
 Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, wie auch dem Benutzer die Möglichkeit bieten, eigene Trainingspläne zu erstellen. Dabei kann man aus einer Vielzahl an Übungen auswählen oder eigene hinzufügen. Die Übungen können zur besseren Übersicht nach Name, Muskelgruppe oder Kategorie sortiert werden. Fügt man Übungen zu einem Trainingsplan hinzu, legt man zuvor noch die Anzahl an Wiederholungen und Sätzen oder die Dauer der Ausführung fest. Im Trainingsmodus können die Übungen dann in beliebiger Reihenfolge ausgeübt werden und das geschaffte Gewicht bzw. die zurückgelegte Strecke eingetragen werden. Im Statistikmodus kann der Trainingserfolg mithilfe eines Graphen angezeigt werden, wobei die jeweilige Übung und der Zeitraum eingestellt werden können. Auch die Verteilung der trainierten Muskelgruppen und weitere Statistiken sollen hier einsehbar sein. Darüber hinaus kann der Benutzer einen Alarm einstellen, der ihn in Form einer Push-Benachrichtigung ans Training erinnert.
 
-## 1.2 Ziele
+## 1.2 Ziele <a name="ziele"></a>
     
 #### Anwendungsbereiche
 Zu den größten wachsenden Trends der letzten Jahre kann man sowohl die Digitalisierung wie auch das Thema Gesundheit und alle damit verbundenen Unterthemen wie Fitness, gesundem Lifestyle und Ernährung zählen.[1] Diese Trends sind oﬀensichtliche Begleiterscheinungen der allgemeinen weltweiten Entwicklung: Der technologische Fortschritt erschließt immer neue Märkte, das alltägliche Leben wird zunehmend digitalisiert und das Smartphone ist der ständige Begleiter. Über das bloße Telefonieren und Schreiben von Mitteilungen ist das Handy längst hinausgewachsen. Heutzutage nutzt man es zur Informationsgewinnung, zum Einkaufen, zum Planen und Strukturieren des Tagesablaufes, zu Unterhaltungszwecken und vielem mehr. Gleichzeitig wächst der Gesundheitsbegriff immer weiter. Hierbei geht es nicht mehr nur um die bloße körperliche Gesundheit, sondern vielmehr um die “aktive Selbstoptimierung“[1] mit dem “neue[n, Anm. d. Verf.] Ziel einer Gesamtgesundheit“[1]. Gesunde Ernährung und regelmäßiger Sport gewinnen immer stärker an Bedeutung. Dahingehend wird auch die Kombination dieser beiden Trends in Form von Fitness- und Health-Apps immer bedeutsamer.[1]
@@ -80,9 +76,9 @@ Zur Zielgruppe zählen alle Sport-, Fitness-, und Gesundheits-Interessenten jegl
 
 Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Ausführung von sportlichen Übungen. Das bedeutet, dass es keine entsprechenden Anleitungen oder Bilder zur korrekten Ausführung geben wird. Auch eine Community- oder eine Share-Funktion, mit Hilfe derer sich Nutzer austauschen oder gegenseitig untersützen können, ist zu diesem Zeitpunkt nicht eingeplant. Des weiteren werden auch jegliche medizinischen, gesundheitlichen und ernährungsspezifischen Aspekte nicht in der Fitness-App berücksichtigt.
 
-# 2 Anforderungen
+# 2 Anforderungen <a name="anforderungen"></a>
 
-## 2.1 Funktionale Anforderungen <br />
+## 2.1 Funktionale Anforderungen <br /> <a name="funktionaleAnforderungen"></a>
 #### Use-Case-Diagramm "Trainingsplan"
    ![alt text](Diagramme/Traininsplan.png) <br />
    <br />
@@ -108,9 +104,9 @@ Möchte der Nutzer ein Trainings ausführen, wählt er zunächst den gewünschte
    <br />
 Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, die er sich als Graph anzeigen lassen möchte. Danach hat er die Möglichkeit, den Zeitraum einzugrenzen, um sich den Verlauf seiner erbrachten Leistung entweder in einem kurz-, mittel- oder langfristigen Zeitintervall anzeigen zu lassen.
 
-## 2.2 Nicht-funktionale Anforderungen 
+## 2.2 Nicht-funktionale Anforderungen <a name="nichtFunktionaleAnforderungen"></a>
 
-### 2.2.1 Rahmenbedingungen
+### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
 
 | **Kategorie**| **Anforderung**|
@@ -121,7 +117,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Hardware | Endgeräte: Google Nexus 5X API-Level ?????????, Samsung Galaxy S7 API-Level ????????? |
 | Externe Vorgaben | ... |
 
-### 2.2.2 Betriebsbedingungen
+### 2.2.2 Betriebsbedingungen <a name="betriebsbedingungen"></a>
     - Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
     
 | **Kategorie**| **Anforderung**|
@@ -134,7 +130,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | UML-Werkzeug | UMLet Version 14.2 |
 | Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
 
-### 2.2.3 Qualitätsmerkmale
+### 2.2.3 Qualitätsmerkmale <a name="qualitaetsmerkmale"></a>
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
     
 | **Kategorie**| **Merkmal**|
@@ -144,7 +140,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Zuverlässigkeit | ... |
 | Benutzerfreundlichkeit | ... |
 
-## 2.3 Graphische Benutzerschnittstelle
+## 2.3 Graphische Benutzerschnittstelle <a name="graphischeBenutzerschnittstelle"></a>
 
 #### Ladebildschirm<br /><br />
    ![alt text](Mockups/XtremeXercising_Ladebildschirm.png) <br />
@@ -208,7 +204,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
    Zustandsgraph, der die GUI-Navigation darstellt.
    
    
-## 2.4 Anforderungen im Detail
+## 2.4 Anforderungen im Detail <a name="anforderungenImDetail"></a>
 
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
@@ -240,22 +236,22 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Motivation | User | möchte ich motiviert werden | ich angespornt werde, mehr Sport zu machen | Motivationssprüche werden angezeigt | Should |
 
 
-# 3 Technische Beschreibung
+# 3 Technische Beschreibung <a name="technischeBeschreibung"></a>
 
-## 3.1 Systemübersicht
+## 3.1 Systemübersicht <a name="systemuebersicht"></a>
    ![alt text](Diagramme/Systemarchitekturdiagramm.png) <br />
     <br />
     - Schnittstellenbeschreibung
     - Kommunikationsprotokolle, Datenformate
 
-## 3.2 Softwarearchitektur
+## 3.2 Softwarearchitektur <a name="softwarearchitektur"></a>
     - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
-## 3.3 Datenmodell 
+## 3.3 Datenmodell <a name="datenmodell"></a>
    ![alt text](Diagramme/Analyseklassendiagramm.png) <br />
    <br />
 
-## 3.4 Abläufe
+## 3.4 Abläufe <a name="ablaeufe"></a>
 
 #### Aktivitätsdiagramm "Trainingsplan erstellen"
 ![alt text](Diagramme/AD_Trainingsplan_erstellen.png) <br />
@@ -285,12 +281,12 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ![alt text](Diagramme/AD_Ablauf_alle_Use_Cases.png) <br />
 <br />
 
-## 3.5 Entwurf
+## 3.5 Entwurf <a name="entwurf"></a>
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
 
-# 4 Projektorganisation
+# 4 Projektorganisation <a name="projektorganisation"></a>
 
-## 4.1 Annahmen
+## 4.1 Annahmen <a name="annahmen"></a>
 
 #### Verwendete Technologien
 | **Kategorie**| **Anforderung**|
@@ -318,23 +314,23 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
 
-## 4.2 Verantwortlichkeiten
+## 4.2 Verantwortlichkeiten <a name="verantwortlichkeiten"></a>
     - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
     - Rollendefinition und Zuordnung
 
-## 4.3 Grober Projektplan
+## 4.3 Grober Projektplan <a name="groberProjektplan"></a>
     - Meilensteine
 
-# 5 Anhänge
+# 5 Anhänge <a name="anhaenge"></a>
 
-## 5.1 Glossar 
+## 5.1 Glossar <a name="glossar"></a>
     - Definitionen, Abkürzungen, Begriffe
 
-## 5.2 Referenzen
+## 5.2 Referenzen <a name="referenzen"></a>
     - Handbücher, Gesetze
     - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/
 
-## 5.3 Index
+## 5.3 Index <a name="index"></a>
 
 
 
