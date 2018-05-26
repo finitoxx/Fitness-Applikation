@@ -261,7 +261,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 <br />
 
 #### Aktivitätsdiagramm "Trainingsplan löschen"
-![alt text](Diagramme/AD_Trainingsplan_löschen.png) <br />
+![alt text](Diagramme/AD_Trainingsplan_loeschen.png) <br />
 <br />
 
     - Aktivitätsdiagramme für relevante Use Cases
