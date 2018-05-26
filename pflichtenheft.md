@@ -242,7 +242,8 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 # 3 Technische Beschreibung
 
 ## 3.1 Systemübersicht
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
+   ![alt text](Diagramme/Systemarchitekturdiagramm.png) <br />
+    <br />
     - Schnittstellenbeschreibung
     - Kommunikationsprotokolle, Datenformate
 
@@ -250,11 +251,22 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
 ## 3.3 Datenmodell 
-    - Konzeptionelles Analyseklassendiagramm
+   ![alt text](Diagramme/Analyseklassendiagramm.png) <br />
+   <br />
 
 ## 3.4 Abläufe
+
+#### Aktivitätsdiagramm "Trainingsplan erstellen"
+![alt text](Diagramme/AD_Trainingsplan_erstellen.png) <br />
+<br />
+
+#### Aktivitätsdiagramm "Trainingsplan löschen"
+![alt text](Diagramme/AD_Trainingsplan_löschen.png) <br />
+<br />
+
     - Aktivitätsdiagramme für relevante Use Cases
     - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+
 
 ## 3.5 Entwurf
     - Detaillierte UML-Diagramme für relevante Softwarebausteine
@@ -262,7 +274,28 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 # 4 Projektorganisation
 
 ## 4.1 Annahmen
-    - Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
+### Verwendete Technologien
+| **Kategorie**| **Anforderung**|
+|:-----|:----------:|
+| Entwicklungsumgebung | Visual Studio Code |
+| Programmiersprache | Javascript (React Native) |
+| Dokumentation | Markdown |
+| Versionsverwaltungssoftare | Git mithilfe von GitHub und GitHub Desktop |
+| UML-Werkzeug | UMLet Version 14.2 |
+| Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
+
+### Betriebsbedingungen
+- Einschränkungen
+- Faktoren
+
+### Spezifische Annahmen
+- Anforderungen und Abhängigkeit
+
+### Interne Qualitätsanforderungen
+- Softwarequalitätsmerkmale
+
+
+- Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
     - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
     - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
     - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
