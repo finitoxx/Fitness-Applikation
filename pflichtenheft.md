@@ -16,6 +16,8 @@
         * 2.2.1\. [Rahmenbedingungen](#rahmenbedingungen)
         * 2.2.2\. [Betriebsbedingungen](#betriebsbedingungen)
         * 2.2.3\. [Qualitätsmerkmale](#qualitaetsmerkmale)
+    * 2.3\. [Graphische Benutzerschnittstelle](#graphischeBenutzerschnittstelle)
+    * 2.4\. [Anforderungen im Detail](#anforderungenImDetail)
 * 3\. [Technische Beschreibung](#technischeBeschreibung)
     * 3.1\. [Systemübersicht](#systemuebersicht)
     * 3.2\. [Softwarearchitektur](#softwarearchitektur)
