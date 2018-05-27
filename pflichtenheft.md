@@ -115,7 +115,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Normen | ... |
 | Standards | ... |
 | Protokolle | ... |
-| Hardware | Endgeräte: Google Nexus 5X API-Level ?????????, Samsung Galaxy S7 API-Level ????????? |
+| Hardware | ... |
 | Externe Vorgaben | ... |
 
 ### 2.2.2 Betriebsbedingungen <a name="betriebsbedingungen"></a>
@@ -294,18 +294,23 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 #### Verwendete Technologien
 
-- Verwendete Technologien (Programmiersprache, Frameworks, etc.)
-
 | **Kategorie**| **Anforderung**|
 |:-----|:----------|
-| Entwicklungsumgebung | Visual Studio Code |
 | Programmiersprache | Javascript (React Native) |
+| Framework | React Native |
+| Hardware | Endgeräte: Google Nexus 5X Version Oreo 8.1, API Level 27 und Samsung Galaxy S7 Version Nougat 7.0, API Level 24 |
 | Dokumentation | Markdown |
 | Versionsverwaltungssoftare | Git mithilfe von GitHub und GitHub Desktop |
 | UML-Werkzeug | UMLet Version 14.2 |
 | Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
+| Projektplanerstellung | Microsoft Office 365 ProPlus Excel, Version 1804 |
 
 #### Betriebsbedingungen
+
+|:-----|:----------|
+| Entwicklungsumgebung | Visual Studio Code |
+| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [2] |
+| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [3] |
 
 - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
 
@@ -349,6 +354,8 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 
 ## 5.2 Referenzen <a name="referenzen"></a>
-    - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/
+    - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/, 09.05.2018
+    - [2] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
+    - [3] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
 
 
