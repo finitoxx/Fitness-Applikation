@@ -318,7 +318,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Rollendefinition und Zuordnung
 
 ## 4.3 Grober Projektplan <a name="groberProjektplan"></a>
-    - Meilensteine
+![alt text](Projektplan/Projektplan2.png) <br />
 
 # 5 Anhänge <a name="anhaenge"></a>
 
