@@ -324,7 +324,6 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 # 5 Anhänge <a name="anhaenge"></a>
 
 ## 5.1 Glossar <a name="glossar"></a>
-    - Definitionen, Abkürzungen, Begriffe
 | **Begriff**| **Beschreibung**|
 |:-----:|:----------|
 | Ausdauer | Übungskategorie; Übungen, die den Herz-Kreislauf stärken und den Fettabbau fördern, z.B. "Joggen", "Fahrrad fahren" |
@@ -350,7 +349,6 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 
 ## 5.2 Referenzen <a name="referenzen"></a>
-    - Handbücher, Gesetze
     - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/
 
 
