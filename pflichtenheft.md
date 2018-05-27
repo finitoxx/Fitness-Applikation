@@ -111,7 +111,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
 
 | **Kategorie**| **Anforderung**|
-|:-----|:----------:|
+|:-----|:----------|
 | Normen | ... |
 | Standards | ... |
 | Protokolle | ... |
@@ -122,7 +122,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
     
 | **Kategorie**| **Anforderung**|
-|:-----|:----------:|
+|:-----|:----------|
 | Entwicklungsumgebung | Visual Studio Code |
 | Programmiersprache | Javascript (React Native) |
 | Compile-SDK-Version | ... |
@@ -135,7 +135,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
     
 | **Kategorie**| **Merkmal**|
-|:-----|:----------:|
+|:-----|:----------|
 | Performance | ... |
 | Sicherheit | Datenspeicherung bei jeder Datenmanipulation mithilfe der dokumentenbasierten Datenbank Couch.db bzw. Pouch.db |
 | Zuverlässigkeit | ... |
@@ -297,7 +297,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
 
 | **Kategorie**| **Anforderung**|
-|:-----|:----------:|
+|:-----|:----------|
 | Entwicklungsumgebung | Visual Studio Code |
 | Programmiersprache | Javascript (React Native) |
 | Dokumentation | Markdown |
@@ -326,7 +326,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ## 5.1 Glossar <a name="glossar"></a>
     - Definitionen, Abkürzungen, Begriffe
 | **Begriff**| **Beschreibung**|
-|:-----|:----------:|
+|:-----:|:----------|
 | User | (Be-)Nutzer von Xtreme Xercising |
 | Trainingsplan | Liste mit vom User zu geordneten Übungen |
 | Übung | Eine sportliche Aktion, z.B. "Liegestütz" oder "Latzug" |
@@ -343,7 +343,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Freie Übung | Übungskategorie; Übungen, bei denen nur mit dem Körper oder mit Hanteln trainiert wird und die nicht zu den Ausdauerübungen zählen, z.B. "Sit-up", "Bizeps-Curls" |
 | Maschine| Übungskategorie; Übungen, für die spezielle Geräte benötigt werden, die meist nur im Fitnessstudio vorhanden sind, z.B. "Bauchpresse", "Rückenstrecker" |
 | Training | Ausführung aller Übungseinheiten eines Trainingsplanes mit Notierung der erbrachten Leistung: Gewicht oder Strecke  |
-| Ausführungsdauer | Auch (Ausführungs)Zeit, Zeitspanne der Ausführung einer Übungseinheit, bei Übungen der Kategorien "Ausdauer"  |
+| Ausführungsdauer | Auch (Ausführungs-)Zeit, Zeitspanne der Ausführung einer Übungseinheit, bei Übungen der Kategorien "Ausdauer"  |
 | Leistung | Trainingsergebnis des Users bei der Ausführung eines Satzes einer Übungseinheit oder einer Ausführungsdauer: gemessen in Gewicht oder Strecke  |
 | Gewicht | Leistung bei Übungseinheiten der Kategorie "Freie Übung" und "Maschine" mit Sätzen und Wiederholungen, gemessen in Kilogramm, wird beim Training des Nutzers erfasst  |
 | Strecke | Leistung bei Übungeinheiten der Kategorie "Ausdauer" mit Ausführungsdauer, gemessen in Kilometern pro Stunde, wird beim Training des Nutzers erfasst  |
