@@ -110,36 +110,30 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
 
-| **Kategorie**| **Anforderung**|
+| **Kategorie**| **Bedingung**|
 |:-----|:----------|
 | Normen | ... |
 | Standards | ... |
 | Protokolle | ... |
-| Hardware | ... |
 | Externe Vorgaben | ... |
 
 ### 2.2.2 Betriebsbedingungen <a name="betriebsbedingungen"></a>
-    - Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
-    
-| **Kategorie**| **Anforderung**|
+
+| **Kategorie**| **Bedingung**|
 |:-----|:----------|
-| Entwicklungsumgebung | Visual Studio Code |
-| Programmiersprache | Javascript (React Native) |
-| Compile-SDK-Version | ... |
-| Dokumentation | Markdown |
-| Versionsverwaltungssoftare | Git mithilfe von GitHub und GitHub Desktop |
-| UML-Werkzeug | UMLet Version 14.2 |
-| Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
+| Endgerät | Smartphone |
+| Programmiersprache | Javascript + React Native |
+| Betriebssystem | Google Android und Apple iOS |
+| Versionen | Anteil der mögl. Nutzer auf Basis der Versionsverteilung mind. 80% |
 
 ### 2.2.3 Qualitätsmerkmale <a name="qualitaetsmerkmale"></a>
-    - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
     
 | **Kategorie**| **Merkmal**|
 |:-----|:----------|
-| Performance | ... |
-| Sicherheit | Datenspeicherung bei jeder Datenmanipulation mithilfe der dokumentenbasierten Datenbank Couch.db bzw. Pouch.db |
-| Zuverlässigkeit | ... |
-| Benutzerfreundlichkeit | ... |
+| Performance | Schnelles Starten der Anwendung, schnelles Speichern und Abrufen der Daten (Datenbankanbindung), geringer Speicherbedarf (wichtig bei Datenverbrauch bei mobilem Internet) |
+| Sicherheit | Keine Kontoerstellung und deshalb auch keine Speicherung von kritischen persönlichen Daten ( wie z.B. Email-Adresse, Passwort, Name, Adresse, Telefonnummer, etc.) |
+| Zuverlässigkeit | Speicherung der Daten bei jeder Datenmanipulation, Nutzung der Anwendung und Speicherung von Daten sowohl online als auch offline |
+| Benutzerfreundlichkeit | Hinweise bei falschen oder fehlerhaften Nutzereingaben, kurze Popup-Nachricht bei Nutzeraktionen (Erstellen eines Trainingsplans / einer Übung / Hinzufügen einer Übung zu einem Trainingsplan etc.), Akzentfarbe zur Hervorhebung wichtiger Aktionen, gleiche Icons für gleiche oder ähnliche Funktionen, wenig Text, selbsterklärende Funktionen (Orientierung an den iOS und Android Design Guidelines) |
 
 ## 2.3 Graphische Benutzerschnittstelle <a name="graphischeBenutzerschnittstelle"></a>
 
@@ -294,11 +288,12 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 #### Verwendete Technologien
 
-| **Kategorie**| **Anforderung**|
+| **Kategorie**| **Technologie**|
 |:-----|:----------|
 | Programmiersprache | Javascript (React Native) |
 | Framework | React Native |
 | Hardware | Endgeräte: Google Nexus 5X Version Oreo 8.1, API Level 27 und Samsung Galaxy S7 Version Nougat 7.0, API Level 24 |
+| Datenbank | Dokumentenbasierte Datenbank Couch.db |
 | Dokumentation | Markdown |
 | Versionsverwaltungssoftare | Git mithilfe von GitHub und GitHub Desktop |
 | UML-Werkzeug | UMLet Version 14.2 |
@@ -307,12 +302,11 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 #### Betriebsbedingungen
 
+| **Kategorie**| **Bedingung**|
 |:-----|:----------|
 | Entwicklungsumgebung | Visual Studio Code |
 | Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [2] |
 | Betriebssystem (iOS) | Apple iOS ab 10.3.3 [3] |
-
-- Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
 
 #### Interne Qualitätsanforderungen
 
