@@ -327,26 +327,26 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Definitionen, Abkürzungen, Begriffe
 | **Begriff**| **Beschreibung**|
 |:-----:|:----------|
-| User | (Be-)Nutzer von Xtreme Xercising |
-| Trainingsplan | Liste mit vom User zu geordneten Übungen |
-| Übung | Eine sportliche Aktion, z.B. "Liegestütz" oder "Latzug" |
-| Übungseinheit | Eine Übung, die zu einem Trainingsplan gehört, hat Sätze und Wiederholungen oder eine Ausführungsdauer |
-| Sätze | Bildet die Ausführung einer Übungseinheit mit vorgegebener Wiederholungsanzahl, bei Übungen der Kategorien "Freie Übung" und "Maschine"  |
-| Wiederholungen | Anzahl der Ausführungen einer Übungeinheit pro Satz, bei Übungen der Kategorien "Freie Übung" und "Maschine" |
-| Kategorie (Trainingsplan) | Bezeichnet das generelle Fitnessziel des Trainingsplans: Cardio, Definition, Muskelaufbau |
-| Kategorie (Übung) | Bezeichnet die Art der Ausführung einer Übung: Ausdauer, Freie Übung, Maschine  |
-| Muskelgruppe | Gibt an, welche Muskelgruppen bei der AUsführung einer Übung aktiv sind: Bauch, Bizeps, Brust, Oberschenkel, Po, Rücken, Schultern, Trizeps, Waden  |
+| Ausdauer | Übungskategorie; Übungen, die den Herz-Kreislauf stärken und den Fettabbau fördern, z.B. "Joggen", "Fahrrad fahren" |
+| Ausführungsdauer | Auch (Ausführungs-)Zeit, Zeitspanne der Ausführung einer Übungseinheit, bei Übungen der Kategorien "Ausdauer"  |
 | Cardio | Trainingsplankategorie; Pläne für Ausdauertraining, die zur Körperfettreduktion und allgemeinen Fitness beitragen |
 | Definition | Trainingsplankategorie; Pläne für die spezielle Körperfettreduzieren, z.B. hochintensives Intervalltraining oder Muskelaufbautraining mit weniger Gewicht aber mehr Wiederholungen pro Satz |
-| Muskelaufbau | Trainingsplankategorie; Pläne für intensives Training mit hohem Gewicht und eher wenigen Wiederholungen pro Satz für erhöhtes Muskelwachstum  |
-| Ausdauer | Übungskategorie; Übungen, die den Herz-Kreislauf stärken und den Fettabbau fördern, z.B. "Joggen", "Fahrrad fahren" |
 | Freie Übung | Übungskategorie; Übungen, bei denen nur mit dem Körper oder mit Hanteln trainiert wird und die nicht zu den Ausdauerübungen zählen, z.B. "Sit-up", "Bizeps-Curls" |
-| Maschine| Übungskategorie; Übungen, für die spezielle Geräte benötigt werden, die meist nur im Fitnessstudio vorhanden sind, z.B. "Bauchpresse", "Rückenstrecker" |
-| Training | Ausführung aller Übungseinheiten eines Trainingsplanes mit Notierung der erbrachten Leistung: Gewicht oder Strecke  |
-| Ausführungsdauer | Auch (Ausführungs-)Zeit, Zeitspanne der Ausführung einer Übungseinheit, bei Übungen der Kategorien "Ausdauer"  |
-| Leistung | Trainingsergebnis des Users bei der Ausführung eines Satzes einer Übungseinheit oder einer Ausführungsdauer: gemessen in Gewicht oder Strecke  |
 | Gewicht | Leistung bei Übungseinheiten der Kategorie "Freie Übung" und "Maschine" mit Sätzen und Wiederholungen, gemessen in Kilogramm, wird beim Training des Nutzers erfasst  |
+| Kategorie (Trainingsplan) | Bezeichnet das generelle Fitnessziel des Trainingsplans: Cardio, Definition, Muskelaufbau |
+| Kategorie (Übung) | Bezeichnet die Art der Ausführung einer Übung: Ausdauer, Freie Übung, Maschine  |
+| Leistung | Trainingsergebnis des Users bei der Ausführung eines Satzes einer Übungseinheit oder einer Ausführungsdauer: gemessen in Gewicht oder Strecke  |
+| Maschine| Übungskategorie; Übungen, für die spezielle Geräte benötigt werden, die meist nur im Fitnessstudio vorhanden sind, z.B. "Bauchpresse", "Rückenstrecker" |
+| Muskelaufbau | Trainingsplankategorie; Pläne für intensives Training mit hohem Gewicht und eher wenigen Wiederholungen pro Satz für erhöhtes Muskelwachstum  |
+| Muskelgruppe | Gibt an, welche Muskelgruppen bei der AUsführung einer Übung aktiv sind: Bauch, Bizeps, Brust, Oberschenkel, Po, Rücken, Schultern, Trizeps, Waden  |
+| Sätze | Bildet die Ausführung einer Übungseinheit mit vorgegebener Wiederholungsanzahl, bei Übungen der Kategorien "Freie Übung" und "Maschine"  |
 | Strecke | Leistung bei Übungeinheiten der Kategorie "Ausdauer" mit Ausführungsdauer, gemessen in Kilometern pro Stunde, wird beim Training des Nutzers erfasst  |
+| Training | Ausführung aller Übungseinheiten eines Trainingsplanes mit Notierung der erbrachten Leistung: Gewicht oder Strecke  |
+| Trainingsplan | Liste mit vom User zu geordneten Übungen |
+| User | (Be-)Nutzer von Xtreme Xercising |
+| Übung | Eine sportliche Aktion, z.B. "Liegestütz" oder "Latzug" |
+| Übungseinheit | Eine Übung, die zu einem Trainingsplan gehört, hat Sätze und Wiederholungen oder eine Ausführungsdauer |
+| Wiederholungen | Anzahl der Ausführungen einer Übungeinheit pro Satz, bei Übungen der Kategorien "Freie Übung" und "Maschine" |
 
 
 ## 5.2 Referenzen <a name="referenzen"></a>
