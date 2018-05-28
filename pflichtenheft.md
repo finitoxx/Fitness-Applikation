@@ -313,7 +313,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 Langfristig gibt es Pläne zur Erweiterbarkeit der Anwendung, wie zum Beispiel eine Webanwendung für die bessere Verwaltung von Trainingsplänen auf dem Rechner sowie einer Art Forum, um sich mit anderen Nutzern austauschen zu können. Darüberhinaus könnte es auch ergänzende Ernährungs-, Motivations-, Lifestyle- oder Health-Apps geben, die Daten mit der Fitnessapp austauschen sollen. Denkbar wäre auch die Monetarisierung der Fitness-Anwendung, wobei für Standardnutzer der Umfang und die Funktionalität eingeschränkt und für Premiumnutzer in vollem Umfang freigschaltet werden soll. All diese Erweiterungen sind aber im Rahmen dieser Entwicklung aus zeitlichen Gründen nicht umsetzbar und müssen zu diesem Zeitpunkt leider unberücksichtigt bleiben, sollten hier aber der Vollständigkeit halber in Kürze Erwähnung finden.
 
 ## 4.2 Verantwortlichkeiten <a name="verantwortlichkeiten"></a>
-
+Generell soll die Anwendung parallel programmiert werden, wobei sich Pascal Squarra zunächst um die Modellierung der Daten und anschließend um die Implementierung der Logik kümmert, und Jacqueline Menke zeitgleich die Programmierung der GUI übernimmt. Wird einer der Entwickler frühzeitig mit seinem Aufgabenbereich fertig, unterstützt derjenige den anderen bei seiner Arbeit. Die letzte Phase, das Testen, soll gemeinsam am Schluss der Entwicklung erfolgen, um möglichst effizient und gründlich testen zu können.
 
 ## 4.3 Grober Projektplan <a name="groberProjektplan"></a>
 ![alt text](Projektplan/Projektplan2.png) <br />
