@@ -110,7 +110,9 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
 #### Die Bedeutung von Sport und Fitness
+
 #### Fortschrittsüberwachung
+
 #### Motivation und ihre Auswirkung auf Leistungssteigerung
 
 ### 2.2.2 Betriebsbedingungen <a name="betriebsbedingungen"></a>
