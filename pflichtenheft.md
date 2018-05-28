@@ -109,13 +109,9 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 
 ### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
-
-| **Kategorie**| **Bedingung**|
-|:-----|:----------|
-| Normen | ... |
-| Standards | ... |
-| Protokolle | ... |
-| Externe Vorgaben | ... |
+#### Die Bedeutung von Sport und Fitness
+#### Fortschrittsüberwachung
+#### Motivation und ihre Auswirkung auf Leistungssteigerung
 
 ### 2.2.2 Betriebsbedingungen <a name="betriebsbedingungen"></a>
 
@@ -281,10 +277,6 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 # 4 Projektorganisation <a name="projektorganisation"></a>
 
 ## 4.1 Annahmen <a name="annahmen"></a>
-
-#### Spezifische Annahmen
-
-- Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
 
 #### Verwendete Technologien
 
