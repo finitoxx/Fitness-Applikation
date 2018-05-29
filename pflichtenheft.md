@@ -42,8 +42,8 @@ Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, 
 ## 1.2 Ziele <a name="ziele"></a>
     
 #### Anwendungsbereiche
-Zu den größten wachsenden Trends der letzten Jahre kann man sowohl die Digitalisierung wie auch das Thema Gesundheit und alle damit verbundenen Unterthemen wie Fitness, gesundem Lifestyle und Ernährung zählen.[1] Diese Trends sind oﬀensichtliche Begleiterscheinungen der allgemeinen weltweiten Entwicklung: Der technologische Fortschritt erschließt immer neue Märkte, das alltägliche Leben wird zunehmend digitalisiert und das Smartphone ist der ständige Begleiter. Über das bloße Telefonieren und Schreiben von Mitteilungen ist das Handy längst hinausgewachsen. Heutzutage nutzt man es zur Informationsgewinnung, zum Einkaufen, zum Planen und Strukturieren des Tagesablaufes, zu Unterhaltungszwecken und vielem mehr. Gleichzeitig wächst der Gesundheitsbegriff immer weiter. Hierbei geht es nicht mehr nur um die bloße körperliche Gesundheit, sondern vielmehr um die “aktive Selbstoptimierung“[1] mit dem “neue[n, Anm. d. Verf.] Ziel einer Gesamtgesundheit“[1]. Gesunde Ernährung und regelmäßiger Sport gewinnen immer stärker an Bedeutung. Dahingehend wird auch die Kombination dieser beiden Trends in Form von Fitness- und Health-Apps immer bedeutsamer.[1]
-Bereits 15.000 mobile Anwendungen dieser Art werden in Deutschland angeboten, weltweit sind es bereits 40.000. Zwischen 2011 und 2012 ist die Anzahl der Downloads beinahe auf das Doppelte angewachsen: von 124 Millionen auf 247 Millionen. Die Idee hinter diesen Applikationen ist einfach: das Handy als handlichen und immer greifbaren Begleiter soll die Menschen bei ihren Zielen, zum Beispiel Abnehmen, Muskelaufbau oder Fitnesssteigerung, auf motivierende, einfache und spielerische Weise unterstützen.[1] Auf diese Anwendung ist auch Xtreme Xercising ausgelegt.
+Zu den größten wachsenden Trends der letzten Jahre kann man sowohl die Digitalisierung wie auch das Thema Gesundheit und alle damit verbundenen Unterthemen wie Fitness, gesundem Lifestyle und Ernährung zählen[[1]](#zitat1). Diese Trends sind oﬀensichtliche Begleiterscheinungen der allgemeinen weltweiten Entwicklung: Der technologische Fortschritt erschließt immer neue Märkte, das alltägliche Leben wird zunehmend digitalisiert und das Smartphone ist der ständige Begleiter. Über das bloße Telefonieren und Schreiben von Mitteilungen ist das Handy längst hinausgewachsen. Heutzutage nutzt man es zur Informationsgewinnung, zum Einkaufen, zum Planen und Strukturieren des Tagesablaufes, zu Unterhaltungszwecken und vielem mehr. Gleichzeitig wächst der Gesundheitsbegriff immer weiter. Hierbei geht es nicht mehr nur um die bloße körperliche Gesundheit, sondern vielmehr um die “aktive Selbstoptimierung“[[1]](#zitat1) mit dem “neue[n, Anm. d. Verf.] Ziel einer Gesamtgesundheit“[[1]](#zitat1). Gesunde Ernährung und regelmäßiger Sport gewinnen immer stärker an Bedeutung. Dahingehend wird auch die Kombination dieser beiden Trends in Form von Fitness- und Health-Apps immer bedeutsamer[[1]](#zitat1).
+Bereits 15.000 mobile Anwendungen dieser Art werden in Deutschland angeboten, weltweit sind es bereits 40.000. Zwischen 2011 und 2012 ist die Anzahl der Downloads beinahe auf das Doppelte angewachsen: von 124 Millionen auf 247 Millionen. Die Idee hinter diesen Applikationen ist einfach: das Handy als handlichen und immer greifbaren Begleiter soll die Menschen bei ihren Zielen, zum Beispiel Abnehmen, Muskelaufbau oder Fitnesssteigerung, auf motivierende, einfache und spielerische Weise unterstützen[[1]](#zitat1). Auf diese Anwendung ist auch Xtreme Xercising ausgelegt.
 
 #### Motivation
 Da der Markt im Bereich mobiler Anwendungen zum Thema Fitness, Gesundheit und Lifestyle immer stärker wächst, fällt es auch dementsprechend schwer, die für einen persönlich am besten geeignete Anwendung zu ﬁnden. Aus diesem Grund haben wir uns das Ziel der Entwicklung einer FitnessApp gesetzt. Ein ansprechendes und einprägsames Design in Kombination mit intuitiver und einfacher Bedienung verbindet die - unserer Meinung nach - wichtigsten Grundfunktionen für die Trainingsplangestaltung, -verwaltung, -ausführung und Fortschrittüberwachung. Xtreme Xercising soll somit der digitale Freund und Begleiter beim Sport werden. Durch das einfache Prüfen des Trainingserfolgs in Form von anschaulichen Graphen sowie das Erinnern durch Benachrichtigungen ans Trainieren soll die Motivation gefördert werden. Die Bedienung ist simpel und selbsterklärend, sodass das Eintragen der Trainingsdaten das Training erleichtern und verbessern soll. 
@@ -110,20 +110,20 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
 
 #### Die Bedeutung von Sport und Fitness
-Laut der Langzeitstudie "Gesundheit zum Mitmachen" in Bad Schönborn, durchgeführt vom KIT, dem Karlsruher Institut für Technologie, sind sportliche Erwachsene physikalisch gesehen im Schnitt 10 Jahre jünger. [2]
-Obwohl diese Studie beweist, dass die getesteten Probanden im Schnitt immer sportlicher werden (besonders die älteren im Bereich von 51 - 60 Jahren), schaffen es mehr als die Hälfte dieser Personen nicht, die von der WHO, der World Health Organization, empfohlenen zweieinhalb Stunden Sport pro Woche zu absolvieren. [3].
+Laut der Langzeitstudie "Gesundheit zum Mitmachen" in Bad Schönborn, durchgeführt vom KIT, dem Karlsruher Institut für Technologie, sind sportliche Erwachsene physikalisch gesehen im Schnitt 10 Jahre jünger[[2]](#zitat2).
+Obwohl diese Studie beweist, dass die getesteten Probanden im Schnitt immer sportlicher werden (besonders die älteren im Bereich von 51 - 60 Jahren), schaffen es mehr als die Hälfte dieser Personen nicht, die von der WHO, der World Health Organization, empfohlenen zweieinhalb Stunden Sport pro Woche zu absolvieren[[3]](#zitat3).
 
-Die Unterschiede in Fitness und Mobilität zwischen sportlich aktiven Menschen und weniger Aktiveren werden dabei mit fortschreitendem Alter immer gravierender [2]. Aus diesem Grund ist es entscheidend, bereits in jüngeren Jahren regelmäßig Sport zu treiben, um davon im Alter zu profitieren. 
-Auch leiden sportlich Aktive deutlich weniger an gesundheitlichen Beeinträchtigungen: besonders im Hinblick auf Herz-Kreislauf-Erkrankungen, orthopädischen und neurologischen Einschränkungen oder Typ 2 Diabetes schneiden aktivere Menschen bis zu viermal besser ab als inaktivere [4]. 
-Schließlich beugt Sport auch der Volkskrankheit Adipositas (Übergewicht) vor. Trotz des wachsenden Gesundheits- und Fitnessbewusstseins, ist immer noch mehr als die Häflte der erwachsenen Bewohner von Bad Schönborn übergewichtig und 14,4% als adipös. [5]
+Die Unterschiede in Fitness und Mobilität zwischen sportlich aktiven Menschen und weniger Aktiveren werden dabei mit fortschreitendem Alter immer gravierender[[2]](#zitat2). Aus diesem Grund ist es entscheidend, bereits in jüngeren Jahren regelmäßig Sport zu treiben, um davon im Alter zu profitieren. 
+Auch leiden sportlich Aktive deutlich weniger an gesundheitlichen Beeinträchtigungen: besonders im Hinblick auf Herz-Kreislauf-Erkrankungen, orthopädischen und neurologischen Einschränkungen oder Typ 2 Diabetes schneiden aktivere Menschen bis zu viermal besser ab als inaktivere[[4]](#zitat4). 
+Schließlich beugt Sport auch der Volkskrankheit Adipositas (Übergewicht) vor. Trotz des wachsenden Gesundheits- und Fitnessbewusstseins, ist immer noch mehr als die Häflte der erwachsenen Bewohner von Bad Schönborn übergewichtig und 14,4% als adipös[[5]](#zitat5).
 
-Weitere positive Nebeneffekte von Sport sind ein besseres Selbstbewusstsein, eine allgemein positivere Stimmung, eine erhöhte Lebensqualität, ein besseres Gesundheitsverständnis und sozialer Integration bei Gruppensport. Darüberhinaus erholen sich sportlich Aktive schneller von Verletzungen und können negative Gesundheitsaspekte (Rauchen, Bluthochdruck, ein hoher Colesterinspiegel) besser ausgleichen[6].
+Weitere positive Nebeneffekte von Sport sind ein besseres Selbstbewusstsein, eine allgemein positivere Stimmung, eine erhöhte Lebensqualität, ein besseres Gesundheitsverständnis und sozialer Integration bei Gruppensport. Darüberhinaus erholen sich sportlich Aktive schneller von Verletzungen und können negative Gesundheitsaspekte (Rauchen, Bluthochdruck, ein hoher Colesterinspiegel) besser ausgleichen[[6]](#zitat6).
 
 #### Fortschrittsüberwachung und ihre Auswirkung auf Motivation und Leistungssteigerung
-Aufgrund der ernormen Signifikanz im vorangegangen Abschnitt, ergibt sich nur die Fragestellung, wie man die Bereitschaft und das Durchhaltevermögen für den Sport verbessern kann. Die Anwendung Xtreme Xercising soll hier den Nutzer untersützen, begleiten und motivieren. Insbesondere soll dies durch die ausführliche und kontinuierliche Fortschrittsüberwachung geschehen. Eine diesbezügliche Meta-Studie aus dem Jahr 2016 kam zu zwei wichtigen Erkenntnissen: Erstens unterstützt und fördert Fortschrittsüberwachung das Erreichen der eigenen Ziele und zweitens steht die Schnelligkeit des Erreichen der eigenen Ziele in proportionalem Zusammenhang mit der Häufigkeit der Fortschrittsmessungen [7].
-Dabei ist es wichtig, dass die Fortschrittsüberwachung in direktem Zusammenhang mit dem eigentlichen Ziel stehen [7]. So kann es sein, dass Menschen, die ihr Essverhalten überwachden, ihre Ernährung umstellen aber keinen großartigen Gewichtsverlust feststellen. Umgekehrt können Menschen, die sich regelmäßig wiegen, womöglich ihr Gewicht verringern, sich aber trotzdem nicht gesunder ernähren als zuvor [8].
-Auch hilft es, seine eigenen Ziel publik zu machen, beispielsweise in Foren, in der Familie oder im Bekanntenkreis [7]. Dadurch muss man sich nun nicht nur vor sich selbst, sondern auch vor anderen verantworten, was das Verfolgen und Umsetzen der eigenen Ziele angeht, was wiederum den öffentlichen Druck auf die eigene Person und somit die Motivation erhöht.
-Schließlich hilft auch das Notieren der einzelnen Erfolgseinheiten [7]. Die Möglichkeit, die einzelnen Leistungen und besonders Leistungssteigerungen oder -verbesserungen schwarz auf weiß und über einen längeren Zeitraum verfolgen zu können, hilft, seine Motivation aufrecht zu erhalten und auf sein Ziel hinarbeiten zu können.
+Aufgrund der ernormen Signifikanz im vorangegangen Abschnitt, ergibt sich nur die Fragestellung, wie man die Bereitschaft und das Durchhaltevermögen für den Sport verbessern kann. Die Anwendung Xtreme Xercising soll hier den Nutzer untersützen, begleiten und motivieren. Insbesondere soll dies durch die ausführliche und kontinuierliche Fortschrittsüberwachung geschehen. Eine diesbezügliche Meta-Studie aus dem Jahr 2016 kam zu zwei wichtigen Erkenntnissen: Erstens unterstützt und fördert Fortschrittsüberwachung das Erreichen der eigenen Ziele und zweitens steht die Schnelligkeit des Erreichen der eigenen Ziele in proportionalem Zusammenhang mit der Häufigkeit der Fortschrittsmessungen[[7]](#zitat7).
+Dabei ist es wichtig, dass die Fortschrittsüberwachung in direktem Zusammenhang mit dem eigentlichen Ziel stehen[[7]](#zitat7). So kann es sein, dass Menschen, die ihr Essverhalten überwachden, ihre Ernährung umstellen aber keinen großartigen Gewichtsverlust feststellen. Umgekehrt können Menschen, die sich regelmäßig wiegen, womöglich ihr Gewicht verringern, sich aber trotzdem nicht gesunder ernähren als zuvor[[8]](#zitat8).
+Auch hilft es, seine eigenen Ziel publik zu machen, beispielsweise in Foren, in der Familie oder im Bekanntenkreis[[7]](#zitat7). Dadurch muss man sich nun nicht nur vor sich selbst, sondern auch vor anderen verantworten, was das Verfolgen und Umsetzen der eigenen Ziele angeht, was wiederum den öffentlichen Druck auf die eigene Person und somit die Motivation erhöht.
+Schließlich hilft auch das Notieren der einzelnen Erfolgseinheiten[[7]](#zitat7). Die Möglichkeit, die einzelnen Leistungen und besonders Leistungssteigerungen oder -verbesserungen schwarz auf weiß und über einen längeren Zeitraum verfolgen zu können, hilft, seine Motivation aufrecht zu erhalten und auf sein Ziel hinarbeiten zu können.
 
 Aus diesen Gründen soll der Nutzer mithilfe von Xtreme Xercising seine Fitnessziele schneller, besser, effizienter und einfacher erreichen. Weitere Motivations- und Communityfunktionen sind ergänzend für eine spätere Version der Anwendung geplant, um den Nutzer noch optimaler und vorallem ganzheitlich in allen Bereichen von Fitness, Sport und Gesundheit zu unterstützen.
 
@@ -316,8 +316,8 @@ Aus diesen Gründen soll der Nutzer mithilfe von Xtreme Xercising seine Fitnessz
 | **Kategorie**| **Bedingung**|
 |:-----|:----------|
 | Entwicklungsumgebung | Visual Studio Code |
-| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [9] |
-| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [10] |
+| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [[9]](#zitat9) |
+| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [[10]](#zitat10) |
 
 #### Interne Qualitätsanforderungen
 
@@ -357,15 +357,25 @@ Generell soll die Anwendung parallel programmiert werden, wobei sich Pascal Squa
 
 
 ## 5.2 Referenzen <a name="referenzen"></a>
-    - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/, 09.05.2018
-    - [2] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Körperlich Aktive deutlich fitter, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Fitness.pdf, 29.05.2018
-    - [3] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Zunahme der körperlichen Aktivität, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Aktivitaet.pdf, 29.05.2018
-    - [4] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Sportler seltener gesundheitlich beeinträchtigt, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Gesundheit.pdf, 29.05.2018
-    - [5] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Übergewicht bleibt Volkskrankheit , http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_BMI.pdf, 29.05.2018
-    - [6] Karlsruher Institut für Technik: Nutzen von Sport, http://www.gesundheit-zum-mitmachen.de/196.php, 29.05.2018
-    - [7] Reichl, Dominic, Erreiche deine Ziele, indem du deinen Fortschritt überwachst, http://www.kraftmachtfrei.de/denkkraft/ziele-erreichen-fortschritt/, 29.05.2018
-    - [8] American Psychological Association: Frequently monitoring progress toward goals increases chance of success, ScienceDaily, https://www.sciencedaily.com/releases/2015/10/151029101349.htm
-    - [9] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
-    - [10] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
+[1] <a name="zitat1"> Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/, 09.05.2018
+
+[2] <a name="zitat2"> Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Körperlich Aktive deutlich fitter, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Fitness.pdf, 29.05.2018
+
+[3] <a name="zitat3"> Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Zunahme der körperlichen Aktivität, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Aktivitaet.pdf, 29.05.2018
+
+[4] <a name="zitat4"> Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Sportler seltener gesundheitlich beeinträchtigt, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Gesundheit.pdf, 29.05.2018
+
+[5] <a name="zitat5"> Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Übergewicht bleibt Volkskrankheit , http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_BMI.pdf, 29.05.2018
+
+[6] <a name="zitat6"> Karlsruher Institut für Technik: Nutzen von Sport, http://www.gesundheit-zum-mitmachen.de/196.php, 29.05.2018
+
+[7] <a name="zitat7"> Reichl, Dominic, Erreiche deine Ziele, indem du deinen Fortschritt überwachst, http://www.kraftmachtfrei.de/denkkraft/ziele-erreichen-fortschritt/, 29.05.2018
+
+[8] <a name="zitat8"> American Psychological Association: Frequently monitoring progress toward goals increases chance of success, ScienceDaily, https://www.sciencedaily.com/releases/2015/10/151029101349.htm
+
+[9] <a name="zitat9"> Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
+     
+[10] <a name="zitat10"> Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018 
+
 
 
