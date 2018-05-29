@@ -274,7 +274,12 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 <br />
 
 ## 3.5 Entwurf <a name="entwurf"></a>
-    - Detaillierte UML-Diagramme für relevante Softwarebausteine
+   ![alt text](Diagramme/TrainingsplanKlassendiagramm.png) <br />
+   <br />
+     ![alt text](Diagramme/ÜbungsauswahlKlassendiagramm.png) <br />
+   <br />
+     ![alt text](Diagramme/TrainierenKlassendiagramm.png) <br />
+   <br />
 
 # 4 Projektorganisation <a name="projektorganisation"></a>
 
