@@ -110,6 +110,14 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
 #### Die Bedeutung von Sport und Fitness
+Laut der Langzeitstudie "Gesundheit zum Mitmachen" in Bad Schönborn, durchgeführt vom KIT, dem Karlsruher Institut für Technologie, sind sportliche Erwachsene physikalisch gesehen im Schnitt 10 Jahre jünger. [2]
+Obwohl diese Studie beweist, dass die getesteten Probanden im Schnitt immer sportlicher werden (besonders die älteren im Bereich von 51 - 60 Jahren), schaffen es mehr als die Hälfte dieser Personen nicht, die von der WHO, der World Health Organization, empfohlenen zweieinhalb Stunden Sport pro Woche zu absolvieren. [3].
+
+Die Unterschiede in Fitness und Mobilität zwischen sportlich aktiven Menschen und weniger Aktiveren werden dabei mit fortschreitendem Alter immer gravierender [2]. Aus diesem Grund ist es entscheidend, bereits in jüngeren Jahren regelmäßig Sport zu treiben, um davon im Alter zu profitieren. 
+Auch leiden sportlich Aktive deutlich weniger an gesundheitlichen Beeinträchtigungen: besonders im Hinblick auf Herz-Kreislauf-Erkrankungen, orthopädischen und neurologischen Einschränkungen oder Typ 2 Diabetes schneiden aktivere Menschen bis zu viermal besser ab als inaktivere [4]. 
+Schließlich beugt Sport auch der Volkskrankheit Adipositas (Übergewicht) vor. Trotz des wachsenden Gesundheits- und Fitnessbewusstseins, ist immer noch mehr als die Häflte der erwachsenen Bewohner von Bad Schönborn übergewichtig und 14,4% als adipös. [5]
+
+Weitere positive Nebeneffekte von Sport sind ein besseres Selbstbewusstsein, eine allgemein positivere Stimmung, eine erhöhte Lebensqualität, ein besseres Gesundheitsverständnis und sozialer Integration bei Gruppensport. Darüberhinaus erholen sich sportlich Aktive schneller von Verletzungen und können negative Gesundheitsaspekte (Rauchen, Bluthochdruck, ein hoher Colesterinspiegel) besser ausgleichen[6].
 
 #### Fortschrittsüberwachung
 
@@ -237,8 +245,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Kommunikationsprotokolle, Datenformate
 
 ## 3.2 Softwarearchitektur <a name="softwarearchitektur"></a>
-  ![alt text](Diagramme/Komponentendiagramm.png) <br />
-   <br />
+    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
 ## 3.3 Datenmodell <a name="datenmodell"></a>
    ![alt text](Diagramme/Analyseklassendiagramm.png) <br />
@@ -305,8 +312,8 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | **Kategorie**| **Bedingung**|
 |:-----|:----------|
 | Entwicklungsumgebung | Visual Studio Code |
-| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [2] |
-| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [3] |
+| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [?] |
+| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [??] |
 
 #### Interne Qualitätsanforderungen
 
@@ -347,7 +354,14 @@ Generell soll die Anwendung parallel programmiert werden, wobei sich Pascal Squa
 
 ## 5.2 Referenzen <a name="referenzen"></a>
     - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/, 09.05.2018
-    - [2] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
-    - [3] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
+    - [2] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Körperlich Aktive deutlich fitter, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Fitness.pdf, 29.05.2018
+    - [3] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Zunahme der körperlichen Aktivität, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Aktivitaet.pdf, 29.05.2018
+    - [4] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Sportler seltener gesundheitlich beeinträchtigt, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Gesundheit.pdf, 29.05.2018
+    - [5] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Übergewicht bleibt Volkskrankheit , http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_BMI.pdf, 29.05.2018
+    - [6] Karlsruher Institut für Technik: Nutzen von Sport, http://www.gesundheit-zum-mitmachen.de/196.php, 29.05.2018
+    
+    
+    - [?] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
+    - [??] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
 
 
