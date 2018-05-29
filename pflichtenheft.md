@@ -288,6 +288,10 @@ Weitere positive Nebeneffekte von Sport sind ein besseres Selbstbewusstsein, ein
    <br />
      ![alt text](Diagramme/TrainierenKlassendiagramm.png) <br />
    <br />
+    ![alt text](Diagramme/ÜbungausführenKlassendiagramm1_1.png) <br />
+   <br />
+    ![alt text](Diagramme/StatistikKlassendiagramm1_1.png) <br />
+   <br />
 
 # 4 Projektorganisation <a name="projektorganisation"></a>
 
