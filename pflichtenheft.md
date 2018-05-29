@@ -108,7 +108,7 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 ## 2.2 Nicht-funktionale Anforderungen <a name="nichtFunktionaleAnforderungen"></a>
 
 ### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
-    - Normen, Standards, Protokolle, Hardware, externe Vorgaben
+
 #### Die Bedeutung von Sport und Fitness
 Laut der Langzeitstudie "Gesundheit zum Mitmachen" in Bad Schönborn, durchgeführt vom KIT, dem Karlsruher Institut für Technologie, sind sportliche Erwachsene physikalisch gesehen im Schnitt 10 Jahre jünger. [2]
 Obwohl diese Studie beweist, dass die getesteten Probanden im Schnitt immer sportlicher werden (besonders die älteren im Bereich von 51 - 60 Jahren), schaffen es mehr als die Hälfte dieser Personen nicht, die von der WHO, der World Health Organization, empfohlenen zweieinhalb Stunden Sport pro Woche zu absolvieren. [3].
@@ -119,9 +119,13 @@ Schließlich beugt Sport auch der Volkskrankheit Adipositas (Übergewicht) vor. 
 
 Weitere positive Nebeneffekte von Sport sind ein besseres Selbstbewusstsein, eine allgemein positivere Stimmung, eine erhöhte Lebensqualität, ein besseres Gesundheitsverständnis und sozialer Integration bei Gruppensport. Darüberhinaus erholen sich sportlich Aktive schneller von Verletzungen und können negative Gesundheitsaspekte (Rauchen, Bluthochdruck, ein hoher Colesterinspiegel) besser ausgleichen[6].
 
-#### Fortschrittsüberwachung
+#### Fortschrittsüberwachung und ihre Auswirkung auf Motivation und Leistungssteigerung
+Aufgrund der ernormen Signifikanz im vorangegangen Abschnitt, ergibt sich nur die Fragestellung, wie man die Bereitschaft und das Durchhaltevermögen für den Sport verbessern kann. Die Anwendung Xtreme Xercising soll hier den Nutzer untersützen, begleiten und motivieren. Insbesondere soll dies durch die ausführliche und kontinuierliche Fortschrittsüberwachung geschehen. Eine diesbezügliche Meta-Studie aus dem Jahr 2016 kam zu zwei wichtigen Erkenntnissen: Erstens unterstützt und fördert Fortschrittsüberwachung das Erreichen der eigenen Ziele und zweitens steht die Schnelligkeit des Erreichen der eigenen Ziele in proportionalem Zusammenhang mit der Häufigkeit der Fortschrittsmessungen [7].
+Dabei ist es wichtig, dass die Fortschrittsüberwachung in direktem Zusammenhang mit dem eigentlichen Ziel stehen [7]. So kann es sein, dass Menschen, die ihr Essverhalten überwachden, ihre Ernährung umstellen aber keinen großartigen Gewichtsverlust feststellen. Umgekehrt können Menschen, die sich regelmäßig wiegen, womöglich ihr Gewicht verringern, sich aber trotzdem nicht gesunder ernähren als zuvor [8].
+Auch hilft es, seine eigenen Ziel publik zu machen, beispielsweise in Foren, in der Familie oder im Bekanntenkreis [7]. Dadurch muss man sich nun nicht nur vor sich selbst, sondern auch vor anderen verantworten, was das Verfolgen und Umsetzen der eigenen Ziele angeht, was wiederum den öffentlichen Druck auf die eigene Person und somit die Motivation erhöht.
+Schließlich hilft auch das Notieren der einzelnen Erfolgseinheiten [7]. Die Möglichkeit, die einzelnen Leistungen und besonders Leistungssteigerungen oder -verbesserungen schwarz auf weiß und über einen längeren Zeitraum verfolgen zu können, hilft, seine Motivation aufrecht zu erhalten und auf sein Ziel hinarbeiten zu können.
 
-#### Motivation und ihre Auswirkung auf Leistungssteigerung
+Aus diesen Gründen soll der Nutzer mithilfe von Xtreme Xercising seine Fitnessziele schneller, besser, effizienter und einfacher erreichen. Weitere Motivations- und Communityfunktionen sind ergänzend für eine spätere Version der Anwendung geplant, um den Nutzer noch optimaler und vorallem ganzheitlich in allen Bereichen von Fitness, Sport und Gesundheit zu unterstützen.
 
 ### 2.2.2 Betriebsbedingungen <a name="betriebsbedingungen"></a>
 
@@ -288,10 +292,6 @@ Weitere positive Nebeneffekte von Sport sind ein besseres Selbstbewusstsein, ein
    <br />
      ![alt text](Diagramme/TrainierenKlassendiagramm.png) <br />
    <br />
-    ![alt text](Diagramme/ÜbungausführenKlassendiagramm1_1.png) <br />
-   <br />
-    ![alt text](Diagramme/StatistikKlassendiagramm1_1.png) <br />
-   <br />
 
 # 4 Projektorganisation <a name="projektorganisation"></a>
 
@@ -363,7 +363,10 @@ Generell soll die Anwendung parallel programmiert werden, wobei sich Pascal Squa
     - [4] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Sportler seltener gesundheitlich beeinträchtigt, http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_Gesundheit.pdf, 29.05.2018
     - [5] Bös, Klaus und Woll, Alexander, Karlsruher Institut für Technik: Übergewicht bleibt Volkskrankheit , http://www.gesundheit-zum-mitmachen.de/downloads/GzM_Factsheet_BMI.pdf, 29.05.2018
     - [6] Karlsruher Institut für Technik: Nutzen von Sport, http://www.gesundheit-zum-mitmachen.de/196.php, 29.05.2018
-    
+    - [7] Reichl, Dominic, Erreiche deine Ziele, indem du deinen Fortschritt überwachst, http://www.kraftmachtfrei.de/denkkraft/ziele-erreichen-fortschritt/, 29.05.2018
+    - [8] American Psychological Association: Frequently monitoring progress toward goals increases chance of success, ScienceDaily, https://www.sciencedaily.com/releases/2015/10/151029101349.htm
+   
+   
     
     - [?] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
     - [??] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
