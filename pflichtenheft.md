@@ -237,7 +237,8 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
     - Kommunikationsprotokolle, Datenformate
 
 ## 3.2 Softwarearchitektur <a name="softwarearchitektur"></a>
-    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
+  ![alt text](Diagramme/Komponentendiagramm.png) <br />
+   <br />
 
 ## 3.3 Datenmodell <a name="datenmodell"></a>
    ![alt text](Diagramme/Analyseklassendiagramm.png) <br />
