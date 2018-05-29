@@ -7,42 +7,39 @@
 **Inhaltsverzeichnis**
 ======================
 
-1. Einführung
-    1.1 Beschreibung
-    1.2 Ziele
-2. Anforderungen
-    2.1 Funktionale Anforderungen
-    2.2 Nicht-funktionale Anforderungen
-        2.2.1 Rahmenbedingungen
-        2.2.2 Betriebsbedingungen
-        2.2.3 Qualitätsmerkmale
-    2.3 Grafische Benutzerschnittstelle
-    2.4 Anforderungen im Detail
-3. Technische Beschreibung
-    3.1 Systemübersicht
-    3.2 Softwarearchitektur
-    3.3 Datenmodell
-    3.4 Abläufe
-    3.5 Entwurf
- 4. Projektorganisation
-    4.1 Annahmen
-    4.2 Verantwortlichkeiten
-    4.3 Grober Projektplan
- 5. Anhänge
-    5.1 Glossar
-    5.2 Referenzen
-    5.3 Index
+* 1\. [Einführung](#einführung)
+    * 1.1\. [Beschreibung](#beschreibung)
+    * 1.2\. [Ziele](#ziele)
+* 2\. [Anforderungen](#anforderungen)
+    * 2.1\. [Funktionale Anforderungen](#funktionaleAnforderungen)
+    * 2.2\. [Nicht-funktionale Anforderungen](#nichtFunktionaleAnforderungen)
+        * 2.2.1\. [Rahmenbedingungen](#rahmenbedingungen)
+        * 2.2.2\. [Betriebsbedingungen](#betriebsbedingungen)
+        * 2.2.3\. [Qualitätsmerkmale](#qualitaetsmerkmale)
+    * 2.3\. [Graphische Benutzerschnittstelle](#graphischeBenutzerschnittstelle)
+    * 2.4\. [Anforderungen im Detail](#anforderungenImDetail)
+* 3\. [Technische Beschreibung](#technischeBeschreibung)
+    * 3.1\. [Systemübersicht](#systemuebersicht)
+    * 3.2\. [Softwarearchitektur](#softwarearchitektur)
+    * 3.3\. [Datenmodell](#datenmodell)
+    * 3.4\. [Abläufe](#ablaeufe)
+    * 3.5\. [Entwurf](#entwurf)
+* 4\. [Projektorganisation](#projektorganisation)
+    * 4.1\. [Annahmen](#annahmen)
+    * 4.2\. [Verantwortlichkeiten](#verantwortlichkeiten)
+    * 4.3\. [Grober Projektplan](#groberProjektplan)
+* 5\. [Anhänge](#anhaenge)
+    * 5.1\. [Glossar](#glossar)
+    * 5.2\. [Referenzen](#referenzen)
+    
 
 
+# 1 Einführung <a name="einführung"></a>
 
-
-
-# 1 Einführung
-
-## 1.1 Beschreibung
+## 1.1 Beschreibung <a name="beschreibung"></a>
 Die App "Xtreme Xercising" soll sowohl vorgefertigte Trainingspläne enthalten, wie auch dem Benutzer die Möglichkeit bieten, eigene Trainingspläne zu erstellen. Dabei kann man aus einer Vielzahl an Übungen auswählen oder eigene hinzufügen. Die Übungen können zur besseren Übersicht nach Name, Muskelgruppe oder Kategorie sortiert werden. Fügt man Übungen zu einem Trainingsplan hinzu, legt man zuvor noch die Anzahl an Wiederholungen und Sätzen oder die Dauer der Ausführung fest. Im Trainingsmodus können die Übungen dann in beliebiger Reihenfolge ausgeübt werden und das geschaffte Gewicht bzw. die zurückgelegte Strecke eingetragen werden. Im Statistikmodus kann der Trainingserfolg mithilfe eines Graphen angezeigt werden, wobei die jeweilige Übung und der Zeitraum eingestellt werden können. Auch die Verteilung der trainierten Muskelgruppen und weitere Statistiken sollen hier einsehbar sein. Darüber hinaus kann der Benutzer einen Alarm einstellen, der ihn in Form einer Push-Benachrichtigung ans Training erinnert.
 
-## 1.2 Ziele
+## 1.2 Ziele <a name="ziele"></a>
     
 #### Anwendungsbereiche
 Zu den größten wachsenden Trends der letzten Jahre kann man sowohl die Digitalisierung wie auch das Thema Gesundheit und alle damit verbundenen Unterthemen wie Fitness, gesundem Lifestyle und Ernährung zählen.[1] Diese Trends sind oﬀensichtliche Begleiterscheinungen der allgemeinen weltweiten Entwicklung: Der technologische Fortschritt erschließt immer neue Märkte, das alltägliche Leben wird zunehmend digitalisiert und das Smartphone ist der ständige Begleiter. Über das bloße Telefonieren und Schreiben von Mitteilungen ist das Handy längst hinausgewachsen. Heutzutage nutzt man es zur Informationsgewinnung, zum Einkaufen, zum Planen und Strukturieren des Tagesablaufes, zu Unterhaltungszwecken und vielem mehr. Gleichzeitig wächst der Gesundheitsbegriff immer weiter. Hierbei geht es nicht mehr nur um die bloße körperliche Gesundheit, sondern vielmehr um die “aktive Selbstoptimierung“[1] mit dem “neue[n, Anm. d. Verf.] Ziel einer Gesamtgesundheit“[1]. Gesunde Ernährung und regelmäßiger Sport gewinnen immer stärker an Bedeutung. Dahingehend wird auch die Kombination dieser beiden Trends in Form von Fitness- und Health-Apps immer bedeutsamer.[1]
@@ -80,9 +77,9 @@ Zur Zielgruppe zählen alle Sport-, Fitness-, und Gesundheits-Interessenten jegl
 
 Die Fitness Applikation dient nicht dem Zweck der Erläuterung und richtigen Ausführung von sportlichen Übungen. Das bedeutet, dass es keine entsprechenden Anleitungen oder Bilder zur korrekten Ausführung geben wird. Auch eine Community- oder eine Share-Funktion, mit Hilfe derer sich Nutzer austauschen oder gegenseitig untersützen können, ist zu diesem Zeitpunkt nicht eingeplant. Des weiteren werden auch jegliche medizinischen, gesundheitlichen und ernährungsspezifischen Aspekte nicht in der Fitness-App berücksichtigt.
 
-# 2 Anforderungen
+# 2 Anforderungen <a name="anforderungen"></a>
 
-## 2.1 Funktionale Anforderungen <br />
+## 2.1 Funktionale Anforderungen <br /> <a name="funktionaleAnforderungen"></a>
 #### Use-Case-Diagramm "Trainingsplan"
    ![alt text](Diagramme/Traininsplan.png) <br />
    <br />
@@ -108,43 +105,36 @@ Möchte der Nutzer ein Trainings ausführen, wählt er zunächst den gewünschte
    <br />
 Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, die er sich als Graph anzeigen lassen möchte. Danach hat er die Möglichkeit, den Zeitraum einzugrenzen, um sich den Verlauf seiner erbrachten Leistung entweder in einem kurz-, mittel- oder langfristigen Zeitintervall anzeigen zu lassen.
 
-## 2.2 Nicht-funktionale Anforderungen 
+## 2.2 Nicht-funktionale Anforderungen <a name="nichtFunktionaleAnforderungen"></a>
 
-### 2.2.1 Rahmenbedingungen
+### 2.2.1 Rahmenbedingungen <a name="rahmenbedingungen"></a>
     - Normen, Standards, Protokolle, Hardware, externe Vorgaben
+#### Die Bedeutung von Sport und Fitness
 
-| **Kategorie**| **Anforderung**|
-|:-----|:----------:|
-| Normen | ... |
-| Standards | ... |
-| Protokolle | ... |
-| Hardware | Endgeräte: Google Nexus 5X API-Level ?????????, Samsung Galaxy S7 API-Level ????????? |
-| Externe Vorgaben | ... |
+#### Fortschrittsüberwachung
 
-### 2.2.2 Betriebsbedingungen
-    - Vorgaben des Kunden (z.B. Web Browser / Betriebssystem Versionen, Programmiersprache)
-    
-| **Kategorie**| **Anforderung**|
-|:-----|:----------:|
-| Entwicklungsumgebung | Visual Studio Code |
-| Programmiersprache | Javascript (React Native) |
-| Compile-SDK-Version | ... |
-| Dokumentation | Markdown |
-| Versionsverwaltungssoftare | Git mithilfe von GitHub und GitHub Desktop |
-| UML-Werkzeug | UMLet Version 14.2 |
-| Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
+#### Motivation und ihre Auswirkung auf Leistungssteigerung
 
-### 2.2.3 Qualitätsmerkmale
-    - Externe Qualitätsanforderungen (z.B. Performance, Sicherheit, Zuverlässigkeit, Benutzerfreundlichkeit)
+### 2.2.2 Betriebsbedingungen <a name="betriebsbedingungen"></a>
+
+| **Kategorie**| **Bedingung**|
+|:-----|:----------|
+| Endgerät | Smartphone |
+| Programmiersprache | Javascript + React Native |
+| Betriebssystem | Google Android und Apple iOS |
+| Versionen | Anteil der mögl. Nutzer auf Basis der Versionsverteilung mind. 80% |
+
+### 2.2.3 Qualitätsmerkmale <a name="qualitaetsmerkmale"></a>
     
 | **Kategorie**| **Merkmal**|
-|:-----|:----------:|
-| Performance | ... |
-| Sicherheit | Datenspeicherung bei jeder Datenmanipulation mithilfe der dokumentenbasierten Datenbank Couch.db bzw. Pouch.db |
-| Zuverlässigkeit | ... |
-| Benutzerfreundlichkeit | ... |
+|:-----|:----------|
+| Performance | Schnelles Starten der Anwendung, schnelles Speichern und Abrufen der Daten (Datenbankanbindung), geringer Speicherbedarf (wichtig bei Datenverbrauch bei mobilem Internet) |
+| Sicherheit | Keine Kontoerstellung und deshalb auch keine Speicherung von kritischen persönlichen Daten ( wie z.B. Email-Adresse, Passwort, Name, Adresse, Telefonnummer, etc.) |
+| Zuverlässigkeit | Speicherung der Daten bei jeder Datenmanipulation, Nutzung der Anwendung und Speicherung von Daten sowohl online als auch offline |
+| Benutzerfreundlichkeit | Hinweise bei falschen oder fehlerhaften Nutzereingaben, kurze Popup-Nachricht bei Nutzeraktionen (Erstellen eines Trainingsplans / einer Übung / Hinzufügen einer Übung zu einem Trainingsplan etc.), Akzentfarbe zur Hervorhebung wichtiger Aktionen, gleiche Icons für gleiche oder ähnliche Funktionen, wenig Text, selbsterklärende Funktionen (Orientierung an den iOS und Android Design Guidelines) |
 
-## 2.3 Graphische Benutzerschnittstelle
+## 2.3 Graphische Benutzerschnittstelle <a name="graphischeBenutzerschnittstelle"></a>
+
 #### Ladebildschirm<br /><br />
    ![alt text](Mockups/XtremeXercising_Ladebildschirm.png) <br />
    <br />
@@ -190,24 +180,23 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
    <br />
    In diesem Bildschirm ist man im Trainingsmodus. Aus diesem Grund ist es hier nicht möglich, den Navigation-Drawer zu benutzen. Auch hier ﬁndet man wieder eine Liste mit allen Übungen des Trainingsplans. Das Design ist dabei aber etwas anders: statt einer Liste mit Listeneinträgen sind die Übungen hier mehr wie einzelne Einheiten angeordnet. Die Icons links neben dem Namen werden in der Akzentfarbe eingefärbt, sobald eine Übung vollständig ausgeführt wurde. Unterhalb der Liste ist ein Progress-Bar, der sich entsprechend der abgearbeiteten Übungen füllt und den Fortschritt visualisiert.
    
-### Übung ausführen<br /><br />
+#### Übung ausführen<br /><br />
    ![alt text](Mockups/XtremeXercising_UebungAusfuehren.png) <br />
    <br />
    Dieser Bildschirm ist aktiv, wenn der Benutzer gerade eine bestimmte Übungseinheit ausführt. Pro Satz wird ein Bildschirm dieser Art generiert, in welchem die angestrebte Wiederholungsanzahl und ein Feld für das absolvierte Gewicht angezeigt wird. Wieder hat man die Möglichkeit, die Anzahl per Tastatur oder mit den Buttons einzustellen. Zum nächsten Satz gelangt man mit dem Pfeil am unteren rechten Bildschirm. Hat man den letzten Satz absolviert, verwandelt dieser sich in ein Häkchen und man kehrt in den vorherigen Bildschirm zurück.
    
-### Statistik<br /><br />
+#### Statistik<br /><br />
    ![alt text](Mockups/XtremeXercising_Statistik.png) <br />
    <br />
    Die Statistik besteht aus einem einzelnen Bildschirm, der die unterschiedlichen statistischen Darstellungen enthält. Der erste Graph zeigt den Verlauf des jeweils maximal gestemmten Gewichts, welches man bei einem Training geschaﬀt hat. Darunter kann man die Übung sowie einen Zeitraum aus der Drop-Down-Liste auswählen, die man sich mit dem Graph anzeigen lassen möchte. Darunter ist eine Pie-Chart, welche die Verteilung der einzelnen Muskelgruppen in Prozent anzeigt. Damit kann der Nutzer sehen, wie spezialisiert oder ausgewogen er seinen Körper trainiert. Darüber hinaus gibt es einen weiteren Graphen. Dieser benutzt als Wert die Summe aus den Wiederholungen multipliziert mit dem Gewicht. Dieser Graph berücksichtigt somit nicht nur das Gewicht sondern auch die Sätze und Wiederholungen und zeigt den Fortschritt in Hinblick auf alle drei Variablen an. 
    Somit bekommt der Nutzer einen umfassenden Überblick über sein Training und seine Leistungssteigerung. Dabei kann er die Übungen einzeln und individuell prüfen und sowohl einen kurzfristigen wie auch langfristigen Einblick gewinnen, indem er den Zeitraum entsprechend anpasst.
    
-### GUI-Navigation<br /><br />
+#### GUI-Navigation<br /><br />
    ![alt text](Diagramme/GUINavigation.png) <br />
    <br />
-   Zustandsgraph, der die GUI-Navigation darstellt.
    
    
-## 2.4 Anforderungen im Detail
+## 2.4 Anforderungen im Detail <a name="anforderungenImDetail"></a>
 
 | **Name**| **In meiner Rolle als**...|   ...**möchte ich**...   | ..., **so dass**... | **Erfüllt, wenn**... | **Priorität**   |
 |:-----|:----------:|:-------------------|:-------------|:---------|:----------------|
@@ -239,51 +228,125 @@ Um die Statistik auszuwerten, muss der Nutzer zunächst eine Übung auswählen, 
 | Motivation | User | möchte ich motiviert werden | ich angespornt werde, mehr Sport zu machen | Motivationssprüche werden angezeigt | Should |
 
 
-# 3 Technische Beschreibung
+# 3 Technische Beschreibung <a name="technischeBeschreibung"></a>
 
-## 3.1 Systemübersicht
-    - Systemarchitekturdiagramm ("Box-And-Arrow" Diagramm)
+## 3.1 Systemübersicht <a name="systemuebersicht"></a>
+   ![alt text](Diagramme/Systemarchitekturdiagramm.png) <br />
+    <br />
     - Schnittstellenbeschreibung
     - Kommunikationsprotokolle, Datenformate
 
-## 3.2 Softwarearchitektur
+## 3.2 Softwarearchitektur <a name="softwarearchitektur"></a>
     - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
 
-## 3.3 Datenmodell 
-    - Konzeptionelles Analyseklassendiagramm
+## 3.3 Datenmodell <a name="datenmodell"></a>
+   ![alt text](Diagramme/Analyseklassendiagramm.png) <br />
+   <br />
 
-## 3.4 Abläufe
-    - Aktivitätsdiagramme für relevante Use Cases
-    - Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+## 3.4 Abläufe <a name="ablaeufe"></a>
 
-## 3.5 Entwurf
-    - Detaillierte UML-Diagramme für relevante Softwarebausteine
+#### Aktivitätsdiagramm "Trainingsplan erstellen"
+![alt text](Diagramme/AD_Trainingsplan_erstellen.png) <br />
+<br />
 
-# 4 Projektorganisation
+#### Aktivitätsdiagramm "Trainingsplan löschen"
+![alt text](Diagramme/AD_Trainingsplan_loeschen.png) <br />
+<br />
 
-## 4.1 Annahmen
-    - Nicht durch den Kunden definierte spezifische Annahmen, Anforderungen und Abhängigkeiten
-    - Verwendete Technologien (Programmiersprache, Frameworks, etc.)
-    - Einschränkungen, Betriebsbedingungen und Faktoren, die die Entwicklung beeinflussen (Betriebssysteme, Entwicklungsumgebung)
-    - Interne Qualitätsanforderungen (z.B. Softwarequalitätsmerkmale wie z.B. Erweiterbarkeit)
+#### Aktivitätsdiagramm "Übung zum Trainingsplan hinzufügen"
+![alt text](Diagramme/AD_Uebung_hinzufügen.png) <br />
+<br />
 
-## 4.2 Verantwortlichkeiten
-    - Zuordnung von Personen zu Softwarebausteinen aus Kapitel 3.1 und 3.2
-    - Rollendefinition und Zuordnung
+#### Aktivitätsdiagramm "Eigene Übungen erstellen"
+![alt text](Diagramme/AD_Eigene_Uebungen_erstellen.png) <br />
+<br />
 
-## 4.3 Grober Projektplan
-    - Meilensteine
+#### Aktivitätsdiagramm "Trainieren"
+![alt text](Diagramme/AD_Trainieren.png) <br />
+<br />
 
-# 5 Anhänge
+#### Aktivitätsdiagramm "Statistik auswerten"
+![alt text](Diagramme/AD_Statistik_auswerten.png) <br />
+<br />
 
-## 5.1 Glossar 
-    - Definitionen, Abkürzungen, Begriffe
+#### Aktivitätsdiagramm für den Ablauf sämtlicher Use Cases
+![alt text](Diagramme/AD_Ablauf_alle_Use_Cases.png) <br />
+<br />
 
-## 5.2 Referenzen
-    - Handbücher, Gesetze
-    - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/
+## 3.5 Entwurf <a name="entwurf"></a>
+   ![alt text](Diagramme/TrainingsplanKlassendiagramm.png) <br />
+   <br />
+     ![alt text](Diagramme/ÜbungsauswahlKlassendiagramm.png) <br />
+   <br />
+     ![alt text](Diagramme/TrainierenKlassendiagramm.png) <br />
+   <br />
 
-## 5.3 Index
+# 4 Projektorganisation <a name="projektorganisation"></a>
 
+## 4.1 Annahmen <a name="annahmen"></a>
+
+#### Verwendete Technologien
+
+| **Kategorie**| **Technologie**|
+|:-----|:----------|
+| Programmiersprache | Javascript (React Native) |
+| Framework | React Native |
+| Hardware | Endgeräte: Google Nexus 5X Version Oreo 8.1, API Level 27 und Samsung Galaxy S7 Version Nougat 7.0, API Level 24 |
+| Datenbank | Dokumentenbasierte Datenbank Couch.db |
+| Dokumentation | Markdown |
+| Versionsverwaltungssoftare | Git mithilfe von GitHub und GitHub Desktop |
+| UML-Werkzeug | UMLet Version 14.2 |
+| Mockup Tool | Balsamiq Mockups 3 Version 3.5.15 |
+| Projektplanerstellung | Microsoft Office 365 ProPlus Excel, Version 1804 |
+
+#### Betriebsbedingungen
+
+| **Kategorie**| **Bedingung**|
+|:-----|:----------|
+| Entwicklungsumgebung | Visual Studio Code |
+| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [2] |
+| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [3] |
+
+#### Interne Qualitätsanforderungen
+
+Langfristig gibt es Pläne zur Erweiterbarkeit der Anwendung, wie zum Beispiel eine Webanwendung für die bessere Verwaltung von Trainingsplänen auf dem Rechner sowie einer Art Forum, um sich mit anderen Nutzern austauschen zu können. Darüberhinaus könnte es auch ergänzende Ernährungs-, Motivations-, Lifestyle- oder Health-Apps geben, die Daten mit der Fitnessapp austauschen sollen. Denkbar wäre auch die Monetarisierung der Fitness-Anwendung, wobei für Standardnutzer der Umfang und die Funktionalität eingeschränkt und für Premiumnutzer in vollem Umfang freigschaltet werden soll. All diese Erweiterungen sind aber im Rahmen dieser Entwicklung aus zeitlichen Gründen nicht umsetzbar und müssen zu diesem Zeitpunkt leider unberücksichtigt bleiben, sollten hier aber der Vollständigkeit halber in Kürze Erwähnung finden.
+
+## 4.2 Verantwortlichkeiten <a name="verantwortlichkeiten"></a>
+Generell soll die Anwendung parallel programmiert werden, wobei sich Pascal Squarra zunächst um die Modellierung der Daten und anschließend um die Implementierung der Logik kümmert, und Jacqueline Menke zeitgleich die Programmierung der GUI übernimmt. Wird einer der Entwickler frühzeitig mit seinem Aufgabenbereich fertig, unterstützt derjenige den anderen bei seiner Arbeit. Die letzte Phase, das Testen, soll gemeinsam am Schluss der Entwicklung erfolgen, um möglichst effizient und gründlich testen zu können.
+
+## 4.3 Grober Projektplan <a name="groberProjektplan"></a>
+![alt text](Projektplan/Projektplan2.png) <br />
+
+# 5 Anhänge <a name="anhaenge"></a>
+
+## 5.1 Glossar <a name="glossar"></a>
+| **Begriff**| **Beschreibung**|
+|:-----:|:----------|
+| Ausdauer | Übungskategorie; Übungen, die den Herz-Kreislauf stärken und den Fettabbau fördern, z.B. "Joggen", "Fahrrad fahren" |
+| Ausführungsdauer | Auch (Ausführungs-)Zeit, Zeitspanne der Ausführung einer Übungseinheit, bei Übungen der Kategorien "Ausdauer"  |
+| Cardio | Trainingsplankategorie; Pläne für Ausdauertraining, die zur Körperfettreduktion und allgemeinen Fitness beitragen |
+| Definition | Trainingsplankategorie; Pläne für die spezielle Körperfettreduzieren, z.B. hochintensives Intervalltraining oder Muskelaufbautraining mit weniger Gewicht aber mehr Wiederholungen pro Satz |
+| Freie Übung | Übungskategorie; Übungen, bei denen nur mit dem Körper oder mit Hanteln trainiert wird und die nicht zu den Ausdauerübungen zählen, z.B. "Sit-up", "Bizeps-Curls" |
+| Gewicht | Leistung bei Übungseinheiten der Kategorie "Freie Übung" und "Maschine" mit Sätzen und Wiederholungen, gemessen in Kilogramm, wird beim Training des Nutzers erfasst  |
+| Kategorie (Trainingsplan) | Bezeichnet das generelle Fitnessziel des Trainingsplans: Cardio, Definition, Muskelaufbau |
+| Kategorie (Übung) | Bezeichnet die Art der Ausführung einer Übung: Ausdauer, Freie Übung, Maschine  |
+| Leistung | Trainingsergebnis des Users bei der Ausführung eines Satzes einer Übungseinheit oder einer Ausführungsdauer: gemessen in Gewicht oder Strecke  |
+| Maschine| Übungskategorie; Übungen, für die spezielle Geräte benötigt werden, die meist nur im Fitnessstudio vorhanden sind, z.B. "Bauchpresse", "Rückenstrecker" |
+| Muskelaufbau | Trainingsplankategorie; Pläne für intensives Training mit hohem Gewicht und eher wenigen Wiederholungen pro Satz für erhöhtes Muskelwachstum  |
+| Muskelgruppe | Gibt an, welche Muskelgruppen bei der AUsführung einer Übung aktiv sind: Bauch, Bizeps, Brust, Oberschenkel, Po, Rücken, Schultern, Trizeps, Waden  |
+| Sätze | Bildet die Ausführung einer Übungseinheit mit vorgegebener Wiederholungsanzahl, bei Übungen der Kategorien "Freie Übung" und "Maschine"  |
+| Strecke | Leistung bei Übungeinheiten der Kategorie "Ausdauer" mit Ausführungsdauer, gemessen in Kilometern pro Stunde, wird beim Training des Nutzers erfasst  |
+| Training | Ausführung aller Übungseinheiten eines Trainingsplanes mit Notierung der erbrachten Leistung: Gewicht oder Strecke  |
+| Trainingsplan | Liste mit vom User zu geordneten Übungen |
+| User | (Be-)Nutzer von Xtreme Xercising |
+| Übung | Eine sportliche Aktion, z.B. "Liegestütz" oder "Latzug" |
+| Übungseinheit | Eine Übung, die zu einem Trainingsplan gehört, hat Sätze und Wiederholungen oder eine Ausführungsdauer |
+| Wiederholungen | Anzahl der Ausführungen einer Übungeinheit pro Satz, bei Übungen der Kategorien "Freie Übung" und "Maschine" |
+
+
+## 5.2 Referenzen <a name="referenzen"></a>
+    - [1] Zukunftsinstitut GmbH, Frankfurt am Main, Healthness: Gesundheit wird ganzheitlich https://www.zukunftsinstitut.de/artikel/healthness-gesundheitwird-ganzheitlich/, 09.05.2018
+    - [2] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
+    - [3] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
 
 
