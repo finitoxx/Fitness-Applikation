@@ -4,12 +4,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>480</x>
-      <y>260</y>
+      <x>360</x>
+      <y>220</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
-    <panel_attributes>ÜbungAusführenApp
+    <panel_attributes>StatistikApp
 -
 -
 render(): function</panel_attributes>
@@ -18,8 +18,8 @@ render(): function</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>250</x>
-      <y>260</y>
+      <x>130</x>
+      <y>220</y>
       <w>150</w>
       <h>100</h>
     </coordinates>
@@ -35,18 +35,16 @@ render(): function</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
-      <y>70</y>
+      <x>190</x>
+      <y>50</y>
       <w>200</w>
-      <h>130</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;component&gt;&gt;
-ÜbungsContainer
+MaxLeistungGraph
 -
 props:
-name: string
-kategorie: string
-muskelgruppe: string
+werte:int[]
 -
 render(): function</panel_attributes>
     <additional_attributes/>
@@ -54,100 +52,60 @@ render(): function</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>700</x>
-      <y>260</y>
-      <w>180</w>
-      <h>150</h>
+      <x>580</x>
+      <y>220</y>
+      <w>150</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;component&gt;&gt;
-SatzUndWdhZähler
+Menue
 -
 props:
-aktuellerSatz: int
-maximalSatz: int
-anzahlWdh: int
+ausgeklappt: boolean
 -
-render(): function
-aktualisieren(): function</panel_attributes>
+render(): function</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
-      <y>430</y>
+      <x>500</x>
+      <y>50</y>
       <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;component&gt;&gt;
+KuchenDiagramm
+-
+props:
+werte:int[]
+-
+render(): function</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>410</y>
+      <w>200</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;component&gt;&gt;
-LeistungEingeben
+DropdownMenue
 -
 props:
-gewicht: double
+aktuelleAuswahl: string
 -
 render(): function
-aktualisieren(): function</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>710</x>
-      <y>430</y>
-      <w>180</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;component&gt;&gt;
-PlusButton
--
--
-render(): function
-gewichtErhöhen(): function</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>710</x>
-      <y>530</y>
-      <w>190</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;component&gt;&gt;
-MinusButton
--
--
-render(): function
-gewichtReduzieren(): function</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>220</x>
-      <y>430</y>
-      <w>220</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;component&gt;&gt;
-WeiterButton
--
-props:
-eingegebenesGewicht: double
-trainingfertig: boolean
-buttonImage: image
--
-render(): function
-trainingswertBerechnen(): function
-aktuellerSatz erhöhen(): function
-bildAktualisieren(): function</panel_attributes>
+chartsAktualisieren(): function</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>390</x>
-      <y>260</y>
+      <x>270</x>
+      <y>220</y>
       <w>110</w>
       <h>40</h>
     </coordinates>
@@ -158,20 +116,20 @@ bildAktualisieren(): function</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>190</y>
-      <w>80</w>
-      <h>90</h>
+      <x>270</x>
+      <y>140</y>
+      <w>170</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;import&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>610</x>
-      <y>270</y>
+      <x>490</x>
+      <y>230</y>
       <w>110</w>
       <h>40</h>
     </coordinates>
@@ -182,62 +140,69 @@ bildAktualisieren(): function</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
-      <y>300</y>
-      <w>80</w>
-      <h>150</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;import&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>430</x>
-      <y>300</y>
-      <w>100</w>
-      <h>150</h>
+      <y>140</y>
+      <w>160</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;import&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;130.0;50.0;10.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>430</y>
-      <w>100</w>
-      <h>40</h>
+      <x>250</x>
+      <y>260</y>
+      <w>170</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;import&gt;&gt;</panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>630</x>
-      <y>520</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;import&gt;&gt;</panel_attributes>
-    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;150.0;150.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>190</x>
-      <y>40</y>
+      <x>60</x>
+      <y>0</y>
       <w>720</w>
       <h>640</h>
     </coordinates>
-    <panel_attributes>ÜbungausführenActivity
+    <panel_attributes>StatistikActivity
 --
 bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>260</y>
+      <w>120</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;import&gt;&gt;</panel_attributes>
+    <additional_attributes>90.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>410</y>
+      <w>200</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;component&gt;&gt;
+ÜbungsChooser
+-
+props:
+aktuelleAuswahl: string
+-
+render(): function
+chartsAktualisieren(): function
+layer=1</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
