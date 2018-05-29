@@ -316,8 +316,8 @@ Aus diesen Gründen soll der Nutzer mithilfe von Xtreme Xercising seine Fitnessz
 | **Kategorie**| **Bedingung**|
 |:-----|:----------|
 | Entwicklungsumgebung | Visual Studio Code |
-| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [?] |
-| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [??] |
+| Betriebssystem (Android) | Google Android ab Version 5.0 Lollipop, API Level 21 [9] |
+| Betriebssystem (iOS) | Apple iOS ab 10.3.3 [10] |
 
 #### Interne Qualitätsanforderungen
 
@@ -365,10 +365,7 @@ Generell soll die Anwendung parallel programmiert werden, wobei sich Pascal Squa
     - [6] Karlsruher Institut für Technik: Nutzen von Sport, http://www.gesundheit-zum-mitmachen.de/196.php, 29.05.2018
     - [7] Reichl, Dominic, Erreiche deine Ziele, indem du deinen Fortschritt überwachst, http://www.kraftmachtfrei.de/denkkraft/ziele-erreichen-fortschritt/, 29.05.2018
     - [8] American Psychological Association: Frequently monitoring progress toward goals increases chance of success, ScienceDaily, https://www.sciencedaily.com/releases/2015/10/151029101349.htm
-   
-   
-    
-    - [?] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
-    - [??] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
+    - [9] Statista das Statistik-Portal, Anteile der verschiedenen Android-Versionen an allen Geräten mit Android OS weltweit im Zeitraum 01. bis 07. Mai 2018, https://de.statista.com/statistik/daten/studie/180113/umfrage/anteil-der-verschiedenen-android-versionen-auf-geraeten-mit-android-os/, 28.05.2018
+    - [10] Apple Developer, App Store, https://developer.apple.com/support/app-store/, 28.05.2018
 
 
