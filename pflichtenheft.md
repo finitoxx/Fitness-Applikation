@@ -245,11 +245,16 @@ Aus diesen Gründen soll der Nutzer mithilfe von Xtreme Xercising seine Fitnessz
 ## 3.1 Systemübersicht <a name="systemuebersicht"></a>
    ![alt text](Diagramme/Systemarchitekturdiagramm.png) <br />
     <br />
-    - Schnittstellenbeschreibung
-    - Kommunikationsprotokolle, Datenformate
+#### Schnittstellenbeschreibung
+   Die Schnitstelle beläuft sich auf eine ad-hoc Verbindung, wie es bei mobilen Applikationen so üblich ist. Dies ermöglicht uns eine einache Verbindung mit dem Server zum interagieren und austauschen der Datenbank-Daten.
+#### Datenformate
+   Vorläufig werden wir das Datenformat JSON verwenden, um Daten abzuspeichern. Da JSON sehr flexibel und gut zu lesen ist können wir die Speicherung der Daten einfach vornehmen. Am Ende sollen die Daten dann mithilfe von Couchdb abgespeichert werden.
+#### Kommunikationsprotokolle
+   HTML wird genutzt um mit der Couchdb zu interagieren
 
 ## 3.2 Softwarearchitektur <a name="softwarearchitektur"></a>
-    - Darstellung von Softwarebausteinen (Module, Schichten, Komponenten)
+   ![alt text](Diagramme/Komponentendiagramm.png) <br />
+   <br />
 
 ## 3.3 Datenmodell <a name="datenmodell"></a>
    ![alt text](Diagramme/Analyseklassendiagramm.png) <br />
