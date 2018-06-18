@@ -26,7 +26,7 @@ export default class HomeScreen extends Component {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#F5FCFF',
+      backgroundColor: '#F500FF',
     },
     welcome: {
       fontSize: 20,
