@@ -6,6 +6,17 @@ import {
   View,
   Button
 } from 'react-native';
+import {
+  BallIndicator,
+  BarIndicator,
+  DotIndicator,
+  MaterialIndicator,
+  PacmanIndicator,
+  PulseIndicator,
+  SkypeIndicator,
+  UIActivityIndicator,
+  WaveIndicator
+} from 'react-native-indicators';
 export default class LoadingScreen extends Component {
     
     render(){
@@ -15,7 +26,7 @@ export default class LoadingScreen extends Component {
           <Button
             title ="Navigate to Home"
             onPress = { ()=> navigate('Home')}/>
-       
+          <BallIndicator color='blue' size={20}/>
         </View>
       );
     }
