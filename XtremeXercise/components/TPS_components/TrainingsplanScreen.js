@@ -6,6 +6,7 @@ import {
   View,
   Button
 } from 'react-native';
+import TrainingsplanList from './TrainingsplanListComponent';
 export default class TrainingsplanScreen extends Component {
     render(){
       const { navigate}=this.props.navigation;
@@ -17,6 +18,7 @@ export default class TrainingsplanScreen extends Component {
             <Button
             title ="Trainieren"
             onPress = { ()=> navigate('Trainieren')}/>
+            <TrainingsplanList></TrainingsplanList>
         </View>
       );
     }
