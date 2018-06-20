@@ -13,14 +13,14 @@ import {
   Button
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import LoadingScreen from './components/LoadingScreen';
-import HomeScreen from './components/HomeScreen';
-import TrainingsplanScreen from './components/TrainingsplanScreen';
-import EditTrainingsplanScreen from './components/EditTrainingsplanScreen';
-import ÜbungenScreen from './components/ÜbungenScreen';
-import TrainierenScreen from './components/TrainierenScreen';
-import ÜbungAusführenScreen from './components/ÜbungAusführenScreen';
-import StatistikScreen from './components/StatistikScreen';
+import LoadingScreen from './components/LS_components/LoadingScreen';
+import HomeScreen from './components/HS_components/HomeScreen';
+import TrainingsplanScreen from './components/TPS_components/TrainingsplanScreen';
+import EditTrainingsplanScreen from './components/ETPS_components/EditTrainingsplanScreen';
+import ÜbungenScreen from './components/ÜS_components/ÜbungenScreen';
+import TrainierenScreen from './components/TS_components/TrainierenScreen';
+import ÜbungAusführenScreen from './components/ÜAS_components/ÜbungAusführenScreen';
+import StatistikScreen from './components/SS_components/StatistikScreen';
 
 const NavigationApp = StackNavigator({
   LoadingScreen: { screen: LoadingScreen},
