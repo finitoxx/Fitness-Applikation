@@ -6,8 +6,9 @@ import {
   View,
   Button
 } from 'react-native';
-
+import TrainingsplanList from './TrainingsplanListComponent';
 export default class HomeScreen extends Component {
+    
     render(){
       const { navigate}=this.props.navigation;
       return(
@@ -22,7 +23,7 @@ export default class HomeScreen extends Component {
           </View>
 
           <View style={styles.list}>
-
+          <TrainingsplanList navigation = {this.props.navigation}/>
           </View>
           
           <View style={styles.buttons}>
@@ -43,14 +44,10 @@ export default class HomeScreen extends Component {
     container: {
       backgroundColor: '#372D29',
       flex:1,
-      flexDirection:'column',
-      alignItems:'center',
-      justifyContent:'center',
     },  
     header: {
       flex: 1,
       flexDirection:'column',
-      alignItems:'center',
       justifyContent:'center',
     },
     headerElem1: {
@@ -68,10 +65,8 @@ export default class HomeScreen extends Component {
       fontSize: 20,
     },
     list: {
-      flex: 2,
-      flexDirection:'column',
-      alignItems:'center',
-      justifyContent:'center',
+      backgroundColor: '#666666',
+      flex: 9,
     },
     buttons: {
       flex: 1,
