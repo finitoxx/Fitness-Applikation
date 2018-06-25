@@ -1,0 +1,52 @@
+{
+    "Trainingspläne": [
+        {
+            "name" : "Leg Day",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day1",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day2",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day3",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day4",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day5",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day6",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day7",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day8",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day9",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day10",
+            "kategorie" : "Muskelaufbau"
+        },
+        {
+            "name" : "Leg Day11",
+            "kategorie" : "Muskelaufbau"
+        }
+    ]
+}
