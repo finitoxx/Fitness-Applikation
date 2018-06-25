@@ -4,27 +4,35 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  Button,
 } from 'react-native';
+import ListComponent from './ListComponent';
+
+const width = '80%';
+const height = '%';
 
 export default class HomeScreen extends Component {
     render(){
       const { navigate}=this.props.navigation;
       return(
+
         <View style={styles.container}>
           <View style={styles.header}>
             <Text style={styles.headerText1}> 
               |
               <Text style={styles.headerText2}>
+                h
+              </Text>                            
+              <Text style={styles.headerText3}>
                 Meine Trainingspläne
               </Text>
             </Text>
           </View>
 
           <View style={styles.list}>
-
+            <ListComponent/>
           </View>
-          
+
           <View style={styles.buttons}>
             <Button
               title ="Mein Trainingsplan"
@@ -35,6 +43,7 @@ export default class HomeScreen extends Component {
           </View>
 
         </View>
+
       );
     }
   }
@@ -43,38 +52,34 @@ export default class HomeScreen extends Component {
     container: {
       backgroundColor: '#372D29',
       flex:1,
-      flexDirection:'column',
-      alignItems:'center',
-      justifyContent:'center',
     },  
     header: {
-      flex: 1,
+      flex: 5,
       flexDirection:'column',
-      alignItems:'center',
+      alignItems:'flex-start',
       justifyContent:'center',
-    },
-    headerElem1: {
-      marginLeft: -80,
-    },
-    headerElem2: {
-      marginLeft: 40,
+      marginLeft: 10,
     },
     headerText1: {
       color: '#EF2E1C',
       fontSize: 20,
     },
     headerText2: {
+      color: '#372D29',
+      fontSize: 20,
+    },
+    headerText3: {
       color: '#FFFFFF',
       fontSize: 20,
     },
     list: {
-      flex: 2,
+      flex: 40,
       flexDirection:'column',
       alignItems:'center',
       justifyContent:'center',
     },
     buttons: {
-      flex: 1,
+      flex: 10,
       flexDirection:'column',
       alignItems:'center',
       justifyContent:'center',
