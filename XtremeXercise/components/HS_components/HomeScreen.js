@@ -4,15 +4,40 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  Button,
+  TouchableOpacity,
 } from 'react-native';
 import TrainingsplanList from './TrainingsplanListComponent';
+import TrainingsplanErstellen from './TrainingsplanErstellen';
+import Modal from "react-native-modal";
+
+const width = '50%';
+const height = '50%';
+
 export default class HomeScreen extends Component {
-    
+
+  state = {
+    isModalVisible: false
+  };
+
+  _toggleModal = () =>
+    this.setState({ isModalVisible: !this.state.isModalVisible });
+
+  componentWillUnmount = () =>
+    this.setState({ isModalVisible: false });
+      
     render(){
       const { navigate}=this.props.navigation;
       return(
         <View style={styles.container}>
+
+          <Modal
+            isVisible={this.state.isModalVisible}
+            onBackdropPress={() => this.setState({ isModalVisible: false })}
+            >
+              <TrainingsplanErstellen toggle = {this._toggleModal}/>
+          </Modal>
+
           <View style={styles.header}>
             <Text style={styles.headerText1}> 
               |
@@ -31,8 +56,8 @@ export default class HomeScreen extends Component {
               title ="Mein Trainingsplan"
               onPress = { ()=> navigate('Trainingsplan')}/>
             <Button
-              title ="Statistik"
-              onPress = { ()=> navigate('Statistik')}/>
+              title ="Trainingsplan hinzufügen"
+              onPress = {this._toggleModal}/>
           </View>
 
         </View>
@@ -73,6 +98,12 @@ export default class HomeScreen extends Component {
       flexDirection:'column',
       alignItems:'center',
       justifyContent:'center',
+    },
+    modal: {
+      width,
+      height,
+      alignItems: 'center',
+      justifyContent: 'center'
     },
   });
   
