@@ -6,15 +6,7 @@ import {
   View,
   Button,
 } from 'react-native';
-<<<<<<< HEAD
-import ListComponent from './ListComponent';
-
-const width = '80%';
-const height = '%';
-
-=======
 import TrainingsplanList from './TrainingsplanListComponent';
->>>>>>> working
 export default class HomeScreen extends Component {
     
     render(){
@@ -35,11 +27,7 @@ export default class HomeScreen extends Component {
           </View>
 
           <View style={styles.list}>
-<<<<<<< HEAD
-            <ListComponent/>
-=======
           <TrainingsplanList navigation = {this.props.navigation}/>
->>>>>>> working
           </View>
 
           <View style={styles.buttons}>
@@ -63,12 +51,8 @@ export default class HomeScreen extends Component {
       flex:1,
     },  
     header: {
-      flex: 5,
+      flex: 1,
       flexDirection:'column',
-<<<<<<< HEAD
-      alignItems:'flex-start',
-=======
->>>>>>> working
       justifyContent:'center',
       marginLeft: 10,
     },
@@ -85,18 +69,11 @@ export default class HomeScreen extends Component {
       fontSize: 20,
     },
     list: {
-<<<<<<< HEAD
-      flex: 40,
-      flexDirection:'column',
-      alignItems:'center',
-      justifyContent:'center',
-=======
       backgroundColor: '#666666',
       flex: 9,
->>>>>>> working
     },
     buttons: {
-      flex: 10,
+      flex: 2,
       flexDirection:'column',
       alignItems:'center',
       justifyContent:'center',
