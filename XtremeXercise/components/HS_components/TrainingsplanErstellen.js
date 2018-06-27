@@ -57,10 +57,10 @@ export default class HomeScreen extends Component {
                         <TouchableOpacity onPress= {this.props.toggle}>
                             <View style={styles.btnCont2}>
                                 
-                                    <Text>OK</Text>
+                                    <Text style={styles.btnText}>OK</Text>
                                 
                             </View>
-                        </TouchableOpacity>
+                         </TouchableOpacity>
                         </View>    
                     </View>
 
