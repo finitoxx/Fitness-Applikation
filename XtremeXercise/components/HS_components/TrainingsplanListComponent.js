@@ -8,7 +8,7 @@ export default class TrainingsplanListComponent extends Component {
     super(props);
 
     this.state = {
-      data: allData.Trainingspläne,
+      data: this.props.dataSet,
     };
   }
 

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
   Button,
-  TouchableOpacity,
 } from 'react-native';
 import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
 import Modal from "react-native-modal";
+import * as allData from './../../Daten.json';
 
 const width = '50%';
 const height = '50%';
@@ -17,9 +16,17 @@ const height = '50%';
 export default class HomeScreen extends Component {
 
   state = {
-    isModalVisible: false
+    isModalVisible: false,
+    data: allData.Trainingspläne,
   };
-
+  _addTrainingsplan(trainingsplan){
+    let newTrainingsplan= {
+      name: trainingsplan.name,
+      kategorie: trainingsplan.kategorie
+    }
+    this.state.data.push(newTrainingsplan);
+    alert("Trainingsplan wurde hinzugefügt" + newTrainingsplan.name);
+  }
   _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });
 
@@ -35,7 +42,9 @@ export default class HomeScreen extends Component {
             isVisible={this.state.isModalVisible}
             onBackdropPress={() => this.setState({ isModalVisible: false })}
             >
-              <TrainingsplanErstellen toggle = {this._toggleModal}/>
+              <TrainingsplanErstellen 
+              toggle = {this._toggleModal}
+              addTrainingsplan = {this._addTrainingsplan.bind(this)}/>
           </Modal>
 
           <View style={styles.header}>
@@ -48,7 +57,9 @@ export default class HomeScreen extends Component {
           </View>
 
           <View style={styles.list}>
-          <TrainingsplanList navigation = {this.props.navigation}/>
+          <TrainingsplanList 
+          navigation = {this.props.navigation}
+          dataSet = {this.state.data}/>
           </View>
           
           <View style={styles.buttons}>

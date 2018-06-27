@@ -5,13 +5,14 @@ const width = '50%';
 const height = '50%';
 
 export default class Trainingsplan extends Component {
+ 
   render() {
+    const trainingsplan = this.props.navigation.getParam("trainingsplan", 'Irgend n Trainingsplan');
     return (
       <View style={styles.screen}>
         <View style={styles.box}>
           <Text style={styles.text}>
-            {width} of width{'\n'}
-            {height} of height
+            {trainingsplan.name}
           </Text>
         </View>
       </View>
