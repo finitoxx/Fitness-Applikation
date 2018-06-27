@@ -6,20 +6,50 @@ import {
   View,
   Button,
   TouchableOpacity,
+  TextInput,
+  TouchableHighlight
 } from 'react-native';
 
 const width = '50%';
 const height = '50%';
 
 export default class HomeScreen extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { text: 'Name' };
+      }
+
     render(){
         return(
             <View style={styles.screen}>
                 <View style={styles.box}>
-                    <Text>Hello!</Text>
-                    <TouchableOpacity onPress={this.props.toggle}>
-                    <Text>Hide me!</Text>
-                    </TouchableOpacity>
+                    <Text style={styles.title}>Trainingsplan erstellen</Text>
+                    <TextInput
+                        style={styles.textInput}
+                        onChangeText={(text) => this.setState({text})}
+                        value={this.state.text}
+                    />
+
+                    <View style={styles.btnContainer}>
+                        <View style={{flex: 1}}>
+                        <TouchableOpacity onPress= {this.props.toggle}> 
+                            <View style={styles.btnCont1}>
+                               <Text>OK</Text>
+                            </View>
+                        </TouchableOpacity>
+                        </View>
+                        <View style={{flex: 1}}>
+                        <TouchableOpacity onPress= {this.props.toggle}>
+                            <View style={styles.btnCont2}>
+                                
+                                    <Text style={styles.btnText}>ABBRECHEN</Text>
+                                
+                            </View>
+                        </TouchableOpacity>
+                        </View>    
+                    </View>
+
                 </View>
             </View>
         );
@@ -43,7 +73,36 @@ const styles = StyleSheet.create({
         height,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#F3D1B0',
+        backgroundColor: '#FFFFFF',
       },
+      title: {
+          paddingTop: 10,
+          color: '#000000'
+      },
+      textInput: {
+        height: 40, 
+        borderColor: '#372D29',
+      },
+      btnContainer: {
+        flexDirection:'row',
+        flex: 1,
+      },
+      btnCont1: {
+        height: 25,
+        borderWidth: 1,
+        borderColor: '#000000',
+        alignItems: 'center',
+      
+      },
+      btnCont2: {
+        height: 25,
+        borderWidth: 1,
+        borderColor: '#000000',
+        alignItems: 'center',
+      
+      },
+      btnText:{
+          fontSize: 12
+      }
 });
   
