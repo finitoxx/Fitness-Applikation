@@ -23,7 +23,7 @@ export default class Trainingsplan extends Component {
 
   render() {
     const { navigate}=this.props.navigation;
-    const trainingsplan = this.props.navigation.getParam("trainingsplan","noDefault");
+    const item = this.props.navigation.getParam("trainingsplan","noDefault");
     return (
       <View style={styles.container}>
 
@@ -36,11 +36,11 @@ export default class Trainingsplan extends Component {
                 h
               </Text>
               <Text style={styles.headerText3}>
-                {trainingsplan.name}
+                {item.name}
               </Text>
             </Text>
             <Text style={styles.headerText4}>
-              {trainingsplan.kategorie}
+              {item.kategorie}
             </Text>
           </View>
 
@@ -77,7 +77,7 @@ export default class Trainingsplan extends Component {
               </View>
             </TouchableOpacity>
             
-            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan')}>
+            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: item})}>
               <View style={styles.btnEdit}>
                 <Image style={styles.imgEdit}
                   source={require('./../../img/edit.png')}/>
