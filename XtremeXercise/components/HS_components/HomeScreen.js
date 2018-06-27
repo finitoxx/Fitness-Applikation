@@ -51,6 +51,9 @@ export default class HomeScreen extends Component {
             <Text style={styles.headerText1}> 
               |
               <Text style={styles.headerText2}>
+                  h
+              </Text>
+              <Text style={styles.headerText3}>
                 Meine Trainingspläne
               </Text>
             </Text>
@@ -84,19 +87,19 @@ export default class HomeScreen extends Component {
     header: {
       flex: 1,
       flexDirection:'column',
-      justifyContent:'center',
-    },
-    headerElem1: {
-      marginLeft: -80,
-    },
-    headerElem2: {
-      marginLeft: 40,
+      paddingTop: 20,
+      paddingLeft: 20,
     },
     headerText1: {
       color: '#EF2E1C',
       fontSize: 20,
+      fontWeight: 'bold',
     },
     headerText2: {
+      color: '#372D29',
+      fontSize: 10,
+    },
+    headerText3: {
       color: '#FFFFFF',
       fontSize: 20,
     },
