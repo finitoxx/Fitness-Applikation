@@ -9,6 +9,18 @@ import {
  } from 'react-native';
 
 export default class Trainingsplan extends Component {
+
+  state = {
+    isBellVisible: false,
+    isStarVisible: false
+  };
+
+  _toggleBell = () =>
+    this.setState({ isBellVisible: !this.state.isBellVisible });
+
+  _toggleStar = () =>
+    this.setState({ isStarVisible: !this.state.isStarVisible });
+
   render() {
     const { navigate}=this.props.navigation;
     const trainingsplan = this.props.navigation.getParam("trainingsplan","noDefault");
@@ -60,13 +72,15 @@ export default class Trainingsplan extends Component {
           <View style={styles.btnDelEdit}>
             <TouchableOpacity onPress= "">
               <View style={styles.btnDel}>
-                <Text style={styles.btnText2}>Del</Text>  
+                <Image style={styles.imgDel}
+                  source={require('./../../img/delete.png')}/>
               </View>
             </TouchableOpacity>
             
-            <TouchableOpacity onPress= "">
+            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan')}>
               <View style={styles.btnEdit}>
-                <Text style={styles.btnText2}>Edit</Text>  
+                <Image style={styles.imgEdit}
+                  source={require('./../../img/edit.png')}/>
               </View>
             </TouchableOpacity>
           </View>
@@ -109,6 +123,8 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 15,
     marginLeft: 10,
+    marginTop: 5,
+    opacity: .6,
   },
   bellStar: {
     flexDirection: 'row',
@@ -123,7 +139,7 @@ const styles = StyleSheet.create({
     tintColor: "#EF6A39",
   },
   buttons: {
-    flex: 4,
+    flex: 3,
     justifyContent:'flex-start',
     alignItems:'center',
   },
@@ -149,10 +165,16 @@ const styles = StyleSheet.create({
     color: '#EF6A39',
   },
   btnDel: {
-    marginRight: 20,
+    marginRight: 5,
     marginTop: 10,
   },
   btnEdit: {
     marginTop: 10,
+  },
+  imgDel: {
+    tintColor: "#EF6A39",
+  },
+  imgEdit: {
+    tintColor: "#EF6A39",
   },
 });
