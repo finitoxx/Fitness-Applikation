@@ -67,9 +67,6 @@ export default class HomeScreen extends Component {
           
           <View style={styles.buttons}>
             <Button
-              title ="Mein Trainingsplan"
-              onPress = { ()=> navigate('Trainingsplan')}/>
-            <Button
               title ="Trainingsplan hinzufügen"
               onPress = {this._toggleModal}/>
           </View>

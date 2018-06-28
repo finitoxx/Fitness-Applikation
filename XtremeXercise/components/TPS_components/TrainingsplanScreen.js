@@ -45,14 +45,14 @@ export default class Trainingsplan extends Component {
           </View>
 
           <View style={styles.bellStar}>
-            <TouchableOpacity onPress= "">
+            <TouchableOpacity onPress={this._toggleBell}>
               <View style={styles.bell}>
                 <Image style={styles.imgBell}
                   source={require('./../../img/bell_outline.png')}/>
               </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress= "">
+            <TouchableOpacity onPress= {this._toggleStar}>
               <View>
                 <Image style={styles.imgStar}
                   source={require('./../../img/star_filled.png')}/>
@@ -70,7 +70,7 @@ export default class Trainingsplan extends Component {
           </TouchableOpacity>
 
           <View style={styles.btnDelEdit}>
-            <TouchableOpacity onPress= "">
+            <TouchableOpacity onPress= {() => {alert("Wollen sie diesen Trainingsplan löschen?")}}>
               <View style={styles.btnDel}>
                 <Image style={styles.imgDel}
                   source={require('./../../img/delete.png')}/>

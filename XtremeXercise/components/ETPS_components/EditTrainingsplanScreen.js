@@ -6,6 +6,7 @@ import {
   View,
   Button
 } from 'react-native';
+import UebungseinheitList from "./ÜbungseinheitenListComponent";
 export default class EditTrainingsplanScreen extends Component {
     render(){
       const { navigate}=this.props.navigation;
@@ -30,7 +31,10 @@ export default class EditTrainingsplanScreen extends Component {
               </Text>
             </View>
           </View>
-
+          <View style={styles.list}>
+          <UebungseinheitList
+          navigation = {this.props.navigation}/>
+          </View>
           <View>
             <Button
               title ="Übung hinzufügen"
@@ -60,6 +64,11 @@ export default class EditTrainingsplanScreen extends Component {
       color: '#EF2E1C',
       fontSize: 20,
       fontWeight: 'bold',
+    },
+    list: {
+      marginLeft: 30,
+      backgroundColor: '#666666',
+      flex: 9,
     },
     headerText2: {
       color: '#372D29',
