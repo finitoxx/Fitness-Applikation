@@ -30,7 +30,7 @@ export default class TrainierenScreen extends Component {
           <View style={styles.list}>
             <Button
               title ="Will Squats machen"
-              onPress = { ()=> navigate('ÜbungAusführen')}/>
+              onPress = { ()=> navigate('ÜbungAusführen', {trainingsplan: item})}/>
           </View>
 
           <View style={styles.progress}>
