@@ -1,18 +1,15 @@
 import React, { Component } from "react";
-import { View, Text, FlatList , List, TouchableOpacity } from "react-native";
+import { View, FlatList , StyleSheet } from "react-native";
 import ListElement from "./ListElementComponent";
 import * as allData from './../../Daten.json';
 
-export default class TrainingsplanListComponent extends Component {
+export default class ÜbungseinheitenListComponent extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: this.props.dataSet,
+      data: allData.Übungseinheiten,
     };
-  }
-
-  componentDidMount() {
   }
 
   renderSeparator = () => {
@@ -29,22 +26,32 @@ export default class TrainingsplanListComponent extends Component {
   render() {
     const { navigate}=this.props.navigation;
     return (
-      <View style={{flex: 1, width: "100%",borderTopWidth: 2, borderBottomWidth: 2}}>
+      <View style={styles.list}>
         
             <FlatList
                 data={this.state.data}
                 renderItem={({item})=>(
-                    <TouchableOpacity onPress = { ()=> navigate('Trainingsplan',{trainingsplan: item})}>
                     <ListElement 
-                    trainingsplan= {item}
+                    uebungseinheit= {item}
                     />
-                    </TouchableOpacity>
                 )}
                 keyExtractor={(item, name) => item.name}
                 ItemSeparatorComponent={this.renderSeparator}
             />
         
       </View>
+      
     );
+   
   }
+  
 }
+const styles = StyleSheet.create({
+    list: {
+        flex: 1,
+        width: "100%",
+        borderTopWidth: 2, 
+        borderBottomWidth: 2,
+        borderLeftWidth: 2,
+    },
+}) 

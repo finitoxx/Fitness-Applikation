@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
   Button,
-  TouchableOpacity,
 } from 'react-native';
 import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
 import Modal from "react-native-modal";
+import { FloatingAction } from 'react-native-floating-action';
+import * as allData from './../../Daten.json';
 
 const width = '50%';
 const height = '50%';
@@ -17,9 +17,17 @@ const height = '50%';
 export default class HomeScreen extends Component {
 
   state = {
-    isModalVisible: false
+    isModalVisible: false,
+    data: allData.Trainingspläne,
   };
-
+  _addTrainingsplan(trainingsplan){
+    let newTrainingsplan= {
+      name: trainingsplan.name,
+      kategorie: trainingsplan.kategorie
+    }
+    this.state.data.push(newTrainingsplan);
+    alert("Trainingsplan wurde hinzugefügt" + newTrainingsplan.name);
+  }
   _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });
 
@@ -35,7 +43,9 @@ export default class HomeScreen extends Component {
             isVisible={this.state.isModalVisible}
             onBackdropPress={() => this.setState({ isModalVisible: false })}
             >
-              <TrainingsplanErstellen toggle = {this._toggleModal}/>
+              <TrainingsplanErstellen 
+              toggle = {this._toggleModal}
+              addTrainingsplan = {this._addTrainingsplan.bind(this)}/>
           </Modal>
 
           <View style={styles.header}>
@@ -51,23 +61,26 @@ export default class HomeScreen extends Component {
           </View>
 
           <View style={styles.list}>
-          <TrainingsplanList navigation = {this.props.navigation}/>
+          <TrainingsplanList 
+          navigation = {this.props.navigation}
+          dataSet = {this.state.data}/>
           </View>
-          
-          <View style={styles.buttons}>
-            <Button
-              title ="Mein Trainingsplan"
-              onPress = { ()=> navigate('Trainingsplan')}/>
-            <Button
-              title ="Trainingsplan hinzufügen"
-              onPress = {this._toggleModal}/>
-          </View>
-
+          <FloatingAction
+            color="#EF2E1C"
+            actions={actions}
+            overrideWithAction ={true}
+            onPressItem={this._toggleModal}
+      />
         </View>
       );
     }
   }
-
+  const actions = [{
+    text: 'Hinzufügen',
+    icon: require('./../../img/plus.png'),
+    name: 'bt_add',
+    position: 2
+  }]
   const styles = StyleSheet.create({
     container: {
       backgroundColor: '#372D29',
@@ -93,14 +106,8 @@ export default class HomeScreen extends Component {
       fontSize: 20,
     },
     list: {
-      backgroundColor: '#666666',
-      flex: 9,
-    },
-    buttons: {
-      flex: 1,
-      flexDirection:'column',
-      alignItems:'center',
-      justifyContent:'center',
+      backgroundColor: '#564640',
+      flex: 10,
     },
     modal: {
       width,

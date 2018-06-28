@@ -48,5 +48,90 @@
             "name" : "Leg Day11",
             "kategorie" : "Muskelaufbau"
         }
+    ],
+    "Übungseinheiten": [
+      {
+          "name" : "Squats",
+          "kategorie" : "Freihantel",
+          "muskelgruppen" : [
+              "Beine","Po"
+          ]
+      },
+      {
+        "name" : "Stepper",
+        "kategorie" : "Aufwärmen",
+        "muskelgruppen" : [
+            "Beine"
+        ]
+     },
+     {
+        "name" : "Leg Curls",
+        "kategorie" : "Maschine",
+        "muskelgruppen" : [
+            "Beine"
+        ]
+    },
+    {
+        "name" : "Bench Press",
+        "kategorie" : "Freihantel",
+        "muskelgruppen" : [
+            "Brust"
+        ]
+    },{
+        "name" : "Squats",
+        "kategorie" : "Freihantel",
+        "muskelgruppen" : [
+            "Beine","Po"
+        ]
+    },
+    {
+      "name" : "Stepper",
+      "kategorie" : "Aufwärmen",
+      "muskelgruppen" : [
+          "Beine"
+      ]
+   },
+   {
+      "name" : "Leg Curls",
+      "kategorie" : "Maschine",
+      "muskelgruppen" : [
+          "Beine"
+      ]
+  },
+  {
+      "name" : "Bench Press",
+      "kategorie" : "Freihantel",
+      "muskelgruppen" : [
+          "Brust"
+      ]
+  },
+  {
+    "name" : "Squats",
+    "kategorie" : "Freihantel",
+    "muskelgruppen" : [
+        "Beine","Po"
+    ]
+},
+{
+  "name" : "Stepper",
+  "kategorie" : "Aufwärmen",
+  "muskelgruppen" : [
+      "Beine"
+  ]
+},
+{
+  "name" : "Leg Curls",
+  "kategorie" : "Maschine",
+  "muskelgruppen" : [
+      "Beine"
+  ]
+},
+{
+  "name" : "Bench Press",
+  "kategorie" : "Freihantel",
+  "muskelgruppen" : [
+      "Brust"
+  ]
+}
     ]
 }

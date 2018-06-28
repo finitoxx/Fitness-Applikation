@@ -7,10 +7,13 @@ import {
   Button
 } from 'react-native';
 import ProgressBar from 'react-native-progress/Bar';
+import UebungseinheitList from './ÜbungseinheitenListComponent';
+import * as allData from './../../Daten.json'
 export default class TrainierenScreen extends Component {
 
   state = {
     progress: 0.3,
+    data: allData.Übungseinheiten,
   };
 
     render(){
@@ -28,11 +31,9 @@ export default class TrainierenScreen extends Component {
           </View>
 
           <View style={styles.list}>
-            <Button
-              title ="Will Squats machen"
-              onPress = { ()=> navigate('ÜbungAusführen', {trainingsplan: item})}/>
+            <UebungseinheitList
+            navigation = {this.props.navigation}/>
           </View>
-
           <View style={styles.progress}>
             <ProgressBar 
               progress={this.state.progress} 
