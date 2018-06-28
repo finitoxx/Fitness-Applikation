@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
   Button
 } from 'react-native';
 import UebungseinheitList from "./ÜbungseinheitenListComponent";
+import { FloatingAction } from 'react-native-floating-action';
 export default class EditTrainingsplanScreen extends Component {
     render(){
       const { navigate}=this.props.navigation;
@@ -35,16 +35,22 @@ export default class EditTrainingsplanScreen extends Component {
           <UebungseinheitList
           navigation = {this.props.navigation}/>
           </View>
-          <View>
-            <Button
-              title ="Übung hinzufügen"
-              onPress = { ()=> navigate('Übungen')}/>
-          </View>
-        
+          <FloatingAction
+            color="#EF2E1C"
+            actions={actions}
+            overrideWithAction ={true}
+            onPressItem={this._toggleModal}
+      />
         </View>
       );
     }
   }
+  const actions = [{
+    text: 'Hinzufügen',
+    icon: require('./../../img/bell_filled.png'),
+    name: 'bt_add',
+    position: 2
+  }]
   const styles = StyleSheet.create({
     container: {
       backgroundColor: '#372D29',

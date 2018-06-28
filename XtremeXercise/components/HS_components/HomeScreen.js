@@ -8,6 +8,7 @@ import {
 import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
 import Modal from "react-native-modal";
+import { FloatingAction } from 'react-native-floating-action';
 import * as allData from './../../Daten.json';
 
 const width = '50%';
@@ -64,18 +65,22 @@ export default class HomeScreen extends Component {
           navigation = {this.props.navigation}
           dataSet = {this.state.data}/>
           </View>
-          
-          <View style={styles.buttons}>
-            <Button
-              title ="Trainingsplan hinzufügen"
-              onPress = {this._toggleModal}/>
-          </View>
-
+          <FloatingAction
+            color="#EF2E1C"
+            actions={actions}
+            overrideWithAction ={true}
+            onPressItem={this._toggleModal}
+      />
         </View>
       );
     }
   }
-
+  const actions = [{
+    text: 'Hinzufügen',
+    icon: require('./../../img/bell_filled.png'),
+    name: 'bt_add',
+    position: 2
+  }]
   const styles = StyleSheet.create({
     container: {
       backgroundColor: '#372D29',
