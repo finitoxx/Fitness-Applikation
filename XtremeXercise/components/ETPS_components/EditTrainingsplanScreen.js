@@ -39,7 +39,7 @@ export default class EditTrainingsplanScreen extends Component {
             color="#EF2E1C"
             actions={actions}
             overrideWithAction ={true}
-            onPressItem={this._toggleModal}
+            onPressItem={()=> navigate('Übungen')}
       />
         </View>
       );
