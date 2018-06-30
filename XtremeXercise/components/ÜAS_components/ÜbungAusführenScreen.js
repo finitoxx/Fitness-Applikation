@@ -5,9 +5,19 @@ import {
   Text,
   View,
   Button,
-  TouchableOpacity
+  TouchableOpacity,
+  Image,
+  TextInput,
 } from 'react-native';
 export default class ÜbungAusführenScreen extends Component {
+
+  state = {
+    done: false,
+  };
+
+  _toggleImage = () =>
+    this.setState({ done: !this.state.done });
+
     render(){
       const { navigate}=this.props.navigation;
       const item = this.props.navigation.getParam("trainingsplan","noDefault");
@@ -41,24 +51,38 @@ export default class ÜbungAusführenScreen extends Component {
           </View>
 
           <View style={styles.input}>
-            <Text>6</Text>
-            <Text>kg</Text>
-            <TouchableOpacity onPress= { ()=> plus()}>
-              <View style={styles.btnEdit}>
-                <Text>+</Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress= { ()=> minus()}>
-              <View style={styles.btnEdit}>
-                <Text>-</Text>
-              </View>
-            </TouchableOpacity>
+            <View style={styles.inputResult}>
+              <TextInput
+                style={styles.inputText}
+                value="7.25"
+              />
+            </View>
+            <View style={{marginTop: 10, marginRight: 50, marginLeft: 3}}>
+              <Text style={styles.inputText}>kg</Text>
+            </View>
+            <View style={styles.inputBtns}>
+              <TouchableOpacity onPress= { ()=> plus()}>
+                <View style={styles.btnEdit}>
+                  <Image style={styles.imgAddRem}
+                    source={require('./../../img/add_outline.png')}/>
+                </View>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.inputBtns}>
+              <TouchableOpacity onPress= { ()=> minus()}>
+                <View style={styles.btnEdit}>
+                  <Image style={styles.imgAddRem}
+                    source={require('./../../img/remove_outline.png')}/>
+                </View>
+              </TouchableOpacity>
+            </View>
           </View>
 
           <View style={styles.button}>
-            <TouchableOpacity onPress= { ()=> navigate('Home')}>
+          <TouchableOpacity onPress= { ()=> navigate('Home')}>
               <View style={styles.buttomOk}>
-                <Text style={styles.buttonText}>>></Text>
+                <Image style={styles.imgForward}
+                  source={require('./../../img/forward.png')}/>
               </View>
             </TouchableOpacity>
           </View>
@@ -119,6 +143,23 @@ export default class ÜbungAusführenScreen extends Component {
     input: {
       flexDirection: "row",
       flex: 2,
+      paddingLeft: 40,
+    },
+    inputResult: {
+      width: 82,
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start',
+    },
+    inputText: {
+      color: '#FFFFFF',
+      fontSize: 24,
+    },
+    inputBtns: {
+      marginTop: 10,
+      marginRight: 10,
+    },
+    imgAddRem:{
+      tintColor: '#EF2E1C',
     },
     button: {
       flex: 2,
@@ -132,5 +173,15 @@ export default class ÜbungAusführenScreen extends Component {
     buttonText: {
       fontSize: 65,
       color: '#EF6A39',
+    },
+    imgOK: {
+      tintColor: "#EF6A39",
+      height: 72,
+      width: 72,
+    },
+    imgForward: {
+      tintColor: "#EF6A39",
+      height: 64,
+      width: 64,
     },
   });
