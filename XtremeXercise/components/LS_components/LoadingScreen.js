@@ -19,7 +19,8 @@ import {
 } from 'react-native-indicators';
 
 export default class LoadingScreen extends Component {
-    
+    static navigationOptions = {
+       header:null};
     render(){
       const { navigate}=this.props.navigation;
       return(
