@@ -6,7 +6,6 @@ import {
   Picker,
   TouchableOpacity,
   TextInput,
-  CheckBox,
   Image,
 } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
