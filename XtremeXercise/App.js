@@ -34,10 +34,14 @@ const NavigationApp = StackNavigator({
 }, {
   navigationOptions: {
     headerStyle: {
-
+      backgroundColor: '#423631'
     },
-    title : "Xtreme Xercising"
-  } 
+    title : "Xtreme Xercising",
+    headerTintColor: "#FFFFFF",
+    headerTitleStyle: {
+      fontSize: 15,
+    },
+  }
 });
 
 export default class App extends Component {

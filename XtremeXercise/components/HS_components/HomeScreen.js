@@ -83,7 +83,7 @@ export default class HomeScreen extends Component {
   }
   const actions = [{
     text: 'Hinzufügen',
-    icon: require('./../../img/bell_filled.png'),
+    icon: require('./../../img/plus.png'),
     name: 'bt_add',
     position: 2
   }]
@@ -112,14 +112,8 @@ export default class HomeScreen extends Component {
       fontSize: 20,
     },
     list: {
-      backgroundColor: '#666666',
-      flex: 9,
-    },
-    buttons: {
-      flex: 1,
-      flexDirection:'column',
-      alignItems:'center',
-      justifyContent:'center',
+      backgroundColor: '#564640',
+      flex: 10,
     },
     modal: {
       width,

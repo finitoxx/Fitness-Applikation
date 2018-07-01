@@ -57,7 +57,8 @@ export default class TrainierenScreen extends Component {
     },  
     top: {
       flex: 2,
-      marginBottom: 10,
+      marginBottom: 5,
+      marginTop: 1,
     },
     header: {
       height: 50,
@@ -70,11 +71,14 @@ export default class TrainierenScreen extends Component {
       fontSize: 24,
     },
     list: {
+      marginLeft: 60,
+      marginRight: 60,
       flex: 17,
+      backgroundColor: '#564640'
     },
     progress: {
       flex: 1,
-      margin: 5,
+      marginBottom: 5,
       marginLeft: 30,
       marginRight: 30,
       justifyContent:'center',

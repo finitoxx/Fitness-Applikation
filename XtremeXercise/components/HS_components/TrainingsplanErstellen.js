@@ -6,15 +6,14 @@ import {
   Picker,
   TouchableOpacity,
   TextInput,
-  CheckBox
+  Image,
 } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 
+const width = '80%';
+const height = '50%';
 
-const width = '60%';
-const height = '30%';
-
-export default class HomeScreen extends Component {
+export default class TrainingsplanErstellen extends Component {
 
     constructor(props) {
         super(props);
@@ -84,12 +83,23 @@ export default class HomeScreen extends Component {
         return(
             <View style={styles.screen}>
                 <View style={styles.box}>
-                    <Text style={styles.title}>Trainingsplan erstellen</Text>
-                    <TextInput
-                        style={styles.textInput}
-                        onChangeText={(text) => this.setState({text})}
-                        value={this.state.text}
-                    />
+
+                    <View style={styles.titel}>
+                        <Text style={styles.titelText}>Trainingsplan erstellen</Text>
+                    </View>
+
+                    <View style={styles.input}>
+                        <TextInput
+                            style={styles.textInput}
+                            onChangeText={(text) => this.setState({text})}
+                            value={this.state.text}
+                            selectionColor= '#EF6A39'
+                            underlineColorAndroid ='#564640'
+                            fontSize= {16}
+                            
+                        />
+                    </View>
+
                     <View style={styles.picker}>
                         <Picker
                             mode='dropdown'
@@ -101,17 +111,22 @@ export default class HomeScreen extends Component {
                             <Picker.Item label="Fettabbau" value="Fettabbau" />
                         </Picker>
                     </View>
-                    <View style={styles.date}>
+
+                    <View style={styles.benachrichtigung}>
+                        <View style={{flexDirection: 'row', height: 50}}>
+                            <View style={styles.benachrichtigungText}>
+                                <Text style={{color: '#00000070', fontSize: 16}}>Benachrichtigung</Text>
+                            </View>
+                            <TouchableOpacity onPress={this._toggleBenachrichtigung}> 
+                                <View style={styles.benachrichtigungBild}>
+                                    <Image style={styles.imgBell} source={require('./../../img/bell_outline.png')}/>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
                         <View style={{flex:5}}>
                             <Text style={styles.dateText}>
                             {this.state.time}
                             </Text>
-                        </View>
-                        <View style={{flex:1}}>
-                            <CheckBox
-                            value={this.state.benachrichtigung}
-                            onChange={this._toggleBenachrichtigung}
-                            />
                         </View>
                         <DateTimePicker
                         mode = "datetime"
@@ -120,6 +135,7 @@ export default class HomeScreen extends Component {
                         onCancel={this._toggleTimePicker}
                         />
                     </View>
+
                     <View style={styles.btnContainer}>
                         <View style={{flex: 2 ,alignItems: 'flex-end',}}>
                         <TouchableOpacity onPress= {this.props.toggle}> 
@@ -131,9 +147,7 @@ export default class HomeScreen extends Component {
                         <View style={{flex: 1}}>
                         <TouchableOpacity onPress= {this._addTrainingsplan}>
                             <View style={styles.btnCont2}>
-                                
-                                    <Text style={styles.btnText}>OK</Text>
-                                
+                                <Text style={styles.btnText}>OK</Text>
                             </View>
                          </TouchableOpacity>
                         </View>    
@@ -163,22 +177,39 @@ const styles = StyleSheet.create({
         height,
         backgroundColor: '#FFFFFF',
       },
-      title: {
-          paddingTop: 10,
-          color: '#000000'
+      titel: {
+          flex: 1,
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'center',
+          paddingLeft: 10,
+          paddingBottom: 10,
+      },
+      titelText: {
+          flex: 1,
+          color: '#000000',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: 20,
+      },
+      input: {
+        flex: 1,
+        paddingLeft: 10,
       },
       textInput: {
-        height: 40, 
         borderColor: '#372D29',
+        color: '#000000',
+        fontSize: 14,
+        width: 150,
       },
       dateText: {
-        height: 40, 
+        textDecorationLine: 'underline',
+        color: '#000000'
       },
       btnContainer: {
+        flex: 1,
         flexDirection:'row',
-        position: "absolute",
-        bottom: 0, 
-        right: 0
+        alignItems: 'flex-end',
       },
       btnCont1: {
         height: 25,
@@ -191,14 +222,31 @@ const styles = StyleSheet.create({
       
       },
       btnText:{
-          fontSize: 12
       },
       picker:{
         flex: 1,
+        paddingLeft: 5,
       },
       date: {
         flexDirection:'row',
-        flex: 1
+        flex: 1,
+      },
+      benachrichtigung: {
+        flex: 2,
+        paddingLeft: 12,
+      },
+      benachrichtigungText: {
+        marginRight: 30,
+        justifyContent: 'center',
+        flex: 4,
+      },
+      benachrichtigungBild: {
+        flex: 1,
+        paddingRight: 10,
+        justifyContent: 'center',
+      },
+      imgBell: {
+          tintColor: '#EF6A39',
       }
 });
   

@@ -3,17 +3,41 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  TouchableOpacity,
+  Image,
 } from 'react-native';
+import Modal from "react-native-modal";
 import UebungseinheitList from "./ÜbungseinheitenListComponent";
+import TrainingsplanBearbeiten from './TrainingsplanBearbeiten';
 import { FloatingAction } from 'react-native-floating-action';
 export default class EditTrainingsplanScreen extends Component {
+
+    state = {
+      isModalVisible: false
+    };
+
+    _editTrainingsplan(){
+      alert("Änderungen zu Trainingsplan ??? wurden übernommen");
+    }
+
+    _toggleModal = () =>
+    this.setState({ isModalVisible: !this.state.isModalVisible });
+
     render(){
       const { navigate}=this.props.navigation;
       const item = this.props.navigation.getParam("trainingsplan","noDefault");
       
       return(
         <View style={styles.container}>
+
+          <Modal
+            isVisible={this.state.isModalVisible}
+            onBackdropPress={() => this.setState({ isModalVisible: false })}
+            >
+              <TrainingsplanBearbeiten 
+              toggle = {this._toggleModal}
+              editTrainingsplan = {this._editTrainingsplan.bind(this)}/>
+          </Modal>
 
           <View style={styles.top}>
             <View style={styles.header}>
@@ -30,11 +54,20 @@ export default class EditTrainingsplanScreen extends Component {
                 {item.kategorie}
               </Text>
             </View>
+            
+            <TouchableOpacity onPress={this._toggleModal}> 
+              <View>
+                  <Image style={styles.imgEdit} source={require('./../../img/edit.png')}/>
+              </View>
+            </TouchableOpacity>
+
           </View>
+
           <View style={styles.list}>
-          <UebungseinheitList
-          navigation = {this.props.navigation}/>
+            <UebungseinheitList
+            navigation = {this.props.navigation}/>
           </View>
+
           <FloatingAction
             color="#EF2E1C"
             actions={actions}
@@ -47,7 +80,7 @@ export default class EditTrainingsplanScreen extends Component {
   }
   const actions = [{
     text: 'Hinzufügen',
-    icon: require('./../../img/bell_filled.png'),
+    icon: require('./../../img/plus.png'),
     name: 'bt_add',
     position: 2
   }]
@@ -57,14 +90,14 @@ export default class EditTrainingsplanScreen extends Component {
       flex: 1,
     },  
     top: {
-      flex: 1,
+      flex: 2,
       paddingTop: 20,
       paddingLeft: 20,
       flexDirection: 'row',
     },
     header: {
       flexDirection:'column',
-      width: 240,
+      paddingRight: 20,
     },
     headerText1: {
       color: '#EF2E1C',
@@ -73,8 +106,8 @@ export default class EditTrainingsplanScreen extends Component {
     },
     list: {
       marginLeft: 30,
-      backgroundColor: '#666666',
-      flex: 9,
+      backgroundColor: '#564640',
+      flex: 12,
     },
     headerText2: {
       color: '#372D29',
@@ -91,4 +124,7 @@ export default class EditTrainingsplanScreen extends Component {
       marginTop: 5,
       opacity: .6,
     },
+    imgEdit: {
+      tintColor: '#EF6A39'
+    }
   });

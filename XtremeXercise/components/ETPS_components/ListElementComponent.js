@@ -13,8 +13,8 @@ export default class ListElementComponent extends Component {
     return (
       <View style={{ flex: 1, padding: 10}}>
         <Text style={{fontWeight: 'bold',color: '#FFFFFF'}}>{this.state.übungseinheit.name}</Text>
-        <Text>{this.state.übungseinheit.kategorie}</Text>   
-        <Text>{this.state.übungseinheit.muskelgruppen.join(",")}</Text>   
+        <Text style={{color: '#FFFFFF', opacity: 0.6}}>{this.state.übungseinheit.kategorie}</Text>   
+        <Text style={{color: '#FFFFFF', opacity: 0.6}}>{this.state.übungseinheit.muskelgruppen.join(", ")}</Text>   
       </View>
     );
   }

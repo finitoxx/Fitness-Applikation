@@ -52,8 +52,6 @@ const styles = StyleSheet.create({
     list: {
         flex: 1,
         width: "100%",
-        borderTopWidth: 2, 
-        borderBottomWidth: 2,
-        borderLeftWidth: 2,
+        borderWidth: 2,
     },
 }) 
