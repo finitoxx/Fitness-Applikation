@@ -36,11 +36,11 @@ export default class Trainingsplan extends Component {
                 h
               </Text>
               <Text style={styles.headerText3}>
-                {item.name}
+                {item.doc.name}
               </Text>
             </Text>
             <Text style={styles.headerText4}>
-              {item.kategorie}
+              {item.doc.kategorie}
             </Text>
           </View>
 

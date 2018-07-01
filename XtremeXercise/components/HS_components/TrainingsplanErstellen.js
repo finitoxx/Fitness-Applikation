@@ -74,7 +74,8 @@ export default class HomeScreen extends Component {
             name: this.state.text,
             kategorie: this.state.kategorie,
             benachrichtigungszeit: this.state.dateObj,
-            benachrichtigung: this.state.benachrichtigung
+            benachrichtigung: this.state.benachrichtigung,
+            favorit: false
         };
         this.props.addTrainingsplan(trainingsplan)
         this.props.toggle()

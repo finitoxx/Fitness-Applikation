@@ -3,13 +3,14 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
 } from 'react-native';
 import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
 import Modal from "react-native-modal";
 import { FloatingAction } from 'react-native-floating-action';
+
 import * as allData from './../../Daten.json';
+import PouchDB from 'pouchdb-core'
 
 const width = '50%';
 const height = '50%';
@@ -18,24 +19,29 @@ export default class HomeScreen extends Component {
 
   state = {
     isModalVisible: false,
-    data: allData.Trainingspläne,
+    data: this.props.navigation.getParam("data",{"nix":null}),
+    db : this.props.navigation.getParam("db",null),
   };
   _addTrainingsplan(trainingsplan){
     let newTrainingsplan= {
+      _id: new Date().toJSON(),
       name: trainingsplan.name,
-      kategorie: trainingsplan.kategorie
+      kategorie: trainingsplan.kategorie,
+      übungseinheiten: [],
+      favorit:trainingsplan.favorit,
+      benachrichtigung: trainingsplan.benachrichtigung,
+      benachrichtigungszeit: trainingsplan.benachrichtigungszeit
     }
-    this.state.data.push(newTrainingsplan);
-    alert("Trainingsplan wurde hinzugefügt" + newTrainingsplan.name);
+    this.state.db.put(newTrainingsplan)
+    this.state.data.push({"doc":newTrainingsplan})
   }
   _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });
-
-  componentWillUnmount = () =>
-    this.setState({ isModalVisible: false });
+  componentWillUnmount=()=>{
+     
+  }
       
     render(){
-      const { navigate}=this.props.navigation;
       return(
         <View style={styles.container}>
 

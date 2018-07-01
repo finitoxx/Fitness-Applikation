@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, FlatList , List, TouchableOpacity } from "react-native";
+import { View,Text,  FlatList , TouchableOpacity } from "react-native";
 import ListElement from "./ListElementComponent";
-import * as allData from './../../Daten.json';
 
 export default class TrainingsplanListComponent extends Component {
   constructor(props) {
@@ -40,7 +39,7 @@ export default class TrainingsplanListComponent extends Component {
                     />
                     </TouchableOpacity>
                 )}
-                keyExtractor={(item, name) => item.name}
+                keyExtractor={(item, name) => item.doc.name}
                 ItemSeparatorComponent={this.renderSeparator}
             />
         

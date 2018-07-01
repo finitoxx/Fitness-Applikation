@@ -8,18 +8,44 @@ import {
 } from 'react-native';
 import {
   BallIndicator,
-  BarIndicator,
-  DotIndicator,
-  MaterialIndicator,
-  PacmanIndicator,
-  PulseIndicator,
-  SkypeIndicator,
-  UIActivityIndicator,
-  WaveIndicator,
 } from 'react-native-indicators';
+import PouchDB from 'pouchdb-core'
+const url = "https://fd88de1e-f16d-457a-b16b-d265a75da8ae-bluemix:927be7647c76b68886121651d700c7dcf2b208738f6c7ae8b1fa4c01f9ddab37@fd88de1e-f16d-457a-b16b-d265a75da8ae-bluemix.cloudant.com"
 
 export default class LoadingScreen extends Component {
-    
+  state={
+   "db":null 
+  };  
+  
+  fetchData = (db) => {
+      db.allDocs({
+        include_docs: true,
+        attachments: true
+      }).then((result) =>{
+        this.props.navigation.navigate('Home',{db:db,data:result.rows});
+      }).catch((err) =>{
+        console.log(err);
+      });
+  }
+    componentDidMount = () => {
+      PouchDB.plugin(require('pouchdb-adapter-asyncstorage').default)
+      const db = new PouchDB('Trainingsplan', {adapter: 'asyncstorage'});
+      this.fetchData(db);
+      this.setState({db:db})
+    }
+    _syncingDB = () =>{
+      let remotedb = new PouchDB(url);
+      this.state.db
+      .replicate
+      .to(remotedb)
+      .on('complete', function () {
+        alert("Erfolg")
+      }).on('error', function (err) {
+        // error while replicating
+      })
+
+      
+    }
     render(){
       const { navigate}=this.props.navigation;
       return(
@@ -49,7 +75,7 @@ export default class LoadingScreen extends Component {
           <View style={styles.loadingImage2}>
             <Button
               title ="Navigate to Home"
-              onPress = { ()=> navigate('Home')}
+              onPress = { this._syncingDB}
               color = '#EF2E1C'/>
               <BallIndicator color = '#EF6A39' size = {50}/>
           </View>
