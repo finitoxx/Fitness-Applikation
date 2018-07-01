@@ -11,9 +11,6 @@ import Modal from "react-native-modal";
 import { FloatingAction } from 'react-native-floating-action';
 import * as allData from './../../Daten.json';
 
-const width = '50%';
-const height = '50%';
-
 export default class HomeScreen extends Component {
 
   state = {
@@ -108,12 +105,6 @@ export default class HomeScreen extends Component {
     list: {
       backgroundColor: '#564640',
       flex: 10,
-    },
-    modal: {
-      width,
-      height,
-      alignItems: 'center',
-      justifyContent: 'center'
     },
   });
   

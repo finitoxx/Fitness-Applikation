@@ -7,16 +7,36 @@ import {
   Button,
   Picker,
 } from 'react-native';
+import UebungHinzufügen from './ÜbungHinzufügen';
+import Modal from "react-native-modal";
+
 export default class ÜbungenScreen extends Component {
 
   state = {
+    isModalVisible: false,
     selection: "Alphabetisch",
   };
+
+  _toggleModal = () =>
+    this.setState({ isModalVisible: !this.state.isModalVisible });
+
+  _addÜbungseinheit = () =>{}
 
     render(){
       const { navigate}=this.props.navigation;
       return(
         <View style={styles.container}>
+
+          <Modal
+            isVisible={this.state.isModalVisible}
+            onBackdropPress={() => this.setState({ isModalVisible: false })}
+            >
+
+             <UebungHinzufügen
+              toggle = {this._toggleModal}
+              addÜbungseinheit = {this._addÜbungseinheit.bind(this)}/>
+
+          </Modal>
 
         <View style={styles.top}>
 
@@ -49,6 +69,9 @@ export default class ÜbungenScreen extends Component {
           <Button
             title ="B2B"
             onPress = { ()=> navigate('EditTrainingsplan')}/>
+          <Button
+            title = "Übung hinzufügen"
+            onPress = {this._toggleModal}/>
         </View>
       );
     }
