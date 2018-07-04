@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
   Button,
   Picker,
+  SectionList,
 } from 'react-native';
 import UebungHinzufügen from './ÜbungHinzufügen';
 import Modal from "react-native-modal";
@@ -15,6 +15,39 @@ export default class ÜbungenScreen extends Component {
   state = {
     isModalVisible: false,
     selection: "Alphabetisch",
+    data:[{
+      "name": "Squat",
+      "muskelgruppe":["Po","Oberschenke"],
+      "kategorie" : "Freihantel"
+    }],
+    list:[
+      { title: 'A', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'A')},
+      { title: 'B', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'B')},
+      { title: 'C', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'C')},
+      { title: 'D', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'D')},
+      { title: 'E', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'E')},
+      { title: 'F', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'F')},
+      { title: 'G', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'G')},
+      { title: 'H', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'H')},
+      { title: 'I', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'I')},
+      { title: 'J', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'J')},
+      { title: 'K', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'K')},
+      { title: 'L', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'L')},
+      { title: 'M', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'M')},
+      { title: 'N', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'N')},
+      { title: 'O', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'O')},
+      { title: 'P', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'P')},
+      { title: 'Q', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'Q')},
+      { title: 'R', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'R')},
+      { title: 'S', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'S')},
+      { title: 'T', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'T')},
+      { title: 'U', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'U')},
+      { title: 'V', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'V')},
+      { title: 'W', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'W')},
+      { title: 'X', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'X')},
+      { title: 'Y', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'Y')},
+      { title: 'Z', data: this.state.data.filter((übung) => übung.name.toUppercase().charAt(0) = 'Z')},
+    ],
   };
 
   _toggleModal = () =>
@@ -63,7 +96,14 @@ export default class ÜbungenScreen extends Component {
             <Picker.Item label="Muskelgruppen" value="Muskelgruppen" />
           </Picker>
          </View>
-
+        <View style ={styles.list}>
+          <SectionList 
+          sections={}
+          renderSectionHeader={ ({section}) => <Text style={styles.SectionHeaderStyle}> { section.title } </Text> }
+          renderItem={ ({item}) => <Text style={styles.SectionListItemStyle} onPress={this.GetSectionListItem.bind(this, item)}> { item } </Text> }
+          keyExtractor={ (item, index) => index }
+          />
+        </View>
         </View>
 
           <Button
@@ -108,5 +148,15 @@ export default class ÜbungenScreen extends Component {
     picker: {
       flex: 2,
       alignItems: 'flex-end',
+    },
+    list: {
+      flex: 1,
+    },
+    SectionHeaderStyle:{
+ 
+      backgroundColor : '#CDDC39',
+      fontSize : 20,
+      padding: 5,
+      color: '#fff',
     },
   });
