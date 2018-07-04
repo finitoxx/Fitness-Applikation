@@ -11,9 +11,9 @@ export default class ListElementComponent extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, padding: 10}}>
-        <Text style={{fontWeight: 'bold',color: '#FFFFFF'}}>{this.state.trainingsplan.name}</Text>
-        <Text>{this.state.trainingsplan.kategorie}</Text>   
+      <View style={{ flex: 1, padding: 10, paddingLeft: 20}}>
+        <Text style={{fontWeight: 'bold',color: '#FFFFFF'}}>{this.state.trainingsplan.doc.name}</Text>
+        <Text style={{color: '#FFFFFF', opacity: 0.6}}>{this.state.trainingsplan.doc.kategorie}</Text>   
       </View>
     );
   }
