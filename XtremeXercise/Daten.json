@@ -133,5 +133,82 @@
       "Brust"
   ]
 }
+    ],
+    "Übung":[
+        {
+            "name": "Squat",
+            "muskelgruppe":["Po","Oberschenkel"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Bizepscurl",
+            "muskelgruppe":["Bizeps"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Trizepscurl",
+            "muskelgruppe":["Trizeps"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Bankdrücken",
+            "muskelgruppe":["Brust","Trizeps"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Bauchpresse",
+            "muskelgruppe":["Bauch"],
+            "kategorie" : "Maschine"
+        },
+        {
+            "name": "Stepper",
+            "muskelgruppe":["Po","Oberschenkel","Unterschenkel"],
+            "kategorie" : "Aufwärmen"
+        },
+        {
+            "name": "Rudern",
+            "muskelgruppe":["Rücken","Bizeps"],
+            "kategorie" : "Maschine"
+        },
+        {
+            "name": "Hip Thrusts",
+            "muskelgruppe":["Po","Oberschenkel"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Fliegende Hantel",
+            "muskelgruppe":["Brust"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Waden heben",
+            "muskelgruppe":["Waden"],
+            "kategorie" : "Maschine"
+        },
+        {
+            "name": "Kniebeuger",
+            "muskelgruppe":["Unterschenkel","Po"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Liegestütz",
+            "muskelgruppe":["Brust","Trizeps"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Plank",
+            "muskelgruppe":["Bauch"],
+            "kategorie" : "Freihantel"
+        },
+        {
+            "name": "Rückenstrecker",
+            "muskelgruppe":["Rücken","Po"],
+            "kategorie" : "Maschine"
+        },
+        {
+            "name": "Donkey Kicks",
+            "muskelgruppe":["Po"],
+            "kategorie" : "Freihantel"
+        }
     ]
 }
