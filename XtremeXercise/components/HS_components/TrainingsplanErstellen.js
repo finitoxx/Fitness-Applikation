@@ -72,7 +72,7 @@ export default class TrainingsplanErstellen extends Component {
         let trainingsplan = {
             name: this.state.text,
             kategorie: this.state.kategorie,
-            benachrichtigungszeit: this.state.dateObj,
+            benachrichtigungszeit: this.state.dateObj.toString(),
             benachrichtigung: this.state.benachrichtigung,
             favorit: false
         };
@@ -103,9 +103,9 @@ export default class TrainingsplanErstellen extends Component {
                     <View style={styles.picker}>
                         <Picker
                             mode='dropdown'
-                            selectedValue={this.state.language}
+                            selectedValue={this.state.kategorie}
                             style={{ height: 50 , width: 170}}
-                            onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
+                            onValueChange={(itemValue, itemIndex) => this.setState({kategorie: itemValue})}>
                             <Picker.Item label="Ausdauer" value="Ausdauer" />
                             <Picker.Item label="Muskelaufbau" value="Muskelaufbau" />
                             <Picker.Item label="Fettabbau" value="Fettabbau" />

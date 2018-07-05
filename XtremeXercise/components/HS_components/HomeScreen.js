@@ -9,10 +9,7 @@ import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
 import Modal from "react-native-modal";
 import { FloatingAction } from 'react-native-floating-action';
-import { NavigationActions } from 'react-navigation';
 
-import * as allData from './../../Daten.json';
-import PouchDB from 'pouchdb-core'
 
 const width = '50%';
 const height = '50%';
@@ -72,7 +69,8 @@ export default class HomeScreen extends Component {
           </View>
 
           <View style={styles.list}>
-            <TrainingsplanList db = {this.state.db}
+            <TrainingsplanList 
+            db = {this.state.db}
             navigation = {this.props.navigation}
             dataSet = {this.state.data}/>
           </View>

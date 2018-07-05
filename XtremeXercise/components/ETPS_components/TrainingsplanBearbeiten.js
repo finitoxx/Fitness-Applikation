@@ -75,7 +75,7 @@ export default class TrainingsplanBearbeiten extends Component {
 
     _checkBenachrichtigung = () =>{
         if(this.props.trainingsplan.doc.benachrichtigung) {
-            return this.props.trainingsplan.doc.benachrichtigungszeit.toString()
+            return alert(this.props.trainingsplan.doc.benachrichtigungszeit.toString())
         } else {
             return "nüx"
         }
@@ -128,7 +128,7 @@ export default class TrainingsplanBearbeiten extends Component {
                     </View>
                     <View style={{flex:5}}>
                         <Text style={styles.dateText}>
-                        {this._checkBenachrichtigung()}
+                        {this.props.trainingsplan.doc.benachrichtigungszeit}
                         </Text>
                     </View>
                     <DateTimePicker

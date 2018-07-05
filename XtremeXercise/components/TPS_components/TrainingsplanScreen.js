@@ -15,7 +15,7 @@ export default class Trainingsplan extends Component {
     isBellVisible: false,
     isStarVisible: false,
     item: this.props.navigation.getParam("trainingsplan","noDefault"),
-    db: this.props.navigation.getParam("db", "noDefault"),
+    db: this.props.navigation.getParam("db", null),
   };
 
   _toggleBell = () =>
@@ -25,20 +25,21 @@ export default class Trainingsplan extends Component {
     this.setState({ isStarVisible: !this.state.isStarVisible });
 
   _trainingsplanLöschenAlert = () => {
+    let mydb = this.state.db
     Alert.alert(
       'Trainingsplan löschen',
       'Soll der Trainingsplan ' + this.state.item.doc.name + ' wirklich gelöscht werden?',
       [
         {text: 'ABBRECHEN', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-        {text: 'OK', onPress: this._trainingsplanLöschen},
+        {text: 'OK', onPress:()=>this._trainingsplanLöschen(mydb)},
       ],
       { cancelable: false }
     )
   }
 
-  _trainingsplanLöschen = () => {
-    this.state.db.get(this.state.item.doc._id).then(function (doc) {
-      return this.state.db.remove(doc);
+  _trainingsplanLöschen = (db) => {
+    db.get(this.state.item.doc._id).then(function (doc) {
+      return db.remove(doc);
     })
     this.props.navigation.navigate('Home');
     
