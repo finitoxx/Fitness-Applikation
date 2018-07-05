@@ -8,6 +8,7 @@ import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
 import Modal from "react-native-modal";
 import { FloatingAction } from 'react-native-floating-action';
+import { NavigationActions } from 'react-navigation';
 
 import * as allData from './../../Daten.json';
 import PouchDB from 'pouchdb-core'
@@ -37,10 +38,12 @@ export default class HomeScreen extends Component {
   }
   _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });
-  componentWillUnmount=()=>{
-     
-  }
+  
       
+  static navigationOptions = {
+    headerLeft: null,
+  }
+
     render(){
       return(
         <View style={styles.container}>
