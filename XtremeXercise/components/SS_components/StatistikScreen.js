@@ -11,28 +11,62 @@ export default class StatistikScreen extends Component {
       const { navigate}=this.props.navigation;
       return(
         <View style={styles.container}>
-          <Button
-            title ="Fertig"
-            onPress = { ()=> navigate('Home')}/>
+          <View style={styles.top}>
+            <View style={styles.header}>
+              <Text style={styles.headerText1}> 
+                |
+                <Text style={styles.headerText2}>
+                  h
+                </Text>
+                <Text style={styles.headerText3}>
+                  Statistik
+                </Text>
+              </Text>
+              <Text style={styles.headerText4}>
+                Maximalleistung pro Training
+              </Text>
+              <Text style={styles.headerText4}>
+                Muskelgruuppenverteilung
+              </Text>
+            </View>
+          </View>
         </View>
       );
     }
   }
   const styles = StyleSheet.create({
     container: {
+      backgroundColor: '#372D29',
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#F5FCFF',
+    },  
+    top: {
+      flex: 1,
+      paddingTop: 20,
+      paddingLeft: 20,
+      flexDirection: 'row',
     },
-    welcome: {
+    header: {
+      flexDirection:'column',
+      width: 240,
+    },
+    headerText1: {
+      color: '#EF2E1C',
       fontSize: 20,
-      textAlign: 'center',
-      margin: 10,
+      fontWeight: 'bold',
     },
-    instructions: {
-      textAlign: 'center',
-      color: '#333333',
-      marginBottom: 5,
+    headerText2: {
+      color: '#372D29',
+      fontSize: 10,
+    },
+    headerText3: {
+      color: '#FFFFFF',
+      fontSize: 20,
+    },
+    headerText4: {
+      color: '#FFFFFF',
+      fontSize: 15,
+      marginLeft: 10,
+      marginTop: 5,
+      opacity: .6,
     },
   });

@@ -6,13 +6,16 @@ import {
   Button,
   TouchableOpacity,
   Image,
+  Alert
  } from 'react-native';
 
 export default class Trainingsplan extends Component {
 
   state = {
     isBellVisible: false,
-    isStarVisible: false
+    isStarVisible: false,
+    item: this.props.navigation.getParam("trainingsplan","noDefault"),
+    db: this.props.navigation.getParam("db", "noDefault"),
   };
 
   _toggleBell = () =>
@@ -21,9 +24,28 @@ export default class Trainingsplan extends Component {
   _toggleStar = () =>
     this.setState({ isStarVisible: !this.state.isStarVisible });
 
+  _trainingsplanLöschenAlert = () => {
+    Alert.alert(
+      'Trainingsplan löschen',
+      'Soll der Trainingsplan ' + this.state.item.doc.name + ' wirklich gelöscht werden?',
+      [
+        {text: 'ABBRECHEN', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+        {text: 'OK', onPress: this._trainingsplanLöschen},
+      ],
+      { cancelable: false }
+    )
+  }
+
+  _trainingsplanLöschen = () => {
+    this.state.db.get(this.state.item.doc._id).then(function (doc) {
+      return this.state.db.remove(doc);
+    })
+    this.props.navigation.navigate('Home');
+    
+  }
+
   render() {
     const { navigate}=this.props.navigation;
-    const item = this.props.navigation.getParam("trainingsplan","noDefault");
     return (
       <View style={styles.container}>
 
@@ -36,11 +58,11 @@ export default class Trainingsplan extends Component {
                 h
               </Text>
               <Text style={styles.headerText3}>
-                {item.doc.name}
+                {this.state.item.doc.name}
               </Text>
             </Text>
             <Text style={styles.headerText4}>
-              {item.doc.kategorie}
+              {this.state.item.doc.kategorie}
             </Text>
           </View>
 
@@ -63,21 +85,21 @@ export default class Trainingsplan extends Component {
         </View>
 
         <View style={styles.buttons}>
-          <TouchableOpacity onPress=  { ()=> navigate('Trainieren', {trainingsplan: item})}>
+          <TouchableOpacity onPress=  { ()=> navigate('Trainieren', {trainingsplan: this.state.item})}>
             <View style={styles.btnTrainingStarten}>
               <Text style={styles.btnText1}>Training starten</Text>  
             </View>
           </TouchableOpacity>
 
           <View style={styles.btnDelEdit}>
-            <TouchableOpacity onPress= { () => {alert("Wollen Sie den Trainingsplan wirklich löschen?")}}>
+            <TouchableOpacity onPress= { this._trainingsplanLöschenAlert}>
               <View style={styles.btnDel}>
                 <Image style={styles.imgDel}
                   source={require('./../../img/delete.png')}/>
               </View>
             </TouchableOpacity>
             
-            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: item})}>
+            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: this.state.item})}>
               <View style={styles.btnEdit}>
                 <Image style={styles.imgEdit}
                   source={require('./../../img/edit.png')}/>
