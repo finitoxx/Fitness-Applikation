@@ -15,7 +15,7 @@ export default class ÜbungenScreen extends Component {
 
   state = {
     isModalVisible: false,
-    selection: "Alphabetisch",
+    selection: "Kategorie",
     data:allData.Übung,
     list: [],
   };
@@ -27,7 +27,7 @@ export default class ÜbungenScreen extends Component {
   
   componentDidMount = () =>{
     this.setState({
-      list: this._alphabetListe()
+      list: this._kategorieListe()
     })
   }
   _alphabetListe = () =>{
@@ -65,27 +65,38 @@ export default class ÜbungenScreen extends Component {
   _kategorieListe = () =>{
     return(
       [
-        {title: 'Aufwärmen', data: this.state.data.filter((übung) => übung.kategorie = 'Aufwärmen')},
-        {title: 'Freihantel', data: this.state.data.filter((übung) => übung.kategorie = 'Freihantel')},
-        {title: 'Maschine', data: this.state.data.filter((übung) => übung.kategorie = 'Maschine')},
+        {title: 'Aufwärmen', data: this.state.data.filter((übung) => übung.kategorie == 'Aufwärmen')},
+        {title: 'Freihantel', data: this.state.data.filter((übung) => übung.kategorie == 'Freihantel')},
+        {title: 'Maschine', data: this.state.data.filter((übung) => übung.kategorie == 'Maschine')},
       ]
     );
   }
   _muskelgruppeListe = () =>{
     return(
       [
-        {title: 'Bauch', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Bauch')},
-        {title: 'Bizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Bizeps')},
-        {title: 'Brust', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Brust')},
-        {title: 'Oberschenkel', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Oberschenkel')},
-        {title: 'Unterschenkel', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Unterschenkel')},
-        {title: 'Waden', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Waden')},
-        {title: 'Trizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Trizeps')},
-        {title: 'Rücken', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Rücken')},
-        {title: 'Po', data: this.state.data.filter((übung) => übung.muskelgruppe.include = 'Po')},
+        {title: 'Bauch', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Bauch'))},
+        {title: 'Bizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Bizeps'))},
+        {title: 'Brust', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Brust'))},
+        {title: 'Oberschenkel', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Oberschenkel'))},
+        {title: 'Unterschenkel', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Unterschenkel'))},
+        {title: 'Waden', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Waden'))},
+        {title: 'Trizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Trizeps'))},
+        {title: 'Rücken', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Rücken'))},
+        {title: 'Po', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Po'))},
       ]
     );
   }
+  renderSeparator = () => {
+    return (
+      <View
+        style={{
+          height: 1,
+          width: "100%",
+          backgroundColor: "#000000",
+        }}
+      />
+    );
+  };
     render(){
       const { navigate}=this.props.navigation;
       return(
@@ -124,13 +135,13 @@ export default class ÜbungenScreen extends Component {
             onValueChange={(itemValue, itemIndex) => {
               switch(itemValue){
                 case "Alphabetisch":
-                  this.setState({list: this._alphabetListe})
+                  this.setState({list: this._alphabetListe()})
                   break;
                 case "Kategorie":
-                  this.setState({list: this._kategorieListe})
+                  this.setState({list: this._kategorieListe()})
                   break;
                 case "Muskelgruppen":
-                  this.setState({list: this._muskelgruppeListe})
+                  this.setState({list: this._muskelgruppeListe()})
                   break;
               }
               this.setState({selection: itemValue})}
@@ -146,8 +157,13 @@ export default class ÜbungenScreen extends Component {
             <SectionList 
             sections={this.state.list}
             renderSectionHeader={ ({section}) => <Text style={styles.SectionHeaderStyle}> { section.title } </Text> }
-            renderItem={ ({item}) => <Text style={styles.SectionListItemStyle}></Text> }
+            renderItem={ ({item}) => (
+              <View style = {styles.listElement}>
+                <Text style={styles.SectionElement}>{item.name}</Text>
+              </View>
+             ) }
             keyExtractor={ (item, index) => index }
+            ItemSeparatorComponent={this.renderSeparator}
             />
           </View>
           <Button
@@ -202,5 +218,12 @@ export default class ÜbungenScreen extends Component {
       fontSize : 20,
       padding: 5,
       color: '#fff',
+    },
+    SectionElement:{
+      fontSize : 15,
+      color: '#fff',
+    },
+    ListElement:{
+      padding: 5
     },
   });
