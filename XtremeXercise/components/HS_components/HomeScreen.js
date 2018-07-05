@@ -3,11 +3,13 @@ import {
   StyleSheet,
   Text,
   View,
+  Button
 } from 'react-native';
 import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
 import Modal from "react-native-modal";
 import { FloatingAction } from 'react-native-floating-action';
+import { NavigationActions } from 'react-navigation';
 
 import * as allData from './../../Daten.json';
 import PouchDB from 'pouchdb-core'
@@ -37,11 +39,14 @@ export default class HomeScreen extends Component {
   }
   _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });
-  componentWillUnmount=()=>{
-     
-  }
+  
       
+  static navigationOptions = {
+    headerLeft: null,
+  }
+
     render(){
+      const { navigate}=this.props.navigation;
       return(
         <View style={styles.container}>
 
@@ -67,16 +72,24 @@ export default class HomeScreen extends Component {
           </View>
 
           <View style={styles.list}>
-          <TrainingsplanList 
-          navigation = {this.props.navigation}
-          dataSet = {this.state.data}/>
+            <TrainingsplanList db = {this.state.db}
+            navigation = {this.props.navigation}
+            dataSet = {this.state.data}/>
           </View>
+
+          <View style={styles.statistikBtn}>
+            <Button
+              title ="Statistik"
+              onPress = { ()=> navigate('Statistik')}
+              color = '#EF6A39'/>
+          </View>
+
           <FloatingAction
-            color="#EF2E1C"
-            actions={actions}
-            overrideWithAction ={true}
-            onPressItem={this._toggleModal}
-      />
+              color="#EF2E1C"
+              actions={actions}
+              overrideWithAction ={true}
+              onPressItem={this._toggleModal}/>
+
         </View>
       );
     }
@@ -120,6 +133,9 @@ export default class HomeScreen extends Component {
       height,
       alignItems: 'center',
       justifyContent: 'center'
+    },
+    statistikBtn: {
+      flex: 1,
     },
   });
   

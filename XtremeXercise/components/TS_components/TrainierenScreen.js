@@ -25,7 +25,7 @@ export default class TrainierenScreen extends Component {
           <View style={styles.top}>
             <View style={styles.header}>
               <Text style={styles.headerText}>
-                {item.name} - Training
+                {item.doc.name} - Training
               </Text>
             </View>
           </View>

@@ -10,7 +10,11 @@ import {
   BallIndicator,
 } from 'react-native-indicators';
 import PouchDB from 'pouchdb-core'
+import { StackActions, NavigationActions } from 'react-navigation';
+
 const url = "https://fd88de1e-f16d-457a-b16b-d265a75da8ae-bluemix:927be7647c76b68886121651d700c7dcf2b208738f6c7ae8b1fa4c01f9ddab37@fd88de1e-f16d-457a-b16b-d265a75da8ae-bluemix.cloudant.com"
+
+
 
 export default class LoadingScreen extends Component {
   state={
@@ -43,9 +47,18 @@ export default class LoadingScreen extends Component {
       }).on('error', function (err) {
         // error while replicating
       })
-
-      
     }
+
+    resetNavigation(targetRoute) {
+      const resetAction = NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: targetRoute }),
+        ],
+      });
+      this.props.navigation.dispatch(resetAction);
+    }
+    
     static navigationOptions = {
        header:null};
     render(){

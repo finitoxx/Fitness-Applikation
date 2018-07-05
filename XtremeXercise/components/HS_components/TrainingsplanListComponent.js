@@ -33,7 +33,7 @@ export default class TrainingsplanListComponent extends Component {
             <FlatList
                 data={this.state.data}
                 renderItem={({item})=>(
-                    <TouchableOpacity onPress = { ()=> navigate('Trainingsplan',{trainingsplan: item})}>
+                    <TouchableOpacity onPress = { ()=> navigate('Trainingsplan',{trainingsplan: item, db: this.props.db})}>
                     <ListElement 
                     trainingsplan= {item}
                     />

@@ -73,20 +73,28 @@ export default class TrainingsplanBearbeiten extends Component {
         this.props.toggle()
     }
 
+    _checkBenachrichtigung = () =>{
+        if(this.props.trainingsplan.doc.benachrichtigung) {
+            return this.props.trainingsplan.doc.benachrichtigungszeit.toString()
+        } else {
+            return "nüx"
+        }
+    }
+
     render(){
         return(
             <View style={styles.screen}>
             <View style={styles.box}>
 
                 <View style={styles.titel}>
-                    <Text style={styles.titelText}>Trainingsplan erstellen</Text>
+                    <Text style={styles.titelText}>Trainingsplan bearbeiten</Text>
                 </View>
 
                 <View style={styles.input}>
                     <TextInput
                         style={styles.textInput}
                         onChangeText={(text) => this.setState({text})}
-                        value={this.state.text}
+                        value={this.props.trainingsplan.doc.name}
                         selectionColor= '#EF6A39'
                         underlineColorAndroid ='#564640'
                         fontSize= {16}
@@ -99,7 +107,8 @@ export default class TrainingsplanBearbeiten extends Component {
                         mode='dropdown'
                         selectedValue={this.state.language}
                         style={{ height: 50 , width: 170}}
-                        onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
+                        onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}
+                        selectedValue={this.props.trainingsplan.doc.kategorie}>
                         <Picker.Item label="Ausdauer" value="Ausdauer" />
                         <Picker.Item label="Muskelaufbau" value="Muskelaufbau" />
                         <Picker.Item label="Fettabbau" value="Fettabbau" />
@@ -119,7 +128,7 @@ export default class TrainingsplanBearbeiten extends Component {
                     </View>
                     <View style={{flex:5}}>
                         <Text style={styles.dateText}>
-                        {this.state.time}
+                        {this._checkBenachrichtigung()}
                         </Text>
                     </View>
                     <DateTimePicker
