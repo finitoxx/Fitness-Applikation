@@ -30,11 +30,12 @@ export default class EditTrainingsplanScreen extends Component {
       return(
         <View style={styles.container}>
 
-          <Modal
+          <Modal 
             isVisible={this.state.isModalVisible}
             onBackdropPress={() => this.setState({ isModalVisible: false })}
             >
               <TrainingsplanBearbeiten 
+              trainingsplan = {item}
               toggle = {this._toggleModal}
               editTrainingsplan = {this._editTrainingsplan.bind(this)}/>
           </Modal>
@@ -47,11 +48,11 @@ export default class EditTrainingsplanScreen extends Component {
                   h
                 </Text>
                 <Text style={styles.headerText3}>
-                  {item.name}
+                  {item.doc.name}
                 </Text>
               </Text>
               <Text style={styles.headerText4}>
-                {item.kategorie}
+                {item.doc.kategorie}
               </Text>
             </View>
             
