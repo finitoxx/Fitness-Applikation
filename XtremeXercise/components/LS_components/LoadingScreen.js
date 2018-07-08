@@ -122,7 +122,6 @@ export default class LoadingScreen extends Component {
       justifyContent:'center',
     },
     header: {
-      flex: 3,
       flexDirection:'column',
       alignItems:'center',
       justifyContent:'center',

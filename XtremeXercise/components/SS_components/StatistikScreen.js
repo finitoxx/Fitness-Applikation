@@ -22,14 +22,21 @@ export default class StatistikScreen extends Component {
                   Statistik
                 </Text>
               </Text>
-              <Text style={styles.headerText4}>
-                Maximalleistung pro Training
-              </Text>
-              <Text style={styles.headerText4}>
-                Muskelgruuppenverteilung
-              </Text>
             </View>
           </View>
+
+          <View style={styles.graph}>
+            <Text style={styles.headerText4}>
+              Maximalleistung pro Training
+            </Text>
+          </View>
+         
+          <View style={styles.piechart}>
+            <Text style={styles.headerText4}>
+              Muskelgruppenverteilung
+            </Text>
+          </View>
+
         </View>
       );
     }
@@ -37,10 +44,8 @@ export default class StatistikScreen extends Component {
   const styles = StyleSheet.create({
     container: {
       backgroundColor: '#372D29',
-      flex: 1,
     },  
     top: {
-      flex: 1,
       paddingTop: 20,
       paddingLeft: 20,
       flexDirection: 'row',
@@ -64,9 +69,14 @@ export default class StatistikScreen extends Component {
     },
     headerText4: {
       color: '#FFFFFF',
-      fontSize: 15,
-      marginLeft: 10,
+      fontSize: 18,
       marginTop: 5,
-      opacity: .6,
+      opacity: .8,
+    },
+    graph: {
+      marginLeft: 20,
+    },
+    piechart: {
+      marginLeft: 20,
     },
   });
