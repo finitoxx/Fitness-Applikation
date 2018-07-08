@@ -6,6 +6,7 @@ import {
   View,
   Button
 } from 'react-native';
+
 export default class StatistikScreen extends Component {
     render(){
       const { navigate}=this.props.navigation;

@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "chart.js": "^2.7.2",
     "dateformat": "^3.0.3",
     "npm": "^6.1.0",
     "pouchdb": "^7.0.0",
@@ -14,6 +15,7 @@
     "pouchdb-core": "^7.0.0",
     "pouchdb-node": "^7.0.0",
     "react": "16.3.1",
+    "react-chartjs-2": "^2.7.2",
     "react-native": "0.55.4",
     "react-native-floating-action": "^1.10.1",
     "react-native-indicators": "^0.13.0",
@@ -21,7 +23,8 @@
     "react-native-modal-datetime-picker": "^5.1.0",
     "react-native-progress": "^3.5.0",
     "react-native-sqlite-2": "^1.6.0",
-    "react-navigation": "^2.3.1"
+    "react-navigation": "^2.3.1",
+    "victory": "^0.27.2"
   },
   "devDependencies": {
     "babel-jest": "23.0.1",
