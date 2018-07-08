@@ -138,6 +138,7 @@ export default class ÜbungenScreen extends Component {
             </Text>
           </View>
 
+<<<<<<< HEAD
          <View style={styles.picker}>
          <Picker
             mode='dropdown'
@@ -163,6 +164,22 @@ export default class ÜbungenScreen extends Component {
           </Picker>
          </View>
         
+=======
+          <View style={styles.picker}>
+            <Picker
+              backgroundColor='#FFFFFF'
+              mode='dropdown'
+              selectedValue={this.state.selection}
+              style={{ height: 50 , width: 180}}
+              onValueChange={(itemValue, itemIndex) => this.setState({selection: itemValue})}
+              >
+              <Picker.Item color='#7c655c' label="Alphabetisch" value="Alphabetisch" />
+              <Picker.Item color='#7c655c' label="Kategorie" value="Kategorie" />
+              <Picker.Item color='#7c655c' label="Muskelgruppen" value="Muskelgruppen" />
+            </Picker>
+          </View>
+
+>>>>>>> workingJacky
         </View>
           <View style ={styles.list}>
             <SectionList 
@@ -212,12 +229,12 @@ export default class ÜbungenScreen extends Component {
     },  
     top: {
       flex: 1,
-      paddingTop: 20,
       paddingLeft: 20,
       flexDirection: 'row',
     },
     header: {
       flex: 1,
+      paddingTop: 20,
       flexDirection:'column',
       width: 240,
     },
@@ -236,6 +253,7 @@ export default class ÜbungenScreen extends Component {
     },
     picker: {
       flex: 2,
+      paddingTop: 10,
       alignItems: 'flex-end',
     },
     list: {
