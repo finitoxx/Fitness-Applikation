@@ -8,6 +8,7 @@ export default class TrainingsplanListComponent extends Component {
 
     this.state = {
       data: this.props.dataSet,
+      refresh: this.props.refresh,
     };
   }
 
@@ -32,6 +33,7 @@ export default class TrainingsplanListComponent extends Component {
         
             <FlatList
                 data={this.state.data}
+                extraData={this.state.refresh}
                 renderItem={({item})=>(
                     <TouchableOpacity onPress = { ()=> navigate('Trainingsplan',{trainingsplan: item})}>
                     <ListElement 

@@ -21,6 +21,7 @@ export default class HomeScreen extends Component {
     isModalVisible: false,
     data: this.props.navigation.getParam("data",{"nix":null}),
     db : this.props.navigation.getParam("db",null),
+    refresh: false,
   };
   _addTrainingsplan(trainingsplan){
     let newTrainingsplan= {
@@ -33,7 +34,12 @@ export default class HomeScreen extends Component {
       benachrichtigungszeit: trainingsplan.benachrichtigungszeit
     }
     this.state.db.put(newTrainingsplan)
-    this.state.data.push({"doc":newTrainingsplan})
+    let newData = this.state.data.slice(0);
+    newData.push({"doc":newTrainingsplan})
+    this.setState({
+      data: newData,
+      refresh: !this.state.refresh
+    })
   }
   _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });
@@ -69,7 +75,8 @@ export default class HomeScreen extends Component {
           <View style={styles.list}>
           <TrainingsplanList 
           navigation = {this.props.navigation}
-          dataSet = {this.state.data}/>
+          dataSet = {this.state.data}
+          refresh = {this.state.refresh}/>
           </View>
           <FloatingAction
             color="#EF2E1C"
