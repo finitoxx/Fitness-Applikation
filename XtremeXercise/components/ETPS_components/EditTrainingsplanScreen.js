@@ -13,7 +13,9 @@ import { FloatingAction } from 'react-native-floating-action';
 export default class EditTrainingsplanScreen extends Component {
 
     state = {
-      isModalVisible: false
+      isModalVisible: false,
+      trainingsplan:this.props.navigation.getParam("trainingsplan","noDefault"),
+      db:this.props.navigation.getParam("trainingsplan","noDefault"),
     };
 
     _editTrainingsplan(){
@@ -25,7 +27,6 @@ export default class EditTrainingsplanScreen extends Component {
 
     render(){
       const { navigate}=this.props.navigation;
-      const item = this.props.navigation.getParam("trainingsplan","noDefault");
       
       return(
         <View style={styles.container}>
@@ -35,7 +36,7 @@ export default class EditTrainingsplanScreen extends Component {
             onBackdropPress={() => this.setState({ isModalVisible: false })}
             >
               <TrainingsplanBearbeiten 
-              trainingsplan = {item}
+              trainingsplan = {this.state.trainingsplan}
               toggle = {this._toggleModal}
               editTrainingsplan = {this._editTrainingsplan.bind(this)}/>
           </Modal>
@@ -48,11 +49,11 @@ export default class EditTrainingsplanScreen extends Component {
                   h
                 </Text>
                 <Text style={styles.headerText3}>
-                  {item.doc.name}
+                  {this.state.trainingsplan.doc.name}
                 </Text>
               </Text>
               <Text style={styles.headerText4}>
-                {item.doc.kategorie}
+                {this.state.trainingsplan.doc.kategorie}
               </Text>
             </View>
             
@@ -73,7 +74,7 @@ export default class EditTrainingsplanScreen extends Component {
             color="#EF2E1C"
             actions={actions}
             overrideWithAction ={true}
-            onPressItem={()=> navigate('Übungen')}
+            onPressItem={()=> navigate('Übungen',{trainingsplan:this.state.trainingsplan,db:this.state.db})}
       />
         </View>
       );

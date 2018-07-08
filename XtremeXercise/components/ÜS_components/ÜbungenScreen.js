@@ -5,7 +5,9 @@ import {
   View,
   Button,
   Picker,
+  Alert,
   SectionList,
+  TouchableOpacity,
 } from 'react-native';
 import UebungHinzufügen from './ÜbungHinzufügen';
 import Modal from "react-native-modal";
@@ -16,14 +18,32 @@ export default class ÜbungenScreen extends Component {
   state = {
     isModalVisible: false,
     selection: "Kategorie",
+    db:this.props.navigation.getParam("db", null),
     data:allData.Übung,
+    trainingsplan:this.props.navigation.getParam("trainingsplan","noDefault"),
+    übung:null,
     list: [],
   };
 
-  _toggleModal = () =>
-    this.setState({ isModalVisible: !this.state.isModalVisible });
+  _toggleModal = (item) =>
+    this.setState({ übung: item, isModalVisible: !this.state.isModalVisible });
 
-  _addÜbungseinheit = () =>{}
+  _addÜbungseinheit = (übungseinheit,db) =>{
+    let uebungseinheit = {
+      "sätze": übungseinheit.sätze,
+      "wiederholungen": übungseinheit.wiederholungen,
+      "übung": übungseinheit.übung,
+      "trainingsplanID": übungseinheit.trainingsplan.doc._id
+    }
+    this._toggleModal();
+    this.state.trainingsplan.doc.übungseinheiten.push(uebungseinheit);
+    db.get(this.state.trainingsplan.doc._id)
+    .then((doc)=>{
+      doc.übungseinheiten.push(übungseinheit)
+      return db.put(doc)
+    })
+    
+  }
   
   componentDidMount = () =>{
     this.setState({
@@ -102,16 +122,7 @@ export default class ÜbungenScreen extends Component {
       return(
         <View style={styles.container}>
 
-          <Modal
-            isVisible={this.state.isModalVisible}
-            onBackdropPress={() => this.setState({ isModalVisible: false })}
-            >
-
-             <UebungHinzufügen
-              toggle = {this._toggleModal}
-              addÜbungseinheit = {this._addÜbungseinheit.bind(this)}/>
-
-          </Modal>
+          
 
         <View style={styles.top}>
 
@@ -158,9 +169,27 @@ export default class ÜbungenScreen extends Component {
             sections={this.state.list}
             renderSectionHeader={ ({section}) => <Text style={styles.SectionHeaderStyle}> { section.title } </Text> }
             renderItem={ ({item}) => (
-              <View style = {styles.listElement}>
-                <Text style={styles.SectionElement}>{item.name}</Text>
+              <View>
+                <TouchableOpacity onPress= {this._toggleModal.bind(this, item)}>
+                <View style = {styles.listElement}>
+                  <Text style={styles.SectionElement}>{item.name}</Text>
+                </View>
+                </TouchableOpacity>
+                
+                <Modal
+                isVisible={this.state.isModalVisible}
+                onBackdropPress={() => this.setState({ isModalVisible: false })}
+                >
+    
+                <UebungHinzufügen
+                  toggle = {this._toggleModal}
+                  addÜbungseinheit = {this._addÜbungseinheit.bind(this,this.state.db)}
+                  trainingsplan = {this.state.trainingsplan}
+                  uebung = {this.state.übung}/>
+    
+              </Modal>
               </View>
+              
              ) }
             keyExtractor={ (item, index) => index }
             ItemSeparatorComponent={this.renderSeparator}

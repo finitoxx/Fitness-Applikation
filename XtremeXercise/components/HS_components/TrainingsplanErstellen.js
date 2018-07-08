@@ -70,11 +70,14 @@ export default class TrainingsplanErstellen extends Component {
     }
     _addTrainingsplan = () =>{
         let trainingsplan = {
+            _id: new Date().toJSON(),
             name: this.state.text,
             kategorie: this.state.kategorie,
+            übungseinheiten:[],
+            favorit: false,
             benachrichtigungszeit: this.state.dateObj.toString(),
             benachrichtigung: this.state.benachrichtigung,
-            favorit: false
+            
         };
         this.props.addTrainingsplan(trainingsplan)
         this.props.toggle()

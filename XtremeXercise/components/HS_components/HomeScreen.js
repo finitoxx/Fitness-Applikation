@@ -23,18 +23,9 @@ export default class HomeScreen extends Component {
     refresh: false,
   };
   _addTrainingsplan(trainingsplan){
-    let newTrainingsplan= {
-      _id: new Date().toJSON(),
-      name: trainingsplan.name,
-      kategorie: trainingsplan.kategorie,
-      übungseinheiten: [],
-      favorit:trainingsplan.favorit,
-      benachrichtigung: trainingsplan.benachrichtigung,
-      benachrichtigungszeit: trainingsplan.benachrichtigungszeit
-    }
-    this.state.db.put(newTrainingsplan)
+    this.state.db.put(trainingsplan)
     let newData = this.state.data.slice(0);
-    newData.push({"doc":newTrainingsplan})
+    newData.push({"doc":trainingsplan})
     this.setState({
       data: newData,
       refresh: !this.state.refresh
@@ -75,16 +66,11 @@ export default class HomeScreen extends Component {
           </View>
 
           <View style={styles.list}>
-<<<<<<< HEAD
-          <TrainingsplanList 
-          navigation = {this.props.navigation}
-          dataSet = {this.state.data}
-          refresh = {this.state.refresh}/>
-=======
             <TrainingsplanList 
             db = {this.state.db}
             navigation = {this.props.navigation}
-            dataSet = {this.state.data}/>
+            dataSet = {this.state.data}
+            refresh = {this.state.refresh}/>
           </View>
 
           <View style={styles.statistikBtn}>
@@ -92,7 +78,6 @@ export default class HomeScreen extends Component {
               title ="Statistik"
               onPress = { ()=> navigate('Statistik')}
               color = '#EF6A39'/>
->>>>>>> ce3ead3dfe9b19157084c4c8a384102c3a7482aa
           </View>
 
           <FloatingAction

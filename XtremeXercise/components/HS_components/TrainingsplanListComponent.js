@@ -8,11 +8,8 @@ export default class TrainingsplanListComponent extends Component {
 
     this.state = {
       data: this.props.dataSet,
-<<<<<<< HEAD
       refresh: this.props.refresh,
-=======
       db: this.props.db
->>>>>>> ce3ead3dfe9b19157084c4c8a384102c3a7482aa
     };
   }
 

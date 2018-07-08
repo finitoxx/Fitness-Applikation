@@ -7,7 +7,6 @@ import {
   TextInput,
   Image,
 } from 'react-native';
-import DateTimePicker from 'react-native-modal-datetime-picker';
 
 const width = '80%';
 const height = '50%';
@@ -16,26 +15,48 @@ export default class ÜbungHinzufügen extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            name: "",
-            kategorie: "",
-            muskelgruppen: "",   
-            sätze: "",
-            wiederholungen: "",   
+        this.state = { 
+            sätze: 3,
+            wiederholungen: 10,   
+            übung:this.props.uebung,
+            trainingsplan:this.props.trainingsplan
         };
       }
 
     _addÜbungseinheit = () =>{
-        let übung = {
-            name: this.state.text,
-            kategorie: this.state.kategorie,
-            muskelgruppen: this.state.muskelgruppen,
-            sätze: this.state.sätze,
-            wiederholungen: this.state.wiederholungen,
-        };
-        this.props._addÜbungseinheit(übungseinheit)
-        this.props.toggle()
+        let uebungseinheit = {
+            "sätze": this.state.sätze,
+            "wiederholungen": this.state.wiederholungen,
+            "übung": this.state.übung,
+            "trainingsplan": this.state.trainingsplan,
+          }
+        this.props.addÜbungseinheit(uebungseinheit)
     }
+    _minusSatz = () => {
+        if(this.state.sätze > 0){
+            this.setState({
+                sätze: this.state.sätze-1
+            })
+        } 
+    }
+    _minusWdh = () => {
+        if(this.state.wiederholungen > 0){
+            this.setState({
+                wiederholungen: this.state.wiederholungen-1
+            })
+        } 
+    }
+    _plusSatz = () => {
+        this.setState({
+            sätze: this.state.sätze+1
+        }) 
+    }
+    _plusWdh = () => {
+        this.setState({
+            wiederholungen: this.state.wiederholungen+1
+        })
+    }
+
     render(){
         return(
             <View style={styles.screen}>
@@ -46,10 +67,10 @@ export default class ÜbungHinzufügen extends Component {
                     </View>
                     
                     <View style={styles.info}>
-                        <Text style={styles.infoName}>Übungsname</Text>
+                        <Text style={styles.infoName}>{this.state.übung.name}</Text>
                         <View style={styles.info2}>
-                            <Text style={styles.infoRest}>Kategorie</Text>
-                        <   Text style={styles.infoRest}>Muskelgruppen</Text>
+                            <Text style={styles.infoRest}>{this.state.übung.kategorie}</Text>
+                        <   Text style={styles.infoRest}>{this.state.übung.muskelgruppe.join(", ")}</Text>
                         </View>
                     </View>
                     
@@ -63,22 +84,22 @@ export default class ÜbungHinzufügen extends Component {
                         <View style={styles.inputValue}>
                             <TextInput
                                 style={styles.inputText}
-                                value="3"
+                                value={this.state.sätze.toString()}
                             />
                             <TextInput
                                 style={styles.inputText}
-                                value="10"
+                                value={this.state.wiederholungen.toString()}
                             />
                         </View>
                         
                         <View style={styles.inputPlus}>
-                            <TouchableOpacity onPress= { ()=> plus()}>
+                            <TouchableOpacity onPress= {this._plusSatz}>
                                 <View style={styles.btnEdit}>
                                 <Image style={styles.imgPlus}
                                     source={require('./../../img/add_filled.png')}/>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress= { ()=> plus()}>
+                            <TouchableOpacity onPress= {this._plusWdh}>
                                 <View style={styles.btnEdit}>
                                 <Image style={styles.imgPlus}
                                     source={require('./../../img/add_filled.png')}/>
@@ -87,13 +108,13 @@ export default class ÜbungHinzufügen extends Component {
                         </View>
                         
                         <View style={styles.inputMinus}>
-                            <TouchableOpacity onPress= { ()=> minus()}>
+                            <TouchableOpacity onPress= {this._minusSatz}>
                                 <View style={styles.btnEdit}>
                                 <Image style={styles.imgMinus}
                                     source={require('./../../img/remove_filled.png')}/>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity onPress= { ()=> minus()}>
+                            <TouchableOpacity onPress= {this._minusWdh}>
                                 <View style={styles.btnEdit}>
                                 <Image style={styles.imgMinus}
                                     source={require('./../../img/remove_filled.png')}/>
@@ -109,7 +130,7 @@ export default class ÜbungHinzufügen extends Component {
                                 <Text  style={styles.btnText}>ABBRECHEN</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress= {this.props.toggle}> 
+                        <TouchableOpacity onPress= {this._addÜbungseinheit}> 
                             <View style={styles.btnOk}>
                                 <Text  style={styles.btnText}>OK</Text>
                             </View>

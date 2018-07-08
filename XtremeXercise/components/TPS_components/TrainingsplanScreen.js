@@ -100,7 +100,7 @@ export default class Trainingsplan extends Component {
               </View>
             </TouchableOpacity>
             
-            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: this.state.item})}>
+            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: this.state.item,db:this.state.db})}>
               <View style={styles.btnEdit}>
                 <Image style={styles.imgEdit}
                   source={require('./../../img/edit.png')}/>
