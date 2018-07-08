@@ -88,10 +88,6 @@ export default class LoadingScreen extends Component {
           </View>
           
           <View style={styles.loadingImage2}>
-            <Button
-              title ="Navigate to Home"
-              onPress = { this._syncingDB}
-              color = '#EF2E1C'/>
               <BallIndicator color = '#EF6A39' size = {50}/>
           </View>
 
@@ -122,6 +118,7 @@ export default class LoadingScreen extends Component {
       justifyContent:'center',
     },
     header: {
+      marginTop: 80,
       flexDirection:'column',
       alignItems:'center',
       justifyContent:'center',
