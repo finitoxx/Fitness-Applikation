@@ -138,12 +138,12 @@ export default class ÜbungenScreen extends Component {
             </Text>
           </View>
 
-<<<<<<< HEAD
          <View style={styles.picker}>
          <Picker
+            backgroundColor='#FFFFFF'
             mode='dropdown'
             selectedValue={this.state.selection}
-            style={{ height: 50 , width: 200}}
+            style={{ height: 50 , width: 180}}
             onValueChange={(itemValue, itemIndex) => {
               switch(itemValue){
                 case "Alphabetisch":
@@ -158,28 +158,12 @@ export default class ÜbungenScreen extends Component {
               }
               this.setState({selection: itemValue})}
               }>
-            <Picker.Item label="Alphabetisch" value="Alphabetisch" />
-            <Picker.Item label="Kategorie" value="Kategorie" />
-            <Picker.Item label="Muskelgruppen" value="Muskelgruppen" />
+            <Picker.Item color='#7c655c' label="Alphabetisch" value="Alphabetisch" />
+            <Picker.Item color='#7c655c' label="Kategorie" value="Kategorie" />
+            <Picker.Item color='#7c655c' label="Muskelgruppen" value="Muskelgruppen" />
           </Picker>
          </View>
         
-=======
-          <View style={styles.picker}>
-            <Picker
-              backgroundColor='#FFFFFF'
-              mode='dropdown'
-              selectedValue={this.state.selection}
-              style={{ height: 50 , width: 180}}
-              onValueChange={(itemValue, itemIndex) => this.setState({selection: itemValue})}
-              >
-              <Picker.Item color='#7c655c' label="Alphabetisch" value="Alphabetisch" />
-              <Picker.Item color='#7c655c' label="Kategorie" value="Kategorie" />
-              <Picker.Item color='#7c655c' label="Muskelgruppen" value="Muskelgruppen" />
-            </Picker>
-          </View>
-
->>>>>>> workingJacky
         </View>
           <View style ={styles.list}>
             <SectionList 
