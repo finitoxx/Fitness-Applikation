@@ -75,7 +75,7 @@ export default class EditTrainingsplanScreen extends Component {
             actions={actions}
             overrideWithAction ={true}
             onPressItem={()=> navigate('Übungen',{trainingsplan:this.state.trainingsplan,db:this.state.db})}
-      />
+          />
         </View>
       );
     }

@@ -3,7 +3,8 @@ import {
   StyleSheet,
   Text,
   View,
-  Button
+  TouchableOpacity,
+  Image,
 } from 'react-native';
 import TrainingsplanList from './TrainingsplanListComponent';
 import TrainingsplanErstellen from './TrainingsplanErstellen';
@@ -53,16 +54,24 @@ export default class HomeScreen extends Component {
               addTrainingsplan = {this._addTrainingsplan.bind(this)}/>
           </Modal>
 
-          <View style={styles.header}>
-            <Text style={styles.headerText1}> 
-              |
-              <Text style={styles.headerText2}>
-                  h
+          <View style={styles.top}>
+            <View style={styles.header}>
+              <Text style={styles.headerText1}> 
+                |
+                <Text style={styles.headerText2}>
+                    h
+                </Text>
+                <Text style={styles.headerText3}>
+                  Meine Trainingspläne
+                </Text>
               </Text>
-              <Text style={styles.headerText3}>
-                Meine Trainingspläne
-              </Text>
-            </Text>
+            </View>
+            <View style={styles.statistic}>
+              <TouchableOpacity onPress= { ()=> navigate('Statistik')}>
+                <Image style={styles.imgStatistic}
+                  source={require('./../../img/statistic.png')}/>
+              </TouchableOpacity>
+            </View>
           </View>
 
           <View style={styles.list}>
@@ -71,13 +80,6 @@ export default class HomeScreen extends Component {
             navigation = {this.props.navigation}
             dataSet = {this.state.data}
             refresh = {this.state.refresh}/>
-          </View>
-
-          <View style={styles.statistikBtn}>
-            <Button
-              title ="Statistik"
-              onPress = { ()=> navigate('Statistik')}
-              color = '#EF6A39'/>
           </View>
 
           <FloatingAction
@@ -100,12 +102,16 @@ export default class HomeScreen extends Component {
     container: {
       backgroundColor: '#372D29',
       flex:1,
-    },  
-    header: {
+    }, 
+    top: {
       flex: 1,
-      flexDirection:'column',
+      flexDirection: 'row',
       paddingTop: 20,
       paddingLeft: 20,
+    }, 
+    header: {
+      flex: 5,
+      flexDirection:'column',
     },
     headerText1: {
       color: '#EF2E1C',
@@ -119,6 +125,14 @@ export default class HomeScreen extends Component {
     headerText3: {
       color: '#FFFFFF',
       fontSize: 20,
+    },
+    statistic: {
+      flex: 1,
+    },
+    imgStatistic: {
+      tintColor: '#EF2E1C',
+      width: 30,
+      height: 30,
     },
     list: {
       backgroundColor: '#564640',
