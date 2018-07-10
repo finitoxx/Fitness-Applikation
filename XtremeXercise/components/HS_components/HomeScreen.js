@@ -131,8 +131,8 @@ export default class HomeScreen extends Component {
     },
     imgStatistic: {
       tintColor: '#EF2E1C',
-      width: 40,
-      height: 40,
+      width: 30,
+      height: 30,
     },
     list: {
       backgroundColor: '#564640',

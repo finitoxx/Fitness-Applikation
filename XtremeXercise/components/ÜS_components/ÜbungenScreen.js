@@ -3,9 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Button,
   Picker,
-  Alert,
   SectionList,
   TouchableOpacity,
 } from 'react-native';
@@ -196,12 +194,6 @@ export default class ÜbungenScreen extends Component {
             ItemSeparatorComponent={this.renderSeparator}
             />
           </View>
-          <Button
-            title ="B2B"
-            onPress = { ()=> navigate('EditTrainingsplan')}/>
-          <Button
-            title = "Übung hinzufügen"
-            onPress = {this._toggleModal}/>
         </View>
       );
     }
@@ -242,17 +234,22 @@ export default class ÜbungenScreen extends Component {
     },
     list: {
       flex: 9,
+      marginTop: 10,
+      backgroundColor: '#564640'
     },
     SectionHeaderStyle:{
- 
-      backgroundColor : '#CDDC39',
-      fontSize : 20,
-      padding: 5,
-      color: '#fff',
+      backgroundColor : '#EF6A39',
+      fontSize : 15,
+      color: '#FFFFFF',
+      paddingLeft: 5,
+      padding: 2,
+      fontWeight: 'bold',
     },
     SectionElement:{
       fontSize : 15,
-      color: '#fff',
+      color: '#FFFFFF',
+      paddingLeft: 10,
+      marginLeft: 15,
     },
     ListElement:{
       padding: 5
