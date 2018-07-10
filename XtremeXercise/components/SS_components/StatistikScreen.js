@@ -169,6 +169,7 @@ export default class StatistikScreen extends Component {
     headerText4: {
       color: '#EF2E1C',
       fontSize: 16,
+      fontWeight: 'bold'
     },
     headerText5: {
       color: '#372D29',
