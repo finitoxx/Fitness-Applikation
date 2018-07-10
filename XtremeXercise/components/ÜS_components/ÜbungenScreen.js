@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import UebungHinzufügen from './ÜbungHinzufügen';
+import UebungErstellen from './ÜbungErstellen';
+import { FloatingAction } from 'react-native-floating-action';
 import Modal from "react-native-modal";
 import * as allData from "./../../Daten.json"
 
@@ -15,6 +17,7 @@ export default class ÜbungenScreen extends Component {
 
   state = {
     isModalVisible: false,
+    isModalVisible2: false,
     selection: "Kategorie",
     db:this.props.navigation.getParam("db", null),
     data:allData.Übung,
@@ -25,6 +28,9 @@ export default class ÜbungenScreen extends Component {
 
   _toggleModal = (item) =>
     this.setState({ übung: item, isModalVisible: !this.state.isModalVisible });
+  
+  _toggleModal2 = (item) =>
+    this.setState({ übung: item, isModalVisible2: !this.state.isModalVisible2 });
 
   _addÜbungseinheit = (übungseinheit,db) =>{
     let uebungseinheit = {
@@ -194,10 +200,31 @@ export default class ÜbungenScreen extends Component {
             ItemSeparatorComponent={this.renderSeparator}
             />
           </View>
+
+          <Modal
+            isVisible={this.state.isModalVisible2}
+            onBackdropPress={() => this.setState({ isModalVisible2: false })}>
+            <UebungErstellen
+              toggle = {this._toggleModal2}/>
+          </Modal>
+
+          <FloatingAction
+            color="#EF2E1C"
+            actions={actions}
+            overrideWithAction ={true}
+            onPressItem={this._toggleModal2}
+          />
+
         </View>
       );
     }
   }
+  const actions = [{
+    text: 'Hinzufügen',
+    icon: require('./../../img/plus.png'),
+    name: 'bt_add',
+    position: 2
+  }]
   const styles = StyleSheet.create({
     container: {
       backgroundColor: '#372D29',
