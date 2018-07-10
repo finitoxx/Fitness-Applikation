@@ -28,7 +28,8 @@ export default class ÜbungenScreen extends Component {
   _toggleModal = (item) =>
     this.setState({ übung: item, isModalVisible: !this.state.isModalVisible });
 
-  _addÜbungseinheit = (übungseinheit,db) =>{
+  _addÜbungseinheit = (übungseinheit) =>{
+    console.log(übungseinheit)
     let uebungseinheit = {
       "sätze": übungseinheit.sätze,
       "wiederholungen": übungseinheit.wiederholungen,
@@ -37,10 +38,12 @@ export default class ÜbungenScreen extends Component {
     }
     this._toggleModal();
     this.state.trainingsplan.doc.übungseinheiten.push(uebungseinheit);
-    db.get(this.state.trainingsplan.doc._id)
+    console.log("--------------")
+    console.log(uebungseinheit)
+    this.state.db.get(this.state.trainingsplan.doc._id)
     .then((doc)=>{
       doc.übungseinheiten.push(übungseinheit)
-      return db.put(doc)
+      return this.state.db.put(doc)
     })
     
   }
@@ -98,11 +101,11 @@ export default class ÜbungenScreen extends Component {
         {title: 'Bizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Bizeps'))},
         {title: 'Brust', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Brust'))},
         {title: 'Oberschenkel', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Oberschenkel'))},
-        {title: 'Unterschenkel', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Unterschenkel'))},
         {title: 'Waden', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Waden'))},
         {title: 'Trizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Trizeps'))},
         {title: 'Rücken', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Rücken'))},
         {title: 'Po', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Po'))},
+        {title: 'Schultern', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Schultern'))},
       ]
     );
   }
@@ -184,7 +187,7 @@ export default class ÜbungenScreen extends Component {
     
                 <UebungHinzufügen
                   toggle = {this._toggleModal}
-                  addÜbungseinheit = {this._addÜbungseinheit.bind(this,this.state.db)}
+                  addÜbungseinheit = {this._addÜbungseinheit.bind(this)}
                   trainingsplan = {this.state.trainingsplan}
                   uebung = {this.state.übung}/>
     
