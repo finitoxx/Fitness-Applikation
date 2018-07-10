@@ -20,11 +20,10 @@ export default class HomeScreen extends Component {
   state = {
     isModalVisible: false,
     data: this.props.navigation.getParam("data",{"nix":null}),
-    db : this.props.navigation.getParam("db",null),
     refresh: false,
   };
   _addTrainingsplan(trainingsplan){
-    this.state.db.put(trainingsplan)
+    global.db.put(trainingsplan)
     let newData = this.state.data.slice(0);
     newData.push({"doc":trainingsplan})
     this.setState({
@@ -76,7 +75,6 @@ export default class HomeScreen extends Component {
 
           <View style={styles.list}>
             <TrainingsplanList 
-            db = {this.state.db}
             navigation = {this.props.navigation}
             dataSet = {this.state.data}
             refresh = {this.state.refresh}/>

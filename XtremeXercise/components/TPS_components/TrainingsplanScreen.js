@@ -15,7 +15,6 @@ export default class Trainingsplan extends Component {
     isBellVisible: false,
     isStarVisible: false,
     item: this.props.navigation.getParam("trainingsplan","noDefault"),
-    db: this.props.navigation.getParam("db", null),
   };
 
   _toggleBell = () =>
@@ -25,21 +24,20 @@ export default class Trainingsplan extends Component {
     this.setState({ isStarVisible: !this.state.isStarVisible });
 
   _trainingsplanLöschenAlert = () => {
-    let mydb = this.state.db
     Alert.alert(
       'Trainingsplan löschen',
       'Soll der Trainingsplan ' + this.state.item.doc.name + ' wirklich gelöscht werden?',
       [
         {text: 'ABBRECHEN', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
-        {text: 'OK', onPress:()=>this._trainingsplanLöschen(mydb)},
+        {text: 'OK', onPress:()=>this._trainingsplanLöschen()},
       ],
       { cancelable: false }
     )
   }
 
-  _trainingsplanLöschen = (db) => {
-    db.get(this.state.item.doc._id).then(function (doc) {
-      return db.remove(doc);
+  _trainingsplanLöschen = () => {
+    global.db.get(this.state.item.doc._id).then(function (doc) {
+      return global.db.remove(doc);
     })
     this.props.navigation.navigate('Home');
     
@@ -100,7 +98,7 @@ export default class Trainingsplan extends Component {
               </View>
             </TouchableOpacity>
             
-            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: this.state.item,db:this.state.db})}>
+            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: this.state.item})}>
               <View style={styles.btnEdit}>
                 <Image style={styles.imgEdit}
                   source={require('./../../img/edit.png')}/>

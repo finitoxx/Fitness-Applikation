@@ -15,7 +15,6 @@ export default class EditTrainingsplanScreen extends Component {
     state = {
       isModalVisible: false,
       trainingsplan:this.props.navigation.getParam("trainingsplan","noDefault"),
-      db:this.props.navigation.getParam("trainingsplan","noDefault"),
     };
 
     _editTrainingsplan(){
@@ -67,14 +66,15 @@ export default class EditTrainingsplanScreen extends Component {
 
           <View style={styles.list}>
             <UebungseinheitList
-            navigation = {this.props.navigation}/>
+            navigation = {this.props.navigation}
+            trainingsplan = {this.state.trainingsplan}/>
           </View>
 
           <FloatingAction
             color="#EF2E1C"
             actions={actions}
             overrideWithAction ={true}
-            onPressItem={()=> navigate('Übungen',{trainingsplan:this.state.trainingsplan,db:this.state.db})}
+            onPressItem={()=> navigate('Übungen',{trainingsplan:this.state.trainingsplan})}
           />
         </View>
       );

@@ -19,7 +19,6 @@ export default class ÜbungenScreen extends Component {
     isModalVisible: false,
     isModalVisible2: false,
     selection: "Kategorie",
-    db:this.props.navigation.getParam("db", null),
     data:allData.Übung,
     trainingsplan:this.props.navigation.getParam("trainingsplan","noDefault"),
     übung:null,
@@ -41,15 +40,21 @@ export default class ÜbungenScreen extends Component {
       "trainingsplanID": übungseinheit.trainingsplan.doc._id
     }
     this._toggleModal();
-    this.state.trainingsplan.doc.übungseinheiten.push(uebungseinheit);
-    console.log("--------------")
-    console.log(uebungseinheit)
-    this.state.db.get(this.state.trainingsplan.doc._id)
-    .then((doc)=>{
-      doc.übungseinheiten.push(übungseinheit)
-      return this.state.db.put(doc)
+    let newData = [...this.state.trainingsplan.doc.übungseinheiten]
+    newData.push(uebungseinheit)
+    let newTp = Object.assign({},this.state.trainingsplan)
+    newTp.doc.übungseinheiten = newData;
+    this.setState({
+      trainingsplan: newTp
     })
     
+    global.db.get(this.state.trainingsplan.doc._id)
+    .then((doc)=>{
+      console.log("--------------")
+      console.log(doc)
+      doc.übungseinheiten = newData
+      return global.db.put(doc)
+    })
   }
   
   componentDidMount = () =>{
@@ -89,6 +94,7 @@ export default class ÜbungenScreen extends Component {
       ]
     )
   }
+ 
   _kategorieListe = () =>{
     return(
       [
@@ -125,7 +131,6 @@ export default class ÜbungenScreen extends Component {
     );
   };
     render(){
-      const { navigate}=this.props.navigation;
       return(
         <View style={styles.container}>
 
@@ -193,7 +198,8 @@ export default class ÜbungenScreen extends Component {
                   toggle = {this._toggleModal}
                   addÜbungseinheit = {this._addÜbungseinheit.bind(this)}
                   trainingsplan = {this.state.trainingsplan}
-                  uebung = {this.state.übung}/>
+                  uebung = {this.state.übung}
+                  navigation = {this.props.navigation} />
     
               </Modal>
               </View>

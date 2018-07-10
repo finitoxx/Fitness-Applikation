@@ -8,7 +8,7 @@ export default class ÜbungseinheitenListComponent extends Component {
     super(props);
 
     this.state = {
-      data: allData.Übungseinheiten,
+      data: this.props.trainingsplan.doc.übungseinheiten,
     };
   }
 
@@ -24,7 +24,6 @@ export default class ÜbungseinheitenListComponent extends Component {
     );
   };
   render() {
-    const { navigate}=this.props.navigation;
     return (
       <View style={styles.list}>
         
@@ -35,7 +34,7 @@ export default class ÜbungseinheitenListComponent extends Component {
                     uebungseinheit= {item}
                     />
                 )}
-                keyExtractor={(item, name) => item.name}
+                keyExtractor={(item, name) => item.übung.name}
                 ItemSeparatorComponent={this.renderSeparator}
             />
         

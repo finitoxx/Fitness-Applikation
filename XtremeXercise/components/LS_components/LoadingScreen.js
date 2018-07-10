@@ -17,29 +17,26 @@ const url = "https://fd88de1e-f16d-457a-b16b-d265a75da8ae-bluemix:927be7647c76b6
 
 
 export default class LoadingScreen extends Component {
-  state={
-   "db":null 
-  };  
-  
+
+ 
   fetchData = (db) => {
       db.allDocs({
         include_docs: true,
         attachments: true
       }).then((result) =>{
-        this.props.navigation.navigate('Home',{db:db,data:result.rows});
+        this.props.navigation.navigate('Home',{data:result.rows});
       }).catch((err) =>{
         console.log(err);
       });
   }
     componentDidMount = () => {
       PouchDB.plugin(require('pouchdb-adapter-asyncstorage').default)
-      const db = new PouchDB('Trainingsplan', {adapter: 'asyncstorage'});
-      this.fetchData(db);
-      this.setState({db:db})
+      global.db = new PouchDB('Trainingsplan', {adapter: 'asyncstorage'});
+      this.fetchData(global.db);
     }
     _syncingDB = () =>{
       let remotedb = new PouchDB(url);
-      this.state.db
+      global.db
       .replicate
       .to(remotedb)
       .on('complete', function () {
