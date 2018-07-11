@@ -14,7 +14,7 @@ export default class Trainingsplan extends Component {
   state = {
     isBellVisible: false,
     isStarVisible: false,
-    item: this.props.navigation.getParam("trainingsplan","noDefault"),
+    trainingsplan: this.props.navigation.getParam("trainingsplan","noDefault"),
   };
 
   _toggleBell = () =>
@@ -26,7 +26,7 @@ export default class Trainingsplan extends Component {
   _trainingsplanLöschenAlert = () => {
     Alert.alert(
       'Trainingsplan löschen',
-      'Soll der Trainingsplan ' + this.state.item.doc.name + ' wirklich gelöscht werden?',
+      'Soll der Trainingsplan ' + this.state.trainingsplan.doc.name + ' wirklich gelöscht werden?',
       [
         {text: 'ABBRECHEN', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
         {text: 'OK', onPress:()=>this._trainingsplanLöschen()},
@@ -36,7 +36,7 @@ export default class Trainingsplan extends Component {
   }
 
   _trainingsplanLöschen = () => {
-    global.db.get(this.state.item.doc._id).then(function (doc) {
+    global.db.get(this.state.trainingsplan.doc._id).then(function (doc) {
       return global.db.remove(doc);
     })
     this.props.navigation.navigate('Home');
@@ -57,11 +57,11 @@ export default class Trainingsplan extends Component {
                 h
               </Text>
               <Text style={styles.headerText3}>
-                {this.state.item.doc.name}
+                {this.state.trainingsplan.doc.name}
               </Text>
             </Text>
             <Text style={styles.headerText4}>
-              {this.state.item.doc.kategorie}
+              {this.state.trainingsplan.doc.kategorie}
             </Text>
           </View>
 
@@ -84,7 +84,7 @@ export default class Trainingsplan extends Component {
         </View>
 
         <View style={styles.buttons}>
-          <TouchableOpacity onPress=  { ()=> navigate('Trainieren', {trainingsplan: this.state.item})}>
+          <TouchableOpacity onPress=  { ()=> navigate('Trainieren', {trainingsplan: this.state.trainingsplan})}>
             <View style={styles.btnTrainingStarten}>
               <Text style={styles.btnText1}>Training starten</Text>  
             </View>
@@ -98,7 +98,7 @@ export default class Trainingsplan extends Component {
               </View>
             </TouchableOpacity>
             
-            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: this.state.item})}>
+            <TouchableOpacity onPress= { ()=> navigate('EditTrainingsplan', {trainingsplan: this.state.trainingsplan})}>
               <View style={styles.btnEdit}>
                 <Image style={styles.imgEdit}
                   source={require('./../../img/edit.png')}/>

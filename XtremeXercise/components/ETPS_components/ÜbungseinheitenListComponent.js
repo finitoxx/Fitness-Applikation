@@ -9,6 +9,7 @@ export default class ÜbungseinheitenListComponent extends Component {
 
     this.state = {
       data: this.props.trainingsplan.doc.übungseinheiten,
+      refresh:this.props.refresh
     };
   }
 
@@ -29,6 +30,7 @@ export default class ÜbungseinheitenListComponent extends Component {
         
             <FlatList
                 data={this.state.data}
+                extraData={this.state.refresh}
                 renderItem={({item})=>(
                     <ListElement 
                     uebungseinheit= {item}

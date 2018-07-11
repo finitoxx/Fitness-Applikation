@@ -13,14 +13,33 @@ export default class ÜbungAusführenScreen extends Component {
 
   state = {
     done: false,
+    trainingsplan: this.props.navigation.getParam("trainingsplan","noDefault"),
+    übungseinheit: this.props.navigation.getParam("übungseinheit","noDefault"),
+    aktuellerSatz: 1,
+    value: 7.25
   };
 
   _toggleImage = () =>
     this.setState({ done: !this.state.done });
-
+  _plus = () => {
+      this.setState({
+        value: parseFloat(this.state.value) + 1.25
+      })
+  }
+  _minus = () => {
+    if(this.state.value >= 1.25){
+      this.setState({
+        value: parseFloat(this.state.value) - 1.25
+      })
+    }
+  }
+  onChanged (text) {
+    this.setState({
+        value: text.replace(/[^0-9.]/g, ''),
+    });
+}
     render(){
       const { navigate}=this.props.navigation;
-      const item = this.props.navigation.getParam("trainingsplan","noDefault");
 
       return(
         <View style={styles.container}>
@@ -28,15 +47,15 @@ export default class ÜbungAusführenScreen extends Component {
           <View style={styles.top}>
             <View style={styles.header}>
               <Text style={styles.headerText}>
-                {item.name} - Training
+                {this.state.trainingsplan.doc.name} - Training
               </Text>
             </View>
           </View>
         
           <View style={styles.info}>
-            <View style={{marginBottom: 10}}><Text style={styles.infoText1}>Leg Curls</Text></View>
-            <Text style={styles.infoText2}>Maschine</Text> 
-            <Text style={styles.infoText2}>Beine</Text>
+            <View style={{marginBottom: 10}}><Text style={styles.infoText1}>{this.state.übungseinheit.übung.name}</Text></View>
+            <Text style={styles.infoText2}>{this.state.übungseinheit.übung.kategorie}</Text> 
+            <Text style={styles.infoText2}>{this.state.übungseinheit.übung.muskelgruppe.join(", ")}</Text>
           </View>
 
           <View style={styles.setsReps}>
@@ -45,23 +64,26 @@ export default class ÜbungAusführenScreen extends Component {
               <Text style={styles.setsRepsText}>Wdh.</Text>
             </View>
             <View style={styles.sr2}>
-              <Text style={styles.setsRepsText}>2/4</Text>
-              <Text style={styles.setsRepsText}>10</Text>
+              <Text style={styles.setsRepsText}>{this.state.aktuellerSatz.toString()}/{this.state.übungseinheit.sätze.toString()}</Text>
+              <Text style={styles.setsRepsText}>{this.state.übungseinheit.wiederholungen}</Text>
             </View>
           </View>
 
           <View style={styles.input}>
             <View style={styles.inputResult}>
-              <TextInput
-                style={styles.inputText}
-                value="7.25"
-              />
+            <TextInput 
+              style={styles.inputText}
+              keyboardType='numeric'
+              onChangeText={(text)=> this.onChanged(text)}
+              value={this.state.value.toString()}
+              maxLength={10}
+            />
             </View>
             <View style={{marginTop: 10, marginRight: 50, marginLeft: 3}}>
               <Text style={styles.inputText}>kg</Text>
             </View>
             <View style={styles.inputBtns}>
-              <TouchableOpacity onPress= { ()=> plus()}>
+              <TouchableOpacity onPress= { this._plus}>
                 <View style={styles.btnEdit}>
                   <Image style={styles.imgAddRem}
                     source={require('./../../img/add_outline.png')}/>
@@ -69,7 +91,7 @@ export default class ÜbungAusführenScreen extends Component {
               </TouchableOpacity>
             </View>
             <View style={styles.inputBtns}>
-              <TouchableOpacity onPress= { ()=> minus()}>
+              <TouchableOpacity onPress= { this._minus}>
                 <View style={styles.btnEdit}>
                   <Image style={styles.imgAddRem}
                     source={require('./../../img/remove_outline.png')}/>

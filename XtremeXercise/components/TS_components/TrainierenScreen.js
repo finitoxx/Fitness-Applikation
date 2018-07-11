@@ -8,16 +8,13 @@ import {
 } from 'react-native';
 import ProgressBar from 'react-native-progress/Bar';
 import UebungseinheitList from './ÜbungseinheitenListComponent';
-import * as allData from './../../Daten.json'
 export default class TrainierenScreen extends Component {
 
   state = {
     progress: 0.3,
-    data: allData.Übungseinheiten,
+    trainingsplan: this.props.navigation.getParam("trainingsplan","noDefault"),
   };
-
     render(){
-      const { navigate}=this.props.navigation;
       const item = this.props.navigation.getParam("trainingsplan","noDefault");
       return(
         <View style={styles.container}>
@@ -32,7 +29,8 @@ export default class TrainierenScreen extends Component {
 
           <View style={styles.list}>
             <UebungseinheitList
-            navigation = {this.props.navigation}/>
+            navigation = {this.props.navigation}
+            trainingsplan = {this.state.trainingsplan}/>
           </View>
           <View style={styles.progress}>
             <ProgressBar 

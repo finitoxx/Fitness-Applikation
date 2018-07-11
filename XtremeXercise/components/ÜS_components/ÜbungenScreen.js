@@ -199,7 +199,8 @@ export default class ÜbungenScreen extends Component {
                   addÜbungseinheit = {this._addÜbungseinheit.bind(this)}
                   trainingsplan = {this.state.trainingsplan}
                   uebung = {this.state.übung}
-                  navigation = {this.props.navigation} />
+                  navigation = {this.props.navigation}
+                  refresh = {this.props.navigation.getParam("refresh",null)} />
     
               </Modal>
               </View>

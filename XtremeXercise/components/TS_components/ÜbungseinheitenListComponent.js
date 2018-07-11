@@ -8,7 +8,7 @@ export default class ÜbungseinheitenListComponent extends Component {
     super(props);
 
     this.state = {
-      data: allData.Übungseinheiten,
+      trainingsplan: this.props.trainingsplan,
     };
   }
 
@@ -29,15 +29,15 @@ export default class ÜbungseinheitenListComponent extends Component {
       <View style={styles.list}>
         
             <FlatList
-                data={this.state.data}
+                data={this.state.trainingsplan.doc.übungseinheiten}
                 renderItem={({item})=>(
-                    <TouchableOpacity onPress = { ()=> navigate('ÜbungAusführen',{trainingsplan: item})}>
+                    <TouchableOpacity onPress = { ()=> navigate('ÜbungAusführen',{trainingsplan: this.state.trainingsplan,übungseinheit: item})}>
                     <ListElement 
                     uebungseinheit= {item}
                     />
                     </TouchableOpacity>
                 )}
-                keyExtractor={(item, name) => item.name}
+                keyExtractor={(item, name) => item.übung.name}
                 ItemSeparatorComponent={this.renderSeparator}
             />
         

@@ -15,12 +15,15 @@ export default class EditTrainingsplanScreen extends Component {
     state = {
       isModalVisible: false,
       trainingsplan:this.props.navigation.getParam("trainingsplan","noDefault"),
+      refresh:global.refresh
     };
 
     _editTrainingsplan(){
       alert("Änderungen zu Trainingsplan ??? wurden übernommen");
     }
-
+    _refreshlist = () =>{
+      global.refresh = !global.refresh
+    }
     _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });
 
@@ -67,14 +70,15 @@ export default class EditTrainingsplanScreen extends Component {
           <View style={styles.list}>
             <UebungseinheitList
             navigation = {this.props.navigation}
-            trainingsplan = {this.state.trainingsplan}/>
+            trainingsplan = {this.state.trainingsplan}
+            refresh = {this.state.refresh}/>
           </View>
 
           <FloatingAction
             color="#EF2E1C"
             actions={actions}
             overrideWithAction ={true}
-            onPressItem={()=> navigate('Übungen',{trainingsplan:this.state.trainingsplan})}
+            onPressItem={()=> navigate('Übungen',{trainingsplan:this.state.trainingsplan,refresh:this._refreshlist})}
           />
         </View>
       );
