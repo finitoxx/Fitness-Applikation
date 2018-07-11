@@ -58,10 +58,12 @@ export default class ÜbungErstellen extends Component {
                             style={{ height: 50 , width: 170}}
                             onValueChange={(itemValue, itemIndex) => this.setState({kategorie: itemValue})}>
                             <Picker.Item label="Cardio" value="Cardio" />
-                            <Picker.Item label="Freie Übung" value="FreieÜbung" />
+                            <Picker.Item label="Freie Übung" value="Freie Übung" />
                             <Picker.Item label="Maschine" value="Maschine" />
                         </Picker>
                     </View>
+
+
 
                     <View style={styles.buttons}>
                         <TouchableOpacity onPress= {this.props.toggle}> 
