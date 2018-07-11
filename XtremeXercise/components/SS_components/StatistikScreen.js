@@ -20,6 +20,17 @@ export default class StatistikScreen extends Component {
       selectionTime: "Diese Woche",
       selectionTraining: "Leg Day I",
       selectionÜbung: "Squats",
+      maximalgewicht: 0,
+      maximalleistung: 0,
+      anteilBauch:0.0,
+      anteilBizeps:0.0,
+      anteilBrust:0.0,
+      anteilOberschenkel:0.0,
+      anteilPo:0.0,
+      anteilRücken:0.0,
+      anteilSchultern:0.0,
+      anteilTrizeps:0.0,
+      anteilWaden:0.0,
     };
     initialisiereStatistik = () => {
       global.db.get("Statistik").then((doc)=>{
@@ -35,36 +46,83 @@ export default class StatistikScreen extends Component {
     }
     initialisiereListen = () =>{
       let trainingsplanList = this.props.navigation.getParam("trainingspläne", [])
-      console.log(trainingsplanList)
-      let übungslist = []
-      for(let i= 0; i < trainingsplanList[0].übungseinheiten.length; i++){
-          übungslist.push(trainingsplanList[0].übungseinheiten[i].übung)
+      if (typeof trainingsplanList !== 'undefined' && trainingsplanList.length > 0) {
+        let übungslist = []
+        for(let i= 0; i < trainingsplanList[0].übungseinheiten.length; i++){
+            übungslist.push(trainingsplanList[0].übungseinheiten[i].übung)
+        }
+        
+        this.setState({
+          trainingspläne: trainingsplanList,
+          übungen: übungslist,
+        })
       }
       
-      this.setState({
-        trainingspläne: trainingsplanList,
-        übungen: übungslist,
-      })
     }
     initialisiereTrainingssätze = () => {
       db.find({
         selector: {docArt: "Trainingssatz"},
       }).then((result) =>{
+        console.log("_______________________________________________________")
         console.log(result)
         this.setState({  
           trainingssätze: result
         })
       }).catch((err) =>{
+        console.log("_______________________________________________________")
         console.log(err);
       });
     }
-    componentDidMount = () =>{
+    aktualisiereÜbungPicker = (index) => {
+      let übungslist = []
+        for(let i= 0; i < this.state.trainingspläne[index].übungseinheiten.length; i++){
+            übungslist.push(this.state.trainingspläne[index].übungseinheiten[i].übung)
+        }      
+        this.setState({
+          übungen: übungslist,
+        })
+    }
+    findeMaxGewicht = (übung) => {
+      let max = 0
+      for(let i = 0; i < this.state.trainingssätze.docs.length; i++){
+        console.log(this.state.trainingssätze.docs[i].übungseinheit.übung.name)
+        if(this.state.trainingssätze.docs[i].übungseinheit.übung.name == übung.name){
+          if(max <= Math.max.apply(Math, this.state.trainingssätze.docs[i].gewichte)){
+            max = Math.max.apply(Math, this.state.trainingssätze.docs[i].gewichte)
+          }
+        }
+      }
+      return max
+    }
+    findeMaxLeistung = (übung) => {
+      let max = 0
+      for(let i = 0; i < this.state.trainingssätze.docs.length; i++){
+        console.log(this.state.trainingssätze.docs[i].übungseinheit.übung.name)
+        if(this.state.trainingssätze.docs[i].übungseinheit.übung.name == übung.name){
+          if(max <= this.state.trainingssätze.docs[i].trainingswert){
+            max = this.state.trainingssätze.docs[i].trainingswert
+          }
+        }
+      }
+      return max
+    }
+    aktualisiereMaxWerte = (index) => {
+      console.log("MaxwertMethode wird ausgeführt")
+      let übung = this.state.übungen[index]
+      let maxGewicht = this.findeMaxGewicht(übung)
+      let maxLeistung = this.findeMaxLeistung(übung)
+      this.setState({
+        maximalgewicht: maxGewicht,
+        maximalleistung: maxLeistung
+      })
+    }
+    componentDidMount = () => {
       this.initialisiereStatistik()
       this.initialisiereListen()
+      this.initialisiereTrainingssätze()
 
     }
     render(){
-      const { navigate}=this.props.navigation;
       return(
         <View style={styles.container}>
 
@@ -128,7 +186,10 @@ export default class StatistikScreen extends Component {
                       mode='dropdown'
                       selectedValue={this.state.selectionTraining}
                       style={{ height: 30 , width: 150}}
-                      onValueChange={(itemValue, itemIndex) => this.setState({selectionTraining: itemValue})}>
+                      onValueChange={(itemValue, itemIndex) =>{
+                        this.aktualisiereÜbungPicker(itemIndex)
+                        this.setState({selectionTraining: itemValue})
+                      } }>
                       {this.state.trainingspläne.map((item, index) => {
                           return <Picker.Item color='#7c655c' key={index} label={item.name} value={item.name} />
                       })}
@@ -137,7 +198,10 @@ export default class StatistikScreen extends Component {
                       mode='dropdown'
                       selectedValue={this.state.selectionÜbung}
                       style={{ height: 30 , width: 150}}
-                      onValueChange={(itemValue, itemIndex) => this.setState({selectionÜbung: itemValue})}>
+                      onValueChange={(itemValue, itemIndex) =>{
+                        this.aktualisiereMaxWerte(itemIndex)
+                        this.setState({selectionÜbung: itemValue})}
+                      }>
                       {this.state.übungen.map((item, index) => {
                           return <Picker.Item color='#7c655c' key={index} label={item.name} value={item.name} />
                       })}
@@ -145,8 +209,8 @@ export default class StatistikScreen extends Component {
                 </View>
               </View>
               <View style={styles.pickerResult}>
-                <Text style={styles.text}>Maximalgewicht: <Text style={styles.resultText}>??</Text></Text>
-                <Text style={styles.text}>Maximalleistung: <Text style={styles.resultText}>??</Text></Text>
+                <Text style={styles.text}>Maximalgewicht: <Text style={styles.resultText}>{this.state.maximalgewicht}</Text></Text>
+                <Text style={styles.text}>Maximalleistung: <Text style={styles.resultText}>{this.state.maximalleistung}</Text></Text>
                 <Text style={styles.textSmall}>(Sätze + Wdh. + Gewicht)</Text>
               </View>
             </View>

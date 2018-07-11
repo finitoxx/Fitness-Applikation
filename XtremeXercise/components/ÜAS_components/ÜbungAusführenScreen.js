@@ -39,7 +39,7 @@ export default class ÜbungAusführenScreen extends Component {
     let result = 0;
     result = result + wdh + sätze
     for(let i = 0; i < gewichte.length; i++){
-      result = result + gewichte[i]
+      result = result + parseFloat(gewichte[i])
     }
     return result
   }
