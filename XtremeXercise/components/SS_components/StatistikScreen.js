@@ -10,6 +10,9 @@ import {
 export default class StatistikScreen extends Component {
 
     state = {
+      trainingssätze: [],
+      trainingspläne: [],
+      übungen:[],
       anzahlTrainings: 0,
       anzahlÜbungen: 0,
       anzahlSätze: 0,
@@ -18,7 +21,7 @@ export default class StatistikScreen extends Component {
       selectionTraining: "Leg Day I",
       selectionÜbung: "Squats",
     };
-    componentDidMount = () =>{
+    initialisiereStatistik = () => {
       global.db.get("Statistik").then((doc)=>{
         this.setState({
           anzahlTrainings: doc.absolvierteTrainings,
@@ -29,6 +32,24 @@ export default class StatistikScreen extends Component {
       }).catch((err)=>{
         console.log(err)
       })
+    }
+    initialisiereListen = () =>{
+      let trainingsplanList = this.props.navigation.getParam("trainingspläne", [])
+      console.log(trainingsplanList)
+      let übungslist = []
+      for(let i= 0; i < trainingsplanList[0].übungseinheiten.length; i++){
+          übungslist.push(trainingsplanList[0].übungseinheiten[i].übung)
+      }
+      
+      this.setState({
+        trainingspläne: trainingsplanList,
+        übungen: übungslist,
+      })
+    }
+    componentDidMount = () =>{
+      this.initialisiereStatistik()
+      this.initialisiereListen()
+
     }
     render(){
       const { navigate}=this.props.navigation;
@@ -96,22 +117,18 @@ export default class StatistikScreen extends Component {
                       selectedValue={this.state.selectionTraining}
                       style={{ height: 30 , width: 150}}
                       onValueChange={(itemValue, itemIndex) => this.setState({selectionTraining: itemValue})}>
-                      <Picker.Item color='#7c655c' label="Leg Day I" value="DieseWoche" />
-                      <Picker.Item color='#7c655c' label="Leg Day II" value="LetzteWoche" />
-                      <Picker.Item color='#7c655c' label="Push and Pull" value="DieserMonat" />
-                      <Picker.Item color='#7c655c' label="HIIT" value="Letzte3Monate" />
-                      <Picker.Item color='#7c655c' label="Cardiotraining" value="Letzte6Monate" />
+                      {this.state.trainingspläne.map((item, index) => {
+                          return <Picker.Item color='#7c655c' key={index} label={item.name} value={item.name} />
+                      })}
                   </Picker>
                   <Picker
                       mode='dropdown'
                       selectedValue={this.state.selectionÜbung}
                       style={{ height: 30 , width: 150}}
                       onValueChange={(itemValue, itemIndex) => this.setState({selectionÜbung: itemValue})}>
-                      <Picker.Item color='#7c655c' label="Squats" value="Squats" />
-                      <Picker.Item color='#7c655c' label="Ausfallschritte" value="Ausfallschritte" />
-                      <Picker.Item color='#7c655c' label="Abduktoren" value="Abduktoren" />
-                      <Picker.Item color='#7c655c' label="Adduktoren" value="Adduktoren" />
-                      <Picker.Item color='#7c655c' label="Wadenheben" value="Wadenheben" />
+                      {this.state.übungen.map((item, index) => {
+                          return <Picker.Item color='#7c655c' key={index} label={item.name} value={item.name} />
+                      })}
                   </Picker>
                 </View>
               </View>

@@ -69,7 +69,7 @@ export default class HomeScreen extends Component {
               </Text>
             </View>
             <View style={styles.statistic}>
-              <TouchableOpacity onPress= { ()=> navigate('Statistik')}>
+              <TouchableOpacity onPress= { ()=> navigate('Statistik',{trainingspläne: this.state.data})}>
                 <Image style={styles.imgStatistic}
                   source={require('./../../img/statistic.png')}/>
               </TouchableOpacity>
