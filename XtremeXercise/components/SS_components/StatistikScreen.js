@@ -46,6 +46,18 @@ export default class StatistikScreen extends Component {
         übungen: übungslist,
       })
     }
+    initialisiereTrainingssätze = () => {
+      db.find({
+        selector: {docArt: "Trainingssatz"},
+      }).then((result) =>{
+        console.log(result)
+        this.setState({  
+          trainingssätze: result
+        })
+      }).catch((err) =>{
+        console.log(err);
+      });
+    }
     componentDidMount = () =>{
       this.initialisiereStatistik()
       this.initialisiereListen()
