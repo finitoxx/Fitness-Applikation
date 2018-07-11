@@ -35,34 +35,41 @@ export default class ÜbungAusführenScreen extends Component {
       })
     }
   }
-  _trainingswertBerechnen = (sätze,wdh,gewicht) =>{
-    return sätze+wdh+gewicht
+  _trainingswertBerechnen = (sätze,wdh,gewichte) =>{
+    let result = 0;
+    result = result + wdh + sätze
+    for(let i = 0; i < gewichte.length; i++){
+      result = result + gewichte[i]
+    }
+    return result
   }
   _satzFertig = () => {
-      
-    let newStatistik = Object.assign({},this.state.statistik)
-    newStatistik.geschaffteSätze = newStatistik.geschaffteSätze + 1 
-    newStatistik.geschaffteWiederholungen = this.state.statistik.geschaffteWiederholungen + this.state.übungseinheit.wiederholungen
-    
-    let newTrainingssatz = Object.assign({},this.state.trainingssatz)
-    newTrainingssatz.gewichte.push(this.state.value)
-    newTrainingssatz.trainingswert = this._trainingswertBerechnen(newStatistik.geschaffteSätze,newStatistik.geschaffteWiederholungen,this.state.value)
-    if(this.state.aktuellerSatz < this.state.übungseinheit.sätze){
-      this.setState({
-        statistik:newStatistik,
-        trainingssatz:newTrainingssatz,
-        aktuellerSatz: this.state.aktuellerSatz + 1
-    })
-    }else{
-      newStatistik.durchgeführteÜbungen = newStatistik.durchgeführteÜbungen + 1
-      this.setState({
-        statistik:newStatistik,
-        trainingssatz:newTrainingssatz,
-      })
-      let progressAktualisieren = this.props.navigation.getParam("progressAktualisieren",{})
-      progressAktualisieren()
-      this.props.navigation.navigate("Trainieren")
-    }
+      if(this.state.value != ""){
+        let newStatistik = Object.assign({},this.state.statistik)
+        newStatistik.geschaffteSätze = newStatistik.geschaffteSätze + 1 
+        newStatistik.geschaffteWiederholungen = this.state.statistik.geschaffteWiederholungen + this.state.übungseinheit.wiederholungen
+        
+        let newTrainingssatz = Object.assign({},this.state.trainingssatz)
+        newTrainingssatz.gewichte.push(this.state.value)
+        newTrainingssatz.trainingswert = this._trainingswertBerechnen(newStatistik.geschaffteSätze,newStatistik.geschaffteWiederholungen,newTrainingssatz.gewichte)
+        if(this.state.aktuellerSatz < this.state.übungseinheit.sätze){
+          this.setState({
+            statistik:newStatistik,
+            trainingssatz:newTrainingssatz,
+            aktuellerSatz: this.state.aktuellerSatz + 1
+        })
+        }else{
+          newStatistik.durchgeführteÜbungen = newStatistik.durchgeführteÜbungen + 1
+          this.setState({
+            statistik:newStatistik,
+            trainingssatz:newTrainingssatz,
+            done: true,
+          })
+          let progressAktualisieren = this.props.navigation.getParam("progressAktualisieren",{})
+          progressAktualisieren()
+          this.props.navigation.navigate("Trainieren")
+        }
+      } 
   }
   onChanged (text) {
     this.setState({
@@ -76,7 +83,7 @@ export default class ÜbungAusführenScreen extends Component {
       trainingswert: 0,
       gewichte: [],
       übungseinheit: this.state.übungseinheit,
-      trainingsplan: this.state.trainingsplan,
+      trainingsplan: this.state.trainingsplan._id,
     }
     let newStatistikDoc = {
       _id: "Statistik",
@@ -96,19 +103,23 @@ export default class ÜbungAusführenScreen extends Component {
         trainingssatz: newTrainingssatz,
       })
       global.db.put(newStatistikDoc).then((doc)=>{
-        console.log(doc)
+      console.log(doc)
       })
     })
   }
   componentWillUnmount = () =>{
-    global.db.get("Statistik").then((doc)=>{
-      doc.absolvierteTrainings = doc.absolvierteTrainings + this.state.statistik.absolvierteTrainings
-      doc.durchgeführteÜbungen = doc.durchgeführteÜbungen + this.state.statistik.durchgeführteÜbungen
-      doc.geschaffteSätze = doc.geschaffteSätze + this.state.statistik.geschaffteSätze
-      doc.geschaffteWiederholungen = doc.geschaffteWiederholungen + this.state.statistik.geschaffteWiederholungen
-      return global.db.put(doc)
-    })
-    console.log(this.state.trainingssatz)
+    if(this.state.done){
+      global.db.get("Statistik").then((doc)=>{
+        doc.absolvierteTrainings = doc.absolvierteTrainings + this.state.statistik.absolvierteTrainings
+        doc.durchgeführteÜbungen = doc.durchgeführteÜbungen + this.state.statistik.durchgeführteÜbungen
+        doc.geschaffteSätze = doc.geschaffteSätze + this.state.statistik.geschaffteSätze
+        doc.geschaffteWiederholungen = doc.geschaffteWiederholungen + this.state.statistik.geschaffteWiederholungen
+        return global.db.put(doc)
+      })
+      global.db.put(this.state.trainingssatz).then((result) => {
+        console.log(result)
+      })
+    }  
   }
 
     render(){
