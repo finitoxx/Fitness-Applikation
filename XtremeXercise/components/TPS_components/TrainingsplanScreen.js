@@ -26,7 +26,7 @@ export default class Trainingsplan extends Component {
   _trainingsplanLöschenAlert = () => {
     Alert.alert(
       'Trainingsplan löschen',
-      'Soll der Trainingsplan ' + this.state.trainingsplan.doc.name + ' wirklich gelöscht werden?',
+      'Soll der Trainingsplan ' + this.state.trainingsplan.name + ' wirklich gelöscht werden?',
       [
         {text: 'ABBRECHEN', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
         {text: 'OK', onPress:()=>this._trainingsplanLöschen()},
@@ -36,7 +36,7 @@ export default class Trainingsplan extends Component {
   }
 
   _trainingsplanLöschen = () => {
-    global.db.get(this.state.trainingsplan.doc._id).then(function (doc) {
+    global.db.get(this.state.trainingsplan._id).then(function (doc) {
       return global.db.remove(doc);
     })
     this.props.navigation.navigate('Home');
@@ -57,11 +57,11 @@ export default class Trainingsplan extends Component {
                 h
               </Text>
               <Text style={styles.headerText3}>
-                {this.state.trainingsplan.doc.name}
+                {this.state.trainingsplan.name}
               </Text>
             </Text>
             <Text style={styles.headerText4}>
-              {this.state.trainingsplan.doc.kategorie}
+              {this.state.trainingsplan.kategorie}
             </Text>
           </View>
 

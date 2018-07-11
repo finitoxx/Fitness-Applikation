@@ -14,8 +14,8 @@ export default class ListElementComponent extends Component {
       <View style={{ flex: 1, flexDirection: 'row', padding: 10, paddingLeft: 20}}>
 
         <View style={{flex: 5, flexDirection: 'column'}}>
-          <Text style={{fontWeight: 'bold',color: '#FFFFFF'}}>{this.state.trainingsplan.doc.name}</Text>
-          <Text style={{color: '#FFFFFF', opacity: 0.6}}>{this.state.trainingsplan.doc.kategorie}</Text>
+          <Text style={{fontWeight: 'bold',color: '#FFFFFF'}}>{this.state.trainingsplan.name}</Text>
+          <Text style={{color: '#FFFFFF', opacity: 0.6}}>{this.state.trainingsplan.kategorie}</Text>
         </View>
 
         <View style={{flex: 2, flexDirection: 'row', justifyContent: 'flex-end'}}>

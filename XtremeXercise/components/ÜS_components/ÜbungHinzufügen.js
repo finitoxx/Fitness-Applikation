@@ -32,8 +32,6 @@ export default class ÜbungHinzufügen extends Component {
           }
           console.log(uebungseinheit)
         this.props.addÜbungseinheit(uebungseinheit)
-        this.props.refresh()
-        this.props.navigation.navigate("EditTrainingsplan")
     }
     _minusSatz = () => {
         if(this.state.sätze > 0){

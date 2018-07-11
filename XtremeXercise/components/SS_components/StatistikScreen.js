@@ -10,11 +10,26 @@ import {
 export default class StatistikScreen extends Component {
 
     state = {
+      anzahlTrainings: 0,
+      anzahlÜbungen: 0,
+      anzahlSätze: 0,
+      anzahlWiederholungen: 0,
       selectionTime: "Diese Woche",
       selectionTraining: "Leg Day I",
       selectionÜbung: "Squats",
     };
-    
+    componentDidMount = () =>{
+      global.db.get("Statistik").then((doc)=>{
+        this.setState({
+          anzahlTrainings: doc.absolvierteTrainings,
+          anzahlÜbungen: doc.durchgeführteÜbungen,
+          anzahlSätze: doc.geschaffteSätze,
+          anzahlWiederholungen: doc.geschaffteWiederholungen,
+        })
+      }).catch((err)=>{
+        console.log(err)
+      })
+    }
     render(){
       const { navigate}=this.props.navigation;
       return(
@@ -44,10 +59,10 @@ export default class StatistikScreen extends Component {
               </Text>
             </Text>
             <View style={{paddingTop: 10, paddingStart: 10}}>
-              <Text style={styles.text}>Anzahl aller absolvierten Trainings: <Text style={styles.resultText}>??</Text></Text>
-              <Text style={styles.text}>Anzahl aller durchgeführten Übungen: <Text style={styles.resultText}>??</Text></Text>
-              <Text style={styles.text}>Anzahl aller geschafften Sätze: <Text style={styles.resultText}>??</Text></Text>
-              <Text style={styles.text}>Anzahl aller geschafften Wiederholungen: <Text style={styles.resultText}>??</Text></Text>
+              <Text style={styles.text}>Anzahl aller absolvierten Trainings: <Text style={styles.resultText}>{this.state.anzahlTrainings}</Text></Text>
+              <Text style={styles.text}>Anzahl aller durchgeführten Übungen: <Text style={styles.resultText}>{this.state.anzahlÜbungen}</Text></Text>
+              <Text style={styles.text}>Anzahl aller geschafften Sätze: <Text style={styles.resultText}>{this.state.anzahlSätze}</Text></Text>
+              <Text style={styles.text}>Anzahl aller geschafften Wiederholungen: <Text style={styles.resultText}>{this.state.anzahlWiederholungen}</Text></Text>
             </View>
           </View>
 

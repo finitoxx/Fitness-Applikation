@@ -8,7 +8,7 @@ export default class ÜbungseinheitenListComponent extends Component {
     super(props);
 
     this.state = {
-      data: this.props.trainingsplan.doc.übungseinheiten,
+      data: this.props.trainingsplan.übungseinheiten,
       refresh:this.props.refresh
     };
   }

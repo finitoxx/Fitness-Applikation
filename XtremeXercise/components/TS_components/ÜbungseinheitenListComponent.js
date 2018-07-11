@@ -29,9 +29,9 @@ export default class ÜbungseinheitenListComponent extends Component {
       <View style={styles.list}>
         
             <FlatList
-                data={this.state.trainingsplan.doc.übungseinheiten}
+                data={this.state.trainingsplan.übungseinheiten}
                 renderItem={({item})=>(
-                    <TouchableOpacity onPress = { ()=> navigate('ÜbungAusführen',{trainingsplan: this.state.trainingsplan,übungseinheit: item})}>
+                    <TouchableOpacity onPress = { ()=> navigate('ÜbungAusführen',{trainingsplan: this.state.trainingsplan,übungseinheit: item,progressAktualisieren: this.props.progressAktualisieren})}>
                     <ListElement 
                     uebungseinheit= {item}
                     />

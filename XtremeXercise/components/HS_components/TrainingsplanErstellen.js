@@ -71,6 +71,7 @@ export default class TrainingsplanErstellen extends Component {
     _addTrainingsplan = () =>{
         let trainingsplan = {
             _id: new Date().toJSON(),
+            docArt: "Trainingsplan",
             name: this.state.text,
             kategorie: this.state.kategorie,
             übungseinheiten:[],

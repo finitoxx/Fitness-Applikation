@@ -51,11 +51,11 @@ export default class EditTrainingsplanScreen extends Component {
                   h
                 </Text>
                 <Text style={styles.headerText3}>
-                  {this.state.trainingsplan.doc.name}
+                  {this.state.trainingsplan.name}
                 </Text>
               </Text>
               <Text style={styles.headerText4}>
-                {this.state.trainingsplan.doc.kategorie}
+                {this.state.trainingsplan.kategorie}
               </Text>
             </View>
             

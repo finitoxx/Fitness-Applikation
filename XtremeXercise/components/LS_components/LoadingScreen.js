@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View,
-  Button
 } from 'react-native';
 import {
   BallIndicator,
 } from 'react-native-indicators';
 import PouchDB from 'pouchdb-core'
-import { StackActions, NavigationActions } from 'react-navigation';
+
+import {NavigationActions } from 'react-navigation';
 
 const url = "https://fd88de1e-f16d-457a-b16b-d265a75da8ae-bluemix:927be7647c76b68886121651d700c7dcf2b208738f6c7ae8b1fa4c01f9ddab37@fd88de1e-f16d-457a-b16b-d265a75da8ae-bluemix.cloudant.com"
 
@@ -20,17 +19,18 @@ export default class LoadingScreen extends Component {
 
  
   fetchData = (db) => {
-      db.allDocs({
-        include_docs: true,
-        attachments: true
+      db.find({
+        selector: {docArt: "Trainingsplan"},
       }).then((result) =>{
-        this.props.navigation.navigate('Home',{data:result.rows});
+        console.log(result)
+        this.props.navigation.navigate('Home',{data:result.docs});
       }).catch((err) =>{
         console.log(err);
       });
   }
     componentDidMount = () => {
       PouchDB.plugin(require('pouchdb-adapter-asyncstorage').default)
+      PouchDB.plugin(require('pouchdb-find'));
       global.db = new PouchDB('Trainingsplan', {adapter: 'asyncstorage'});
       this.fetchData(global.db);
     }

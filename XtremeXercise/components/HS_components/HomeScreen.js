@@ -19,17 +19,20 @@ export default class HomeScreen extends Component {
 
   state = {
     isModalVisible: false,
-    data: this.props.navigation.getParam("data",{"nix":null}),
+    data: this.props.navigation.getParam("data",[]),
     refresh: false,
   };
   _addTrainingsplan(trainingsplan){
-    global.db.put(trainingsplan)
-    let newData = this.state.data.slice(0);
-    newData.push({"doc":trainingsplan})
-    this.setState({
+    if(this.state.data){
+      let newData = this.state.data.slice(0);
+      newData.push({"doc":trainingsplan})
+      this.setState({
       data: newData,
       refresh: !this.state.refresh
-    })
+     })
+    }
+    global.db.put(trainingsplan)
+    
   }
   _toggleModal = () =>
     this.setState({ isModalVisible: !this.state.isModalVisible });

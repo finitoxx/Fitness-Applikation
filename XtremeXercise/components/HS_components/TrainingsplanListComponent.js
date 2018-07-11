@@ -41,7 +41,7 @@ export default class TrainingsplanListComponent extends Component {
                     />
                     </TouchableOpacity>
                 )}
-                keyExtractor={(item, name) => item.doc.name}
+                keyExtractor={(item, name) => item.name}
                 ItemSeparatorComponent={this.renderSeparator}
             />
         

@@ -20,7 +20,7 @@ export default class ÜbungenScreen extends Component {
     isModalVisible2: false,
     selection: "Kategorie",
     data:allData.Übung,
-    trainingsplan:this.props.navigation.getParam("trainingsplan","noDefault"),
+    trainingsplan:this.props.navigation.getParam("trainingsplan",{}),
     übung:null,
     list: [],
   };
@@ -37,24 +37,31 @@ export default class ÜbungenScreen extends Component {
       "sätze": übungseinheit.sätze,
       "wiederholungen": übungseinheit.wiederholungen,
       "übung": übungseinheit.übung,
-      "trainingsplanID": übungseinheit.trainingsplan.doc._id
+      "trainingsplanID": übungseinheit.trainingsplan._id
     }
     this._toggleModal();
-    let newData = [...this.state.trainingsplan.doc.übungseinheiten]
+    let newData = [...this.state.trainingsplan.übungseinheiten]
     newData.push(uebungseinheit)
+    console.log("+++++++++++++++++++")
+    console.log(newData)
     let newTp = Object.assign({},this.state.trainingsplan)
-    newTp.doc.übungseinheiten = newData;
-    this.setState({
-      trainingsplan: newTp
-    })
+    newTp.übungseinheiten = newData.slice();
+    console.log("+++++++++++++++++++")
+    console.log(newTp)
     
-    global.db.get(this.state.trainingsplan.doc._id)
+    global.db.get(this.state.trainingsplan._id)
     .then((doc)=>{
-      console.log("--------------")
-      console.log(doc)
       doc.übungseinheiten = newData
       return global.db.put(doc)
     })
+    this.setState({
+      trainingsplan: newTp
+    }, () => {
+      let refresh = this.props.navigation.getParam("refresh",null)
+      refresh()
+      this.props.navigation.navigate("EditTrainingsplan")
+    })
+    
   }
   
   componentDidMount = () =>{
@@ -198,9 +205,7 @@ export default class ÜbungenScreen extends Component {
                   toggle = {this._toggleModal}
                   addÜbungseinheit = {this._addÜbungseinheit.bind(this)}
                   trainingsplan = {this.state.trainingsplan}
-                  uebung = {this.state.übung}
-                  navigation = {this.props.navigation}
-                  refresh = {this.props.navigation.getParam("refresh",null)} />
+                  uebung = {this.state.übung}/>
     
               </Modal>
               </View>

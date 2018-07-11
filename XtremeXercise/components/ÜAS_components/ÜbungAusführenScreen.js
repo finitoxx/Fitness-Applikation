@@ -16,7 +16,8 @@ export default class ÜbungAusführenScreen extends Component {
     trainingsplan: this.props.navigation.getParam("trainingsplan","noDefault"),
     übungseinheit: this.props.navigation.getParam("übungseinheit","noDefault"),
     aktuellerSatz: 1,
-    value: 7.25
+    value: 7.25,
+    statistik: {},
   };
 
   _toggleImage = () =>
@@ -33,11 +34,70 @@ export default class ÜbungAusführenScreen extends Component {
       })
     }
   }
+  _satzFertig = () => {
+      let newStatistik = Object.assign({},this.state.statistik)
+      newStatistik.geschaffteSätze = newStatistik.geschaffteSätze + 1 
+      newStatistik.geschaffteWiederholungen = this.state.statistik.geschaffteWiederholungen + this.state.übungseinheit.wiederholungen
+      
+    if(this.state.aktuellerSatz < this.state.übungseinheit.sätze){
+      this.setState({
+        statistik:newStatistik,
+        aktuellerSatz: this.state.aktuellerSatz + 1
+    })
+    }else{
+      newStatistik.durchgeführteÜbungen = newStatistik.durchgeführteÜbungen + 1
+      this.setState({
+        statistik:newStatistik,
+      })
+      let progressAktualisieren = this.props.navigation.getParam("progressAktualisieren",{})
+      progressAktualisieren()
+      this.props.navigation.navigate("Trainieren")
+    }
+  }
   onChanged (text) {
     this.setState({
         value: text.replace(/[^0-9.]/g, ''),
     });
-}
+  }
+  componentDidMount = () =>{
+    global.db.get("Statistik").then((doc)=>{
+      let newStatistikDoc = {
+        "_id" : "Statistik",
+        "absolvierteTrainings": 0,
+        "durchgeführteÜbungen": 0,
+        "geschaffteSätze": 0,
+        "geschaffteWiederholungen": 0,      
+      }
+      this.setState({
+        statistik: newStatistikDoc
+      })
+    }).catch((err) => {
+      let newStatistikDoc = {
+        "_id" : "Statistik",
+        "absolvierteTrainings": 0,
+        "durchgeführteÜbungen": 0,
+        "geschaffteSätze": 0,
+        "geschaffteWiederholungen": 0,      
+      }
+      this.setState({
+        statistik: newStatistikDoc
+      })
+      global.db.put(newStatistikDoc).then((doc)=>{
+        console.log(doc)
+      })
+    })
+  }
+  componentWillUnmount = () =>{
+    global.db.get("Statistik").then((doc)=>{
+      doc.absolvierteTrainings = doc.absolvierteTrainings + this.state.statistik.absolvierteTrainings
+      doc.durchgeführteÜbungen = doc.durchgeführteÜbungen + this.state.statistik.durchgeführteÜbungen
+      doc.geschaffteSätze = doc.geschaffteSätze + this.state.statistik.geschaffteSätze
+      doc.geschaffteWiederholungen = doc.geschaffteWiederholungen + this.state.statistik.geschaffteWiederholungen
+      console.log(doc)
+      return global.db.put(doc)
+    })
+  }
+
     render(){
       const { navigate}=this.props.navigation;
 
@@ -47,7 +107,7 @@ export default class ÜbungAusführenScreen extends Component {
           <View style={styles.top}>
             <View style={styles.header}>
               <Text style={styles.headerText}>
-                {this.state.trainingsplan.doc.name} - Training
+                {this.state.trainingsplan.name} - Training
               </Text>
             </View>
           </View>
@@ -101,7 +161,7 @@ export default class ÜbungAusführenScreen extends Component {
           </View>
 
           <View style={styles.button}>
-          <TouchableOpacity onPress= { ()=> navigate('Home')}>
+          <TouchableOpacity onPress= {this._satzFertig}>
               <View style={styles.buttomOk}>
                 <Image style={styles.imgForward}
                   source={require('./../../img/forward.png')}/>

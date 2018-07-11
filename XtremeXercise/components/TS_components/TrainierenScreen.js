@@ -11,18 +11,23 @@ import UebungseinheitList from './ÜbungseinheitenListComponent';
 export default class TrainierenScreen extends Component {
 
   state = {
-    progress: 0.3,
+    progress: 0.0,
     trainingsplan: this.props.navigation.getParam("trainingsplan","noDefault"),
   };
+    progressAktualisieren = () =>{
+      let prozentAdd = 1 / this.state.trainingsplan.übungseinheiten.length
+      this.setState({
+        progress : this.state.progress + prozentAdd
+      })
+    }
     render(){
-      const item = this.props.navigation.getParam("trainingsplan","noDefault");
       return(
         <View style={styles.container}>
         
           <View style={styles.top}>
             <View style={styles.header}>
               <Text style={styles.headerText}>
-                {item.doc.name} - Training
+                {this.state.trainingsplan.name} - Training
               </Text>
             </View>
           </View>
@@ -30,7 +35,8 @@ export default class TrainierenScreen extends Component {
           <View style={styles.list}>
             <UebungseinheitList
             navigation = {this.props.navigation}
-            trainingsplan = {this.state.trainingsplan}/>
+            trainingsplan = {this.state.trainingsplan}
+            progressAktualisieren = {this.progressAktualisieren}/>
           </View>
           <View style={styles.progress}>
             <ProgressBar 
