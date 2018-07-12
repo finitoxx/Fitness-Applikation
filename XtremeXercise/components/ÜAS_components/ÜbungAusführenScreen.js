@@ -36,12 +36,16 @@ export default class ÜbungAusführenScreen extends Component {
     }
   }
   _trainingswertBerechnen = (sätze,wdh,gewichte) =>{
-    let result = 0;
-    result = result + wdh + sätze
+    let result = 1;
+    result = result * wdh * sätze
     for(let i = 0; i < gewichte.length; i++){
-      result = result + parseFloat(gewichte[i])
+      if(parseFloat(gewichte[i]) == 0){
+        result = result * 1
+      }else{
+        result = result * parseFloat(gewichte[i])
+      }
     }
-    return result
+    return result.toFixed(2)
   }
   _satzFertig = () => {
       if(this.state.value != ""){
