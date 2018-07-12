@@ -11,7 +11,6 @@ import UebungHinzufügen from './ÜbungHinzufügen';
 import UebungErstellen from './ÜbungErstellen';
 import { FloatingAction } from 'react-native-floating-action';
 import Modal from "react-native-modal";
-import * as allData from "./../../Daten.json"
 
 export default class ÜbungenScreen extends Component {
 
@@ -128,8 +127,8 @@ export default class ÜbungenScreen extends Component {
   _kategorieListe = () =>{
     return(
       [
-        {title: 'Aufwärmen', data: this.state.data.filter((übung) => übung.kategorie == 'Aufwärmen')},
-        {title: 'Freihantel', data: this.state.data.filter((übung) => übung.kategorie == 'Freihantel')},
+        {title: 'Cardio', data: this.state.data.filter((übung) => übung.kategorie == 'Cardio')},
+        {title: 'Freie Übung', data: this.state.data.filter((übung) => übung.kategorie == 'Freie Übung')},
         {title: 'Maschine', data: this.state.data.filter((übung) => übung.kategorie == 'Maschine')},
       ]
     );

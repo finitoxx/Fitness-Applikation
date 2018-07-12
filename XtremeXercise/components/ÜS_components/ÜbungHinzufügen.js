@@ -71,7 +71,7 @@ export default class ÜbungHinzufügen extends Component {
                         <Text style={styles.infoName}>{this.state.übung.name}</Text>
                         <View style={styles.info2}>
                             <Text style={styles.infoRest}>{this.state.übung.kategorie}</Text>
-                        <   Text style={styles.infoRest}>{this.state.übung.muskelgruppe.join(", ")}</Text>
+                        <   Text style={styles.infoRest}>{this.state.übung.muskelgruppen.join(", ")}</Text>
                         </View>
                     </View>
                     
