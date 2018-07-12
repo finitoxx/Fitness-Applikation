@@ -19,7 +19,7 @@
 ## 4 Projektpräsentation
 
    - Projektpräsentation (Fertigstellen bis zum Ende des Semesters)
-   - --Link wird noch eingefügt--
+   - https://finitoxx.github.io/Fitness-Applikation/
    
 ## 5 Projektbeteiligte
 
