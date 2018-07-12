@@ -6,7 +6,7 @@ import {
   Picker,
   TouchableOpacity,
   TextInput,
-  Image,
+  Switch
 } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 
@@ -23,7 +23,8 @@ export default class TrainingsplanErstellen extends Component {
             timePicker: false,
             dateObj: "",
             time: "",   
-            benachrichtigung: false   
+            benachrichtigung: false,
+            toggled: false,  
         };
       }
     wochentagParser = (tag) =>{
@@ -60,6 +61,7 @@ export default class TrainingsplanErstellen extends Component {
             this._toggleTimePicker();
     }
     _toggleBenachrichtigung = () =>{
+        this.setState({toggled: !this.state.toggled})
         if(!this.state.benachrichtigung){
             this.setState({benachrichtigung: true});
             this._toggleTimePicker();
@@ -121,11 +123,13 @@ export default class TrainingsplanErstellen extends Component {
                             <View style={styles.benachrichtigungText}>
                                 <Text style={{color: '#00000070', fontSize: 16}}>Benachrichtigung</Text>
                             </View>
-                            <TouchableOpacity onPress={this._toggleBenachrichtigung}> 
-                                <View style={styles.benachrichtigungBild}>
-                                    <Image style={styles.imgBell} source={require('./../../img/bell_outline.png')}/>
-                                </View>
-                            </TouchableOpacity>
+                            <Switch 
+                                onValueChange={ this._toggleBenachrichtigung } 
+                                value={ this.state.toggled }
+                                thumbTintColor= '#EF2E1C' 
+                                onTintColor= '#EF6A39' 
+                                tintColor= '#56464070'
+                            />
                         </View>
                         <View style={{flex:5}}>
                             <Text style={styles.dateText}>

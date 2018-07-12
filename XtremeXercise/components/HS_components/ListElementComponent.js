@@ -6,8 +6,24 @@ export default class ListElementComponent extends Component {
     super(props);
     this.state = {
         trainingsplan: props.trainingsplan,
+        bellColor: null,
+        starColor: null
     };
   }
+
+  componentDidMount=()=> {
+    if(this.state.trainingsplan.favorite) {
+      this.setState({starColor: '#EF6A39'})
+    } else {
+      this.setState({starColor: '#564640'})
+    }
+    if(this.state.trainingsplan.benachrichtigung) {
+      this.setState({bellColor: '#EF6A39'})
+    } else {
+      this.setState({bellColor: '#564640'})
+    }
+  }
+  
 
   render() {
     return (
@@ -19,8 +35,11 @@ export default class ListElementComponent extends Component {
         </View>
 
         <View style={{flex: 2, flexDirection: 'row', justifyContent: 'flex-end'}}>
-          <Image style={{tintColor: "#EF6A39"}} source={require('./../../img/bell_filled.png')}/>
-          <Image style={{tintColor: "#EF6A39"}} source={require('./../../img/star_filled.png')}/>
+        
+          <Image style={[{tintColor: this.state.bellColor}]}
+            source={require('./../../img/bell_outline.png')}/>
+          <Image style={[{tintColor: this.state.starColor}]}
+            source={require('./../../img/star_outline.png')}/>
         </View>
 
       </View>

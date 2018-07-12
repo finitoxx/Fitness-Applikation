@@ -7,6 +7,7 @@ import {
   Image,
   Alert
  } from 'react-native';
+ import DateTimePicker from 'react-native-modal-datetime-picker';
 
 export default class Trainingsplan extends Component {
 
@@ -14,13 +15,50 @@ export default class Trainingsplan extends Component {
     isBellVisible: false,
     isStarVisible: false,
     trainingsplan: this.props.navigation.getParam("trainingsplan","noDefault"),
+    starColor: null,
+    bellColor: null,
+    timePicker: false,
   };
 
-  _toggleBell = () =>
-    this.setState({ isBellVisible: !this.state.isBellVisible });
+  _toggleTimePicker = () =>
+    this.setState({ timePicker: !this.state.timePicker });
 
-  _toggleStar = () =>
-    this.setState({ isStarVisible: !this.state.isStarVisible });
+  _toggleBell = () => {
+    this._toggleTimePicker()
+    this.setState({ isBellVisible: !this.state.isBellVisible },()=>{      
+      if(this.state.isBellVisible) {
+        this.setState({bellColor: '#EF6A39'})
+        global.db.get(this.state.trainingsplan._id).then((doc)=>{
+          doc.benachrichtigung = true;
+          return global.db.put(doc)
+        })
+      } else {
+        this.setState({bellColor: '#564640'})
+        global.db.get(this.state.trainingsplan._id).then((doc)=>{
+          doc.benachrichtigung = false;
+          return global.db.put(doc)
+        })
+      }
+    });
+  }
+
+  _toggleStar = () => {
+    this.setState({ isStarVisible: !this.state.isStarVisible }, ()=> {
+      if(this.state.isStarVisible) {
+        this.setState({starColor: '#EF6A39'})
+        global.db.get(this.state.trainingsplan._id).then((doc)=>{
+          doc.favorite = true;
+          return global.db.put(doc)
+        })
+      } else {
+        this.setState({starColor: '#564640'})
+        global.db.get(this.state.trainingsplan._id).then((doc)=>{
+          doc.favorite = false;
+          return global.db.put(doc)
+        })
+      }
+    });
+  }
 
   _trainingsplanLöschenAlert = () => {
     Alert.alert(
@@ -40,6 +78,19 @@ export default class Trainingsplan extends Component {
     })
     this.props.navigation.navigate('Home');
     
+  }
+
+  componentDidMount = () => {
+    if(this.state.trainingsplan.favorite) {
+      this.setState({starColor: '#EF6A39'})
+    } else {
+      this.setState({starColor: '#564640'})
+    }
+    if(this.state.trainingsplan.benachrichtigung) {
+      this.setState({bellColor: '#EF6A39'})
+    } else {
+      this.setState({bellColor: '#564640'})
+    }
   }
 
   render() {
@@ -67,15 +118,15 @@ export default class Trainingsplan extends Component {
           <View style={styles.bellStar}>
             <TouchableOpacity onPress= {this._toggleBell}>
               <View style={styles.bell}>
-                <Image style={styles.imgBell}
+                <Image style={[styles.imgBell, {tintColor: this.state.bellColor}]}
                   source={require('./../../img/bell_outline.png')}/>
               </View>
             </TouchableOpacity>
 
             <TouchableOpacity onPress= {this._toggleStar}>
               <View>
-                <Image style={styles.imgStar}
-                  source={require('./../../img/star_filled.png')}/>
+                <Image style={[styles.imgStar, {tintColor: this.state.starColor}]}
+                  source={require('./../../img/star_outline.png')}/>
               </View>
             </TouchableOpacity>
           </View>
@@ -105,6 +156,13 @@ export default class Trainingsplan extends Component {
             </TouchableOpacity>
           </View>
         </View>
+
+        <DateTimePicker
+          mode = "datetime"
+          isVisible={this.state.timePicker}
+          onConfirm={this._toggleTimePicker}
+          onCancel={this._toggleTimePicker}
+        />
 
       </View>
     );
@@ -153,10 +211,8 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   imgBell: {
-    tintColor: "#564640",
   },
   imgStar: {
-    tintColor: "#EF6A39",
   },
   buttons: {
     flex: 3,
