@@ -35,10 +35,39 @@ export default class ÜbungErstellen extends Component {
 
     _addNeueÜbung = () =>{
         let uebung = {
-            "name": this.state.name,
-            "kategorie": this.state.kategorie,
-            "muskelgruppen": this.state.muskelgruppen,
+            _id: new Date().toJSON(),
+            docArt: "Übung",
+            name: this.state.name,
+            kategorie: this.state.kategorie,
+            muskelgruppen: [],
           }
+        if(this.state.bauch){
+            uebung.muskelgruppen.push("Bauch")
+        }
+        if(this.state.bizeps){
+            uebung.muskelgruppen.push("Bizeps")
+        }
+        if(this.state.brust){
+            uebung.muskelgruppen.push("Brust")
+        }
+        if(this.state.oberschenkel){
+            uebung.muskelgruppen.push("Oberschenkel")
+        }
+        if(this.state.po){
+            uebung.muskelgruppen.push("Po")
+        }
+        if(this.state.rücken){
+            uebung.muskelgruppen.push("Rücken")
+        }
+        if(this.state.schultern){
+            uebung.muskelgruppen.push("Schultern")
+        }
+        if(this.state.trizeps){
+            uebung.muskelgruppen.push("Trizeps")
+        }
+        if(this.state.waden){
+            uebung.muskelgruppen.push("Waden")
+        }
         this.props.addÜbung(uebung)
     }
 
@@ -113,7 +142,7 @@ export default class ÜbungErstellen extends Component {
                                 <Text  style={styles.btnText}>ABBRECHEN</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress= {this._addNeueÜbung2}> 
+                        <TouchableOpacity onPress= {this._addNeueÜbung}> 
                             <View style={styles.btnOk}>
                                 <Text  style={styles.btnText}>OK</Text>
                             </View>

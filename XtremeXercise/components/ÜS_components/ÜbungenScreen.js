@@ -19,7 +19,7 @@ export default class ÜbungenScreen extends Component {
     isModalVisible: false,
     isModalVisible2: false,
     selection: "Kategorie",
-    data:allData.Übung,
+    data:[],
     trainingsplan:this.props.navigation.getParam("trainingsplan",{}),
     übung:null,
     list: [],
@@ -30,9 +30,38 @@ export default class ÜbungenScreen extends Component {
   
   _toggleModal2 = (item) =>
     this.setState({ übung: item, isModalVisible2: !this.state.isModalVisible2 });
-
+ 
+    _erstelleÜbung = (übung) =>{
+      console.log("Erstelle Übung")
+      let newData = this.state.data.slice(0)
+      newData.push(übung)
+      global.db.put(übung).then((result) => {
+        this.setState({
+          data: newData
+        })
+        console.log(result)
+      }).catch((err)=>{
+        console.log(err)
+      })
+      this._toggleModal2()
+  }
+  _fetchData = () => {
+    db.find({
+      selector: {docArt: "Übung"},
+    }).then((result) =>{
+      this.setState({  
+        data: result.docs
+      },()=>{
+        this.setState({
+          list: this._kategorieListe()
+        })
+      })
+    }).catch((err) =>{
+      console.log(err);
+    });
+  }
+  
   _addÜbungseinheit = (übungseinheit) =>{
-    console.log(übungseinheit)
     let uebungseinheit = {
       "sätze": übungseinheit.sätze,
       "wiederholungen": übungseinheit.wiederholungen,
@@ -42,12 +71,8 @@ export default class ÜbungenScreen extends Component {
     this._toggleModal();
     let newData = [...this.state.trainingsplan.übungseinheiten]
     newData.push(uebungseinheit)
-    console.log("+++++++++++++++++++")
-    console.log(newData)
     let newTp = Object.assign({},this.state.trainingsplan)
     newTp.übungseinheiten = newData.slice();
-    console.log("+++++++++++++++++++")
-    console.log(newTp)
     
     global.db.get(this.state.trainingsplan._id)
     .then((doc)=>{
@@ -65,9 +90,7 @@ export default class ÜbungenScreen extends Component {
   }
   
   componentDidMount = () =>{
-    this.setState({
-      list: this._kategorieListe()
-    })
+    this._fetchData()
   }
   _alphabetListe = () =>{
     return(
@@ -114,15 +137,15 @@ export default class ÜbungenScreen extends Component {
   _muskelgruppeListe = () =>{
     return(
       [
-        {title: 'Bauch', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Bauch'))},
-        {title: 'Bizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Bizeps'))},
-        {title: 'Brust', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Brust'))},
-        {title: 'Oberschenkel', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Oberschenkel'))},
-        {title: 'Waden', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Waden'))},
-        {title: 'Trizeps', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Trizeps'))},
-        {title: 'Rücken', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Rücken'))},
-        {title: 'Po', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Po'))},
-        {title: 'Schultern', data: this.state.data.filter((übung) => übung.muskelgruppe.includes('Schultern'))},
+        {title: 'Bauch', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Bauch'))},
+        {title: 'Bizeps', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Bizeps'))},
+        {title: 'Brust', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Brust'))},
+        {title: 'Oberschenkel', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Oberschenkel'))},
+        {title: 'Waden', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Waden'))},
+        {title: 'Trizeps', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Trizeps'))},
+        {title: 'Rücken', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Rücken'))},
+        {title: 'Po', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Po'))},
+        {title: 'Schultern', data: this.state.data.filter((übung) => übung.muskelgruppen.includes('Schultern'))},
       ]
     );
   }
@@ -220,7 +243,8 @@ export default class ÜbungenScreen extends Component {
             isVisible={this.state.isModalVisible2}
             onBackdropPress={() => this.setState({ isModalVisible2: false })}>
             <UebungErstellen
-              toggle = {this._toggleModal2}/>
+              toggle = {this._toggleModal2}
+              addÜbung = {this._erstelleÜbung}/>
           </Modal>
 
           <FloatingAction
