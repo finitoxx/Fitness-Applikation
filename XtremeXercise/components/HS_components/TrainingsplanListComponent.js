@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View,Text,  FlatList , TouchableOpacity } from "react-native";
+import { View,  FlatList , TouchableOpacity } from "react-native";
 import ListElement from "./ListElementComponent";
 
 export default class TrainingsplanListComponent extends Component {

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { View, FlatList , StyleSheet } from "react-native";
+import { View, FlatList , StyleSheet,TouchableOpacity } from "react-native";
 import ListElement from "./ListElementComponent";
-import * as allData from './../../Daten.json';
 
 export default class ÜbungseinheitenListComponent extends Component {
   constructor(props) {
@@ -32,9 +31,11 @@ export default class ÜbungseinheitenListComponent extends Component {
                 data={this.state.data}
                 extraData={this.state.refresh}
                 renderItem={({item})=>(
+                    <TouchableOpacity onPress = {this.props.löscheÜbungseinheit}>
                     <ListElement 
                     uebungseinheit= {item}
                     />
+                    </TouchableOpacity>
                 )}
                 keyExtractor={(item, name) => item.übung.name}
                 ItemSeparatorComponent={this.renderSeparator}

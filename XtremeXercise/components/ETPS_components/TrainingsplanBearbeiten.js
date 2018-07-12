@@ -74,8 +74,8 @@ export default class TrainingsplanBearbeiten extends Component {
     }
 
     _checkBenachrichtigung = () =>{
-        if(this.props.trainingsplan.doc.benachrichtigung) {
-            return alert(this.props.trainingsplan.doc.benachrichtigungszeit.toString())
+        if(this.props.trainingsplan.benachrichtigung) {
+            return alert(this.props.trainingsplan.benachrichtigungszeit.toString())
         } else {
             return "nüx"
         }
@@ -94,7 +94,7 @@ export default class TrainingsplanBearbeiten extends Component {
                     <TextInput
                         style={styles.textInput}
                         onChangeText={(text) => this.setState({text})}
-                        value={this.props.trainingsplan.doc.name}
+                        value={this.props.trainingsplan.name}
                         selectionColor= '#EF6A39'
                         underlineColorAndroid ='#564640'
                         fontSize= {16}
@@ -108,7 +108,7 @@ export default class TrainingsplanBearbeiten extends Component {
                         selectedValue={this.state.language}
                         style={{ height: 50 , width: 170}}
                         onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}
-                        selectedValue={this.props.trainingsplan.doc.kategorie}>
+                        selectedValue={this.props.trainingsplan.kategorie}>
                         <Picker.Item label="Ausdauer" value="Ausdauer" />
                         <Picker.Item label="Muskelaufbau" value="Muskelaufbau" />
                         <Picker.Item label="Fettabbau" value="Fettabbau" />
@@ -128,7 +128,7 @@ export default class TrainingsplanBearbeiten extends Component {
                     </View>
                     <View style={{flex:5}}>
                         <Text style={styles.dateText}>
-                        {this.props.trainingsplan.doc.benachrichtigungszeit}
+                        {this.props.trainingsplan.benachrichtigungszeit}
                         </Text>
                     </View>
                     <DateTimePicker

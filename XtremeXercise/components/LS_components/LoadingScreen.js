@@ -42,7 +42,6 @@ export default class LoadingScreen extends Component {
       .on('complete', function () {
         alert("Erfolg")
       }).on('error', function (err) {
-        // error while replicating
       })
     }
 
@@ -59,7 +58,6 @@ export default class LoadingScreen extends Component {
     static navigationOptions = {
        header:null};
     render(){
-      const { navigate}=this.props.navigation;
       return(
 
         <View style={styles.container}>
