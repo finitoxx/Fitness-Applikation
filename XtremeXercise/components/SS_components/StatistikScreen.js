@@ -63,13 +63,12 @@ export default class StatistikScreen extends Component {
       db.find({
         selector: {docArt: "Trainingssatz"},
       }).then((result) =>{
-        console.log("_______________________________________________________")
-        console.log(result)
         this.setState({  
           trainingssätze: result
+        },()=>{
+          this.muskelAnteileBerechnen()
         })
       }).catch((err) =>{
-        console.log("_______________________________________________________")
         console.log(err);
       });
     }
@@ -85,7 +84,6 @@ export default class StatistikScreen extends Component {
     findeMaxGewicht = (übung) => {
       let max = 0
       for(let i = 0; i < this.state.trainingssätze.docs.length; i++){
-        console.log(this.state.trainingssätze.docs[i].übungseinheit.übung.name)
         if(this.state.trainingssätze.docs[i].übungseinheit.übung.name == übung.name){
           if(max <= Math.max.apply(Math, this.state.trainingssätze.docs[i].gewichte)){
             max = Math.max.apply(Math, this.state.trainingssätze.docs[i].gewichte)
@@ -97,7 +95,6 @@ export default class StatistikScreen extends Component {
     findeMaxLeistung = (übung) => {
       let max = 0
       for(let i = 0; i < this.state.trainingssätze.docs.length; i++){
-        console.log(this.state.trainingssätze.docs[i].übungseinheit.übung.name)
         if(this.state.trainingssätze.docs[i].übungseinheit.übung.name == übung.name){
           if(max <= this.state.trainingssätze.docs[i].trainingswert){
             max = this.state.trainingssätze.docs[i].trainingswert
@@ -107,7 +104,6 @@ export default class StatistikScreen extends Component {
       return max
     }
     aktualisiereMaxWerte = (index) => {
-      console.log("MaxwertMethode wird ausgeführt")
       let übung = this.state.übungen[index]
       let maxGewicht = this.findeMaxGewicht(übung)
       let maxLeistung = this.findeMaxLeistung(übung)
@@ -116,10 +112,61 @@ export default class StatistikScreen extends Component {
         maximalleistung: maxLeistung
       })
     }
+    muskelAnteileBerechnen = () => {
+      let anteilBauch = 0,anteilBizeps = 0,anteilBrust = 0,anteilOberschenkel = 0,anteilPo = 0,anteilRücken = 0,anteilSchultern = 0,anteilTrizeps = 0,anteilWaden = 0
+      console.log("+++++++++++++++++++++++++++++++++++++++++")
+      console.log(this.state.trainingssätze)
+      for(let i = 0; i < this.state.trainingssätze.docs.length; i++ ){
+        for(let j = 0; j < this.state.trainingssätze.docs[i].übungseinheit.übung.muskelgruppe.length; j++){
+          switch(this.state.trainingssätze.docs[i].übungseinheit.übung.muskelgruppe[j]){
+            case "Bauch":
+              anteilBauch = anteilBauch + 1
+              break;
+            case "Bizeps":
+              anteilBizeps = anteilBizeps + 1 
+              break;
+            case "Brust":
+              anteilBrust = anteilBrust + 1
+              break;
+            case "Oberschenkel":
+              anteilOberschenkel = anteilOberschenkel + 1
+              break;
+            case "Po":
+              anteilPo = anteilPo + 1
+              break;
+            case "Rücken":
+              anteilRücken = anteilRücken + 1
+              break;
+            case "Schultern":
+              anteilSchultern = anteilSchultern + 1
+              break;
+            case "Trizeps":
+              anteilTrizeps = anteilTrizeps + 1
+              break;
+            case "Waden":
+              anteilWaden = anteilWaden + 1
+              break;
+          }
+        }
+      }
+      let gesamt = anteilBauch + anteilBizeps + anteilBrust + anteilOberschenkel + anteilPo + anteilRücken + anteilSchultern + anteilTrizeps + anteilWaden
+      this.setState({
+        anteilBauch: ((anteilBauch / gesamt)*100).toFixed(1),
+        anteilBizeps: ((anteilBizeps / gesamt)*100).toFixed(1),
+        anteilBrust: ((anteilBrust / gesamt)*100).toFixed(1),
+        anteilOberschenkel: ((anteilOberschenkel / gesamt)*100).toFixed(1),
+        anteilPo: ((anteilPo / gesamt)*100).toFixed(1),
+        anteilRücken: ((anteilRücken / gesamt)*100).toFixed(1),
+        anteilSchultern: ((anteilSchultern / gesamt)*100).toFixed(1),
+        anteilTrizeps: ((anteilTrizeps / gesamt)*100).toFixed(1),
+        anteilWaden: ((anteilWaden / gesamt)*100).toFixed(1),
+      })
+    }
     componentDidMount = () => {
       this.initialisiereStatistik()
       this.initialisiereListen()
       this.initialisiereTrainingssätze()
+      
 
     }
     render(){
@@ -227,17 +274,17 @@ export default class StatistikScreen extends Component {
             </Text>
             <View style={styles.muskelgruppen}>
               <View style={{flexDirection: 'column', flex: 1}}>
-                <Text style={styles.text}>Bauch: <Text style={styles.resultText}>?%</Text></Text>
-                <Text style={styles.text}>Bizeps: <Text style={styles.resultText}>?%</Text></Text>
-                <Text style={styles.text}>Brust: <Text style={styles.resultText}>?%</Text></Text>
-                <Text style={styles.text}>Oberschenkel: <Text style={styles.resultText}>?%</Text></Text>
-                <Text style={styles.text}>Po: <Text style={styles.resultText}>?%</Text></Text>
+                <Text style={styles.text}>Bauch: <Text style={styles.resultText}>{this.state.anteilBauch}%</Text></Text>
+                <Text style={styles.text}>Bizeps: <Text style={styles.resultText}>{this.state.anteilBizeps}%</Text></Text>
+                <Text style={styles.text}>Brust: <Text style={styles.resultText}>{this.state.anteilBrust}%</Text></Text>
+                <Text style={styles.text}>Oberschenkel: <Text style={styles.resultText}>{this.state.anteilOberschenkel}%</Text></Text>
+                <Text style={styles.text}>Po: <Text style={styles.resultText}>{this.state.anteilPo}%</Text></Text>
               </View>
               <View style={{flexDirection: 'column', flex: 1}}>
-                <Text style={styles.text}>Rücken: <Text style={styles.resultText}>?%</Text></Text>
-                <Text style={styles.text}>Schultern: <Text style={styles.resultText}>?%</Text></Text>
-                <Text style={styles.text}>Trizeps: <Text style={styles.resultText}>?%</Text></Text>
-                <Text style={styles.text}>Waden: <Text style={styles.resultText}>?%</Text></Text>
+                <Text style={styles.text}>Rücken: <Text style={styles.resultText}>{this.state.anteilRücken}%</Text></Text>
+                <Text style={styles.text}>Schultern: <Text style={styles.resultText}>{this.state.anteilSchultern}%</Text></Text>
+                <Text style={styles.text}>Trizeps: <Text style={styles.resultText}>{this.state.anteilTrizeps}%</Text></Text>
+                <Text style={styles.text}>Waden: <Text style={styles.resultText}>{this.state.anteilWaden}%</Text></Text>
               </View>
             </View>
           </View>
