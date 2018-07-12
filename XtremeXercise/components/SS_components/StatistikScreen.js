@@ -256,9 +256,15 @@ export default class StatistikScreen extends Component {
                 </View>
               </View>
               <View style={styles.pickerResult}>
+<<<<<<< HEAD
                 <Text style={styles.text}>Maximalgewicht: <Text style={styles.resultText}>{this.state.maximalgewicht}</Text></Text>
                 <Text style={styles.text}>Maximalleistung: <Text style={styles.resultText}>{this.state.maximalleistung}</Text></Text>
                 <Text style={styles.textSmall}>(Sätze + Wdh. + Gewicht)</Text>
+=======
+                <Text style={styles.text}>Maximalgewicht: <Text style={styles.resultText}>??</Text></Text>
+                <Text style={styles.text}>Maximalleistung: <Text style={styles.resultText}>??</Text></Text>
+                <Text style={styles.textSmall}>(Sätze * Wdh. * Gewicht)</Text>
+>>>>>>> workingJacky
               </View>
             </View>
           </View>
