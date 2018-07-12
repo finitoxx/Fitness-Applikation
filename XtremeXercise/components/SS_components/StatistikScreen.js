@@ -116,8 +116,8 @@ export default class StatistikScreen extends Component {
       console.log("+++++++++++++++++++++++++++++++++++++++++")
       console.log(this.state.trainingssätze)
       for(let i = 0; i < this.state.trainingssätze.docs.length; i++ ){
-        for(let j = 0; j < this.state.trainingssätze.docs[i].übungseinheit.übung.muskelgruppe.length; j++){
-          switch(this.state.trainingssätze.docs[i].übungseinheit.übung.muskelgruppe[j]){
+        for(let j = 0; j < this.state.trainingssätze.docs[i].übungseinheit.übung.muskelgruppen.length; j++){
+          switch(this.state.trainingssätze.docs[i].übungseinheit.übung.muskelgruppen[j]){
             case "Bauch":
               anteilBauch = anteilBauch + 1
               break;

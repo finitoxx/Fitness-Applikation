@@ -142,7 +142,7 @@ export default class ÜbungAusführenScreen extends Component {
           <View style={styles.info}>
             <View style={{marginBottom: 10}}><Text style={styles.infoText1}>{this.state.übungseinheit.übung.name}</Text></View>
             <Text style={styles.infoText2}>{this.state.übungseinheit.übung.kategorie}</Text> 
-            <Text style={styles.infoText2}>{this.state.übungseinheit.übung.muskelgruppe.join(", ")}</Text>
+            <Text style={styles.infoText2}>{this.state.übungseinheit.übung.muskelgruppen.join(", ")}</Text>
           </View>
 
           <View style={styles.setsReps}>
