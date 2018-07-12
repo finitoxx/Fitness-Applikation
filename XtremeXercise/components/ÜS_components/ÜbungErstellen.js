@@ -5,11 +5,12 @@ import {
   View,
   TouchableOpacity,
   TextInput,
-  Picker
+  Picker,
+  CheckBox
 } from 'react-native';
 
 const width = '80%';
-const height = '50%';
+const height = '70%';
 
 export default class ÜbungErstellen extends Component {
 
@@ -19,6 +20,16 @@ export default class ÜbungErstellen extends Component {
             name: "Übungsname",
             kategorie: "Maschine",
             muskelgruppen: "Oberschenkel",
+            data: "data",
+            bauch: false,
+            bizeps: false,
+            brust: false,
+            oberschenkel: false,
+            po: false,
+            rücken: false,
+            schultern: false,
+            trizeps: false,
+            waden: false,
         };
       }
 
@@ -58,9 +69,42 @@ export default class ÜbungErstellen extends Component {
                             style={{ height: 50 , width: 170}}
                             onValueChange={(itemValue, itemIndex) => this.setState({kategorie: itemValue})}>
                             <Picker.Item label="Cardio" value="Cardio" />
-                            <Picker.Item label="Freie Übung" value="FreieÜbung" />
+                            <Picker.Item label="Freie Übung" value="Freie Übung" />
                             <Picker.Item label="Maschine" value="Maschine" />
                         </Picker>
+                    </View>
+
+                    <View style={styles.checkbox}>
+                        <View style={styles.check1}>
+                            <View style={{flexDirection: 'column'}}>
+                                <Text style={styles.checkText}>Bauch</Text>
+                                <Text style={styles.checkText}>Bizeps</Text>
+                                <Text style={styles.checkText}>Brust</Text>
+                                <Text style={styles.checkText}>Oberschenkel</Text>
+                                <Text style={styles.checkText}>Po</Text>
+                            </View>
+                            <View style={{flexDirection: 'column'}}>
+                                <CheckBox value={this.state.bauch} onChange={ ()=> {this.setState({bauch:!this.state.bauch})}} />
+                                <CheckBox value={this.state.bizeps} onChange={ ()=> {this.setState({bizeps:!this.state.bizeps})}}/>
+                                <CheckBox value={this.state.brust} onChange={ ()=> {this.setState({brust:!this.state.brust})}}/>
+                                <CheckBox value={this.state.oberschenkel} onChange={ ()=> {this.setState({oberschenkel:!this.state.oberschenkel})}}/>
+                                <CheckBox value={this.state.po} onChange={ ()=> {this.setState({po:!this.state.po})}}/>
+                            </View>
+                        </View>
+                        <View style={styles.check2}>
+                            <View style={{flexDirection: 'column'}}>
+                                <Text style={styles.checkText}>Rücken</Text>
+                                <Text style={styles.checkText}>Schultern</Text>
+                                <Text style={styles.checkText}>Trizeps</Text>
+                                <Text style={styles.checkText}>Waden</Text>
+                            </View>
+                            <View style={{flexDirection: 'column'}}>
+                                <CheckBox value={this.state.rücken} onChange={ ()=> {this.setState({rücken:!this.state.rücken})}} />
+                                <CheckBox value={this.state.schultern} onChange={ ()=> {this.setState({schultern:!this.state.schultern})}} />
+                                <CheckBox value={this.state.trizeps} onChange={ ()=> {this.setState({trizeps:!this.state.trizeps})}} />
+                                <CheckBox value={this.state.waden} onChange={ ()=> {this.setState({waden:!this.state.waden})}} />
+                            </View>
+                        </View>
                     </View>
 
                     <View style={styles.buttons}>
@@ -110,18 +154,41 @@ const styles = StyleSheet.create({
             fontSize: 20,
         }, 
         input: {
-            flex: 3,
+            flex: 1,
             flexDirection: 'row',
-            alignItems: 'center',
             paddingLeft: 10,
             paddingRight: 10,
             paddingBottom: 10,
         },
         textInput: {
             flex: 1,
-            height: 80,
-            alignItems: 'center',
+            borderColor: '#372D29',
+            color: '#000000',
+            fontSize: 14,
+            width: 150,
+        },
+        picker:{
+            flex: 1,
+            paddingLeft: 5,
             justifyContent: 'center',
+          },
+        checkbox: {
+            flex: 5,
+            flexDirection: 'row',
+            marginLeft: 15,
+        },
+        check1: {
+            flex: 1,
+            flexDirection: 'row',
+            marginRight: 20,
+        },
+        check2: {
+            flex: 1,
+            flexDirection: 'row',
+        },
+        checkText: {
+            marginTop: 5,
+            marginBottom: 8,
         },
         buttons: {
             flex: 1,
